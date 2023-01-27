@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Comfortaa } from "@next/font/google";
 
+import Navbar from "../components/Navbar";
+
 const comfortaa = Comfortaa({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -21,7 +23,7 @@ export default function RootLayout({
       */}
       <head />
       <body className={`${comfortaa.className}`}>
-        <h2>This is persistent.</h2>
+        <Navbar />
         {children}
       </body>
     </html>
