@@ -1,9 +1,17 @@
-import './globals.css'
+import "./globals.css";
+import { Comfortaa } from "@next/font/google";
+
+const comfortaa = Comfortaa({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-comfortaa",
+});
+//I can put navs and footers here. It will apply across all pages.
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -12,7 +20,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body className={`${comfortaa.className}`}>
+        <h2>This is persistent.</h2>
+        {children}
+      </body>
     </html>
-  )
+  );
 }
