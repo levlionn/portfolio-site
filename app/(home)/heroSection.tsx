@@ -10,7 +10,7 @@ const HeroSection = () => {
         ChatGPT, but in human form
       </h1>
 
-      <CoolButton btnLabel="See my work" />
+      <CoolButton btnLabel="See my work" href="#" />
 
       <span className="absolute bottom-0 left-0 right-0 text-center">
         scroll down
