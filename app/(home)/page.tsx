@@ -16,7 +16,7 @@ export default function Home() {
         client="Food Coma"
         cardHeader="Social Media Campaign Strategy"
         cardBody="Drove 202 email signups in 6 days."
-        tag="Social Media"
+        tags={["#socialmedia", "#advertising"]}
       />
 
       <PortfolioCard
@@ -24,8 +24,8 @@ export default function Home() {
         altText="Call Center Guys portfolio image"
         client="Call Center Guys"
         cardHeader="Website Revamp"
-        cardBody="Designed, developed, deployed and ran marketing for a call center company based in Canada."
-        tag="UX/UI"
+        cardBody="Designed, developed, deployed a brand new website. Followed by running marketing operations and creative for a call center company based in Canada."
+        tags={["#uxui", "#websitecopy"]}
       />
     </main>
   );

@@ -8,7 +8,7 @@ interface Props {
   client: string;
   cardHeader: string;
   cardBody: string;
-  tag: string;
+  tags: string[];
 }
 
 const PortfolioCard = ({
@@ -17,7 +17,7 @@ const PortfolioCard = ({
   altText,
   cardHeader,
   cardBody,
-  tag,
+  tags,
 }: Props) => {
   return (
     <div className="my-2 max-w-s bg-white border border-gray-200 rounded-lg shadow">
@@ -31,6 +31,14 @@ const PortfolioCard = ({
 
       <div className="p-5">
         <span className="text-xs text-gray-500 pb-1">Client: {client}</span>
+        <div className="flex flex-row my-1">
+          {tags.map((t) => {
+            return (
+              <div className="ml-2 first:ml-0 text-xs text-gray-500">{t}</div>
+            );
+          })}
+        </div>
+
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {cardHeader}
         </h5>
