@@ -12,7 +12,7 @@ const ToggleActiveMode = () => {
         <div className="p-1 inline-flex border bg-gray-200 rounded-md ">
           {/* Copywriter Button */}
           <button
-            className={`px-2 py-1 rounded ${
+            className={`px-2 py-1 rounded  ${
               mode === "copywriter" ? "bg-white shadow" : ""
             }`}
             onClick={() => setMode("developer")}

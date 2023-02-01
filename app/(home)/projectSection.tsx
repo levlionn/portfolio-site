@@ -1,4 +1,7 @@
 import React from "react";
+import PortfolioCard from "@/components/PortfolioCard";
+// Images
+import firstPic from "../../public/005.jpg";
 
 const ProjectSection = () => {
   return (
@@ -9,6 +12,24 @@ const ProjectSection = () => {
         <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
         <span className="text-xs">Active Mode: Copywriter</span>
       </div>
+
+      <PortfolioCard
+        source={firstPic}
+        altText="Food Coma portfolio image"
+        client="Food Coma"
+        cardHeader="Social Media Campaign Strategy"
+        cardBody="Drove 202 email signups in 6 days."
+        tags={["#socialmedia", "#advertising"]}
+      />
+
+      <PortfolioCard
+        source={firstPic}
+        altText="Call Center Guys portfolio image"
+        client="Call Center Guys"
+        cardHeader="Website Revamp"
+        cardBody="Designed, developed, deployed a brand new website. Followed by running marketing operations and creative for a call center company based in Canada."
+        tags={["#uxui", "#websitecopy"]}
+      />
     </div>
   );
 };
