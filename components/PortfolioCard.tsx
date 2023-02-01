@@ -32,9 +32,11 @@ const PortfolioCard = ({
       <div className="p-5">
         <span className="text-xs text-gray-500 pb-1">Client: {client}</span>
         <div className="flex flex-row my-1">
-          {tags.map((t) => {
+          {tags.map((t, idx) => {
             return (
-              <div className="ml-2 first:ml-0 text-xs text-gray-500">{t}</div>
+              <div key={idx} className="ml-2 first:ml-0 text-xs text-gray-500">
+                {t}
+              </div>
             );
           })}
         </div>
