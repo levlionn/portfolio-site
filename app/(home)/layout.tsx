@@ -1,12 +1,13 @@
-import "./globals.css";
-import { Comfortaa } from "@next/font/google";
+import "../globals.css";
+import { Open_Sans } from "@next/font/google";
 
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
+import ToggleActiveMode from "@/components/ToggleActiveMode";
 
-const comfortaa = Comfortaa({
+const open_sans = Open_Sans({
   weight: ["400", "700"],
   subsets: ["latin"],
-  variable: "--font-comfortaa",
+  variable: "--font-Open_Sans",
 });
 //I can put navs and footers here. It will apply across all pages.
 
@@ -22,8 +23,9 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={`${comfortaa.className}`}>
+      <body className={`${open_sans.className} mx-4`}>
         <Navbar />
+
         {children}
       </body>
     </html>
