@@ -4,7 +4,7 @@ import firstPic from "../../public/me-nobg.png";
 
 const MeMeSection = () => {
   return (
-    <div className="flex flex-col pt-10 space-y-5">
+    <div className="flex flex-col pt-10 space-y-5 mb-32">
       <h2 className="text-4xl font-extrabold mb-2">My story</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

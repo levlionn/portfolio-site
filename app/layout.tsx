@@ -24,8 +24,9 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`${open_sans.className} mx-4`}>
+      <body className={`${open_sans.className}`}>
         <Navbar />
+
         {/* <Footer /> */}
         {children}
       </body>

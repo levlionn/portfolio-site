@@ -1,25 +1,33 @@
 import React from "react";
-import Link from "next/link";
+import NavLink from "./NavLink";
 
 //closeMenu is a callback function
 
 const FlyOutMenu = ({ closeMenu }: any) => {
   return (
-    <div className="fixed top-0 left-0 w-full h-full z-50 bg-white rounded shadow">
-      <div className="flex flex-col h-full justify-center items-center align-center space-y-6 text-2xl">
-        <div onClick={closeMenu}>
-          <Link href="/">Home</Link>
-        </div>
-        <div onClick={closeMenu}>
-          <Link href="/about">My Story</Link>
-        </div>
-        <div onClick={closeMenu}>
-          <Link href="/portfolio">Portfolio</Link>
-        </div>
-        <div onClick={closeMenu}>
-          <Link href="/contact">Contact</Link>
-        </div>
-      </div>
+    <div className="fixed top-0 left-0 w-full h-full z-50 bg-white ">
+      <nav className="flex flex-col container mx-auto h-full justify-center items-center text-center">
+        <ul className="space-y-6 text-2xl">
+          <li onClick={closeMenu}>
+            <NavLink href="/">Home</NavLink>
+          </li>
+
+          <li onClick={closeMenu}>
+            <NavLink href="/about">About</NavLink>
+          </li>
+
+          <li onClick={closeMenu}>
+            <NavLink href="/portfolio">Portfolio</NavLink>
+          </li>
+          <li onClick={closeMenu}>
+            <NavLink href="/blog">Blog</NavLink>
+          </li>
+          <li onClick={closeMenu}>
+            <NavLink href="/contact">Contact</NavLink>
+          </li>
+        </ul>
+      </nav>
+
       {/* Social media icons */}
       <div className="flex flex-row -mt-52 justify-center space-x-4 text-gray-700">
         {/* Discord */}
