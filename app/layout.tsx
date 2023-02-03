@@ -1,8 +1,8 @@
-import "../globals.css";
+import "./globals.css";
 import { Open_Sans } from "@next/font/google";
 
-import Navbar from "../../components/Navbar";
-import ToggleActiveMode from "@/components/ToggleActiveMode";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const open_sans = Open_Sans({
   weight: ["400", "700"],
@@ -23,9 +23,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
+
       <body className={`${open_sans.className} mx-4`}>
         <Navbar />
-
+        {/* <Footer /> */}
         {children}
       </body>
     </html>

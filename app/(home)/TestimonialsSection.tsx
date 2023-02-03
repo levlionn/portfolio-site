@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
             <h4 className="text-xl font-semibold ">Tyler Mullins</h4>
             <div className="flex flex-row justify-center items-center ">
               <h4 className="text-sm text-gray-500 mr-2">CEO</h4>
-              <span className="text-sm text-gray-500">@ Omni Agency</span>
+              <span className="text-sm py-2 text-gray-500">@ Omni Agency</span>
             </div>
           </div>
         </div>

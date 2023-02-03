@@ -20,36 +20,44 @@ const PortfolioCard = ({
   tags,
 }: Props) => {
   return (
-    <div className="my-2 max-w-s bg-white border border-gray-200 rounded-lg shadow">
-      <Image
-        src={source}
-        width={356}
-        height={50}
-        alt={altText}
-        className="rounded"
-      />
-
-      <div className="p-5">
-        <span className="text-xs text-gray-500 pb-1">Client: {client}</span>
-        <div className="flex flex-row my-1">
-          {tags.map((t, idx) => {
-            return (
-              <div key={idx} className="ml-2 first:ml-0 text-xs text-gray-500">
-                {t}
-              </div>
-            );
-          })}
+    <div className="max-w-s md:max-w-2xl mx-auto my-2 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+      <div className="md:flex">
+        <div className="md:shrink-0">
+          <Image
+            src={source}
+            alt={altText}
+            className="w-full md:h-full md:w-48 object-cover"
+          />
         </div>
 
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          {cardHeader}
-        </h5>
+        <div className="p-8">
+          <div className="flex flex-row -mt-5 mb-6">
+            {tags.map((tag, index) => {
+              return (
+                <div
+                  key={index}
+                  className="ml-2 first:ml-0 text-xs text-gray-500"
+                >
+                  {tag}
+                </div>
+              );
+            })}
+          </div>
+          <span className="text-xs text-gray-500">{client}</span>
 
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          {cardBody}
-        </p>
+          <h5 className="mb-2 text-2xl font-bold text-gray-900">
+            {cardHeader}
+          </h5>
 
-        <CoolButton btnLabel="Read More" href="#" />
+          <p className="my-4 text-gray-700">{cardBody}</p>
+
+          <CoolButton
+            btnLabel="Read More"
+            href="#"
+            btnwidth="full"
+            textSize="s"
+          />
+        </div>
       </div>
     </div>
   );
