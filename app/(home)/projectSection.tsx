@@ -5,7 +5,7 @@ import firstPic from "../../public/005.jpg";
 
 const ProjectSection = () => {
   return (
-    <div>
+    <div className="mb-32">
       <h2 className="text-4xl font-bold my-4">Some fun projects I worked on</h2>
       <p>Hint – Toggle between modes to see work related to each field.</p>
       <div className="flex flex-row items-center my-4">

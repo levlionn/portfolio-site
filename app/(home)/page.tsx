@@ -1,4 +1,4 @@
-import ExpertizeSection from "./ExpertizeSection";
+import ExpertiseSection from "./ExpertiseSection";
 import HeroSection from "./heroSection";
 import MeMeSection from "./MeMeSection";
 import ProjectSection from "./projectSection";
@@ -9,7 +9,7 @@ export default function Home() {
     <main className="h-screen">
       <HeroSection />
       <ProjectSection />
-      <ExpertizeSection />
+      <ExpertiseSection />
       <TestimonialsSection />
       <MeMeSection />
     </main>

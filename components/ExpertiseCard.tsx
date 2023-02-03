@@ -8,7 +8,7 @@ interface Props {
 const ExpertiseCard = ({ expertiseHeader, expertiseBody }: Props) => {
   return (
     <div className="flex justify-center">
-      <div className="my-3 max-w-sm p-7 bg-white border border-gray-200 rounded-lg shadow">
+      <div className="my-3 max-w-sm p-7 bg-white border border-gray-200 rounded-lg shadow-lg">
         <svg
           className="w-7 h-7 mb-8 text-gray-500"
           aria-hidden="true"

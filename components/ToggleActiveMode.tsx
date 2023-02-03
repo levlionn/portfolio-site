@@ -9,10 +9,10 @@ const ToggleActiveMode = () => {
   return (
     <div>
       <ul className="flex flex-col items-center">
-        <div className="p-1 inline-flex border bg-gray-200 rounded-md ">
+        <div className="p-1 inline-flex border bg-gray-200 rounded-xl ">
           {/* Copywriter Button */}
           <button
-            className={`px-2 py-1 rounded  ${
+            className={`px-2 py-1 rounded-lg ${
               mode === "copywriter" ? "bg-white shadow" : ""
             }`}
             onClick={() => setMode("developer")}
@@ -34,7 +34,7 @@ const ToggleActiveMode = () => {
           </button>
           {/* Dev Button */}
           <button
-            className={`px-2 py-1 rounded  ${
+            className={`px-2 py-1 rounded-lg ${
               mode === "developer" ? "bg-white shadow" : ""
             }`}
             onClick={() => setMode("copywriter")}

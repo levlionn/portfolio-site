@@ -30,8 +30,8 @@ const PortfolioCard = ({
           />
         </div>
 
-        <div className="p-8">
-          <div className="flex flex-row -mt-5 mb-6">
+        <div className="px-5 pt-6 pb-6">
+          <div className="flex flex-row -mt-5 mb-3 py-2">
             {tags.map((tag, index) => {
               return (
                 <div

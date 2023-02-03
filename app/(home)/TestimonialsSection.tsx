@@ -2,7 +2,7 @@ import React from "react";
 
 const TestimonialsSection = () => {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col mb-32">
       <div className="text-center md:max-w-xl lg:max-w-3xl mx-auto">
         <h2 className="text-4xl font-extrabold my-4">
           Kind words from amazing people
