@@ -35,7 +35,11 @@ const FlyOutMenu = ({ closeMenu }: any) => {
         </svg> */}
 
         {/* Twitter */}
-        <a href="https://twitter.com/thelevmarkelov" target="_blank">
+        <a
+          href="https://twitter.com/thelevmarkelov"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -49,7 +53,7 @@ const FlyOutMenu = ({ closeMenu }: any) => {
         </a>
 
         {/*Github */}
-        <a href="https://github.com/levlionn" target="_blank">
+        <a href="https://github.com/levlionn" target="_blank" rel="noreferrer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512"
@@ -63,7 +67,11 @@ const FlyOutMenu = ({ closeMenu }: any) => {
         </a>
 
         {/* Linkedin */}
-        <a href="https://www.linkedin.com/in/levmarkelov/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/levmarkelov/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
