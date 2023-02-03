@@ -1,6 +1,6 @@
 import "../globals.css";
 
-export default function PortfolioLayout({
+export default function ContactLayout({
   children,
 }: {
   children: React.ReactNode;
