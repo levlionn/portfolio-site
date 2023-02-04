@@ -75,30 +75,26 @@ const ProjectSection = () => {
       {mode === "copywriter"
         ? copywriterData.map((item) => {
             return (
-              <>
-                <PortfolioCard
-                  source={item.source.src}
-                  altText={item.altText}
-                  client={item.client}
-                  cardHeader={item.cardHeader}
-                  cardBody={item.cardBody}
-                  tags={item.tags}
-                />
-              </>
+              <PortfolioCard
+                source={item.source.src}
+                altText={item.altText}
+                client={item.client}
+                cardHeader={item.cardHeader}
+                cardBody={item.cardBody}
+                tags={item.tags}
+              />
             );
           })
         : developerData.map((item) => {
             return (
-              <>
-                <PortfolioCard
-                  source={item.source.src}
-                  altText={item.altText}
-                  client={item.client}
-                  cardHeader={item.cardHeader}
-                  cardBody={item.cardBody}
-                  tags={item.tags}
-                />
-              </>
+              <PortfolioCard
+                source={item.source.src}
+                altText={item.altText}
+                client={item.client}
+                cardHeader={item.cardHeader}
+                cardBody={item.cardBody}
+                tags={item.tags}
+              />
             );
           })}
     </div>
