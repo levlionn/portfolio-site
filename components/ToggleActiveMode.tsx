@@ -1,10 +1,12 @@
 "use client";
 
-import React from "react";
+import { ModeContext } from "@/ModeContext";
+import { Mode } from "@/types";
+import React, { useContext } from "react";
 import { useState } from "react";
 
 const ToggleActiveMode = () => {
-  const [mode, setMode] = useState("copywriter");
+  const { mode, setMode } = useContext(ModeContext);
 
   return (
     <div>

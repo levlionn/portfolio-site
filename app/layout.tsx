@@ -1,8 +1,13 @@
+"use client";
 import "./globals.css";
 import { Open_Sans } from "@next/font/google";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
+import { ModeContext } from "../ModeContext";
+import { useState } from "react";
+import { Mode } from "@/types";
 
 const open_sans = Open_Sans({
   weight: ["400", "700"],
@@ -16,6 +21,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [mode, setMode] = useState<Mode>("copywriter");
   return (
     <html lang="en">
       {/*
@@ -24,10 +30,13 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`${open_sans.className} mx-4`}>
-        <Navbar />
-        {/* <Footer /> */}
-        {children}
+      <body className={`${open_sans.className}`}>
+        <ModeContext.Provider value={{ mode, setMode }}>
+          <Navbar />
+
+          {children}
+        </ModeContext.Provider>
+        <Footer />
       </body>
     </html>
   );

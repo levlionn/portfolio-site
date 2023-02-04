@@ -1,14 +1,20 @@
 import React from "react";
 import Link from "next/link";
+import { TailwindWidth } from "@/types";
 
 interface Props {
   btnLabel: string;
-  href: string;
-  btnwidth: string;
-  textSize: string;
+  href?: string;
+  btnwidth?: TailwindWidth;
+  textSize?: TailwindWidth;
 }
 
-const CoolButton = ({ btnLabel, href, btnwidth, textSize }: Props) => {
+const CoolButton = ({
+  btnLabel,
+  href = "#",
+  btnwidth = "s",
+  textSize = "s",
+}: Props) => {
   return (
     <div>
       <Link href={href}>

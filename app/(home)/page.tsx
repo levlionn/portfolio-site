@@ -6,12 +6,16 @@ import TestimonialsSection from "./TestimonialsSection";
 
 export default function Home() {
   return (
-    <main className="h-screen">
-      <HeroSection />
-      <ProjectSection />
-      <ExpertiseSection />
-      <TestimonialsSection />
-      <MeMeSection />
-    </main>
+    <div className="container mx-auto">
+      <main className="mx-4">
+        {/*  */}
+        <HeroSection />
+        <ProjectSection />
+        <ExpertiseSection />
+        {/*  */}
+        <TestimonialsSection />
+        <MeMeSection />
+      </main>
+    </div>
   );
 }
