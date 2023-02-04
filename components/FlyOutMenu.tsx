@@ -1,12 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import flyoutCloseIcon from "/public/svg/flyout-close.svg";
 
 //closeMenu is a callback function
 
 const FlyOutMenu = ({ closeMenu }: any) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full z-50 bg-white rounded shadow">
-      <div className="flex flex-col h-full justify-center items-center align-center space-y-6 text-2xl">
+      <div className="flex flex-col h-full justify-center items-center align-center space-y-8 text-2xl">
+        <div onClick={closeMenu} className="">
+          <Image src={flyoutCloseIcon} alt="icon" width={25} height={25} />
+        </div>
         <div onClick={closeMenu}>
           <Link href="/">Home</Link>
         </div>
