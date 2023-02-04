@@ -9,7 +9,7 @@ interface Props {
 
 const ExpertiseCard = ({ icon, expertiseHeader, expertiseBody }: Props) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-2">
       <div className="my-3 max-w-sm p-7 bg-white border border-gray-200 rounded-lg shadow-lg">
         <Image src={icon} alt="icon" width={25} height={25} className="mb-8" />
 

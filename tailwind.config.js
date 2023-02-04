@@ -7,18 +7,25 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'tablet': '640px',
+      tablet: "640px",
       // => @media (min-width: 640px) { ... }
 
-      'laptop': '1024px',
+      laptop: "1024px",
       // => @media (min-width: 1024px) { ... }
 
-      'desktop': '1280px',
+      desktop: "1280px",
       // => @media (min-width: 1280px) { ... }
     },
     extend: {
       fontFamily: {
         comfortaa: ["var(--font-comfortaa)"],
+      },
+      colors: {
+        etonBlue: "#89BD9E",
+        goldCrayola: "#F0C987",
+        cinnabar: "#DB4C40",
+        independence: "#505168",
+        pinkLace: "#F2D7EE",
       },
     },
   },

@@ -17,7 +17,7 @@ const HeroSection = () => {
         ChatGPT, but in human form
       </h1>
 
-      <CoolButton btnLabel="Connect with me" btnwidth="md" />
+      <CoolButton btnLabel="Connect with me" btnwidth="md" colour="#89BD9E" />
     </div>
   );
 };
