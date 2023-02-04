@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between py-10 items-center sticky top-0 z-50 bg-white">
+    <div className="flex justify-between py-10 items-center sticky top-0 z-50 bg-white px-4">
       <div className="flex items-center" onClick={toggleMenu}>
         <button>
           <div className="space-y-2">

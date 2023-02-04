@@ -14,7 +14,7 @@ const HeroSection = () => {
       <h3 className="mb-4">Hi! 👋 I'm Lev Markelov</h3>
 
       <h1 className="text-4xl font-extrabold mb-10">
-        {mode === "copywriter" ? "ChatGPT, but in human form" : "ha"}
+        ChatGPT, but in human form
       </h1>
 
       <CoolButton btnLabel="Connect with me" btnwidth="md" />

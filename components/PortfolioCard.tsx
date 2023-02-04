@@ -3,7 +3,9 @@ import Image, { StaticImageData } from "next/image";
 import CoolButton from "./CoolButton";
 
 interface Props {
-  source: StaticImageData;
+  source: string;
+  width?: number;
+  height?: number;
   altText: string;
   client: string;
   cardHeader: string;
@@ -14,6 +16,8 @@ interface Props {
 const PortfolioCard = ({
   client,
   source,
+  width,
+  height,
   altText,
   cardHeader,
   cardBody,
@@ -25,8 +29,10 @@ const PortfolioCard = ({
         <div className="md:shrink-0">
           <Image
             src={source}
+            height={500}
+            width={500}
             alt={altText}
-            className="w-full md:h-full md:w-48 object-cover"
+            className="w-full md:h-full md:w-48"
           />
         </div>
 

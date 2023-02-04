@@ -19,7 +19,7 @@ const CoolButton = ({
     <div>
       <Link href={href}>
         <button
-          className={`py-3 px-3 w-${btnwidth} bg-purple-400 hover:bg-purple-600 text-white text-${textSize} font-semibold rounded-md shadow-md`}
+          className={`py-3 px-3 w-${btnwidth} bg-purple-400 hover:bg-purple-600 text-white text-${textSize} font-semibold rounded-md shadow-md `}
         >
           {btnLabel}
         </button>
