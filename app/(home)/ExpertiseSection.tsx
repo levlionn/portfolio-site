@@ -25,15 +25,18 @@ const copywriterExpertise = [
 const developerExpertise = [
   {
     expertiseHeader: "Front-end Developer",
-    expertiseBody: "Coding is fun!",
+    expertiseBody:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, saepe architecto perferendis.",
   },
   {
     expertiseHeader: "System Building",
-    expertiseBody: "Smart systems, smarter you.",
+    expertiseBody:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, saepe architecto perferendis.",
   },
   {
     expertiseHeader: "Backend",
-    expertiseBody: "APIs all the way baby",
+    expertiseBody:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, saepe architecto perferendis.",
   },
 ];
 
@@ -59,7 +62,7 @@ const ExpertiseSection = () => {
               />
             );
           })
-        : copywriterExpertise.map((item) => {
+        : developerExpertise.map((item) => {
             return (
               <ExpertiseCard
                 expertiseHeader={item.expertiseHeader}
