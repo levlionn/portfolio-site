@@ -82,6 +82,7 @@ const ProjectSection = () => {
                 cardHeader={item.cardHeader}
                 cardBody={item.cardBody}
                 tags={item.tags}
+                colour="cinnabar"
               />
             );
           })
@@ -94,6 +95,7 @@ const ProjectSection = () => {
                 cardHeader={item.cardHeader}
                 cardBody={item.cardBody}
                 tags={item.tags}
+                colour="etonBlue"
               />
             );
           })}

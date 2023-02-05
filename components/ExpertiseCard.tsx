@@ -10,6 +10,7 @@ interface Props {
   tag: string;
   expertiseHeader: string;
   expertiseBody: string;
+  href: string;
 }
 
 const ExpertiseCard = ({
@@ -17,6 +18,7 @@ const ExpertiseCard = ({
   expertiseHeader,
   expertiseBody,
   tag,
+  href,
 }: Props) => {
   return (
     <div className="relative my-3 max-w-sm h-2/3 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
@@ -34,7 +36,7 @@ const ExpertiseCard = ({
         <h5 className="mb-6 text-xl font-black">{expertiseHeader}</h5>
         <p className="text-independence">{expertiseBody}</p>
         <div className="text-sm text-black flex flex-row my-4">
-          <a href="#" className="mr-2 ">
+          <a href={href} className="mr-2 ">
             See my work
           </a>
           <Image src={rightArrow} alt="icon" width={15} height={15} />

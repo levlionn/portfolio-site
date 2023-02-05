@@ -16,6 +16,7 @@ const copywriterExpertise = [
     expertiseHeader: "I write clean, concise, converting copy.",
     expertiseBody:
       "Craft engaging & persuasive stories that drive results. Specialized in web, email, ad copy, video scripts & more.",
+    href: "/portfolio/copywriter",
   },
 ];
 
@@ -26,6 +27,7 @@ const developerExpertise = [
     expertiseHeader: "I develop & deploy gorgeous websites",
     expertiseBody:
       "Responsive, secure & reliable websites that showcase your brand, and capture the hearts of users.",
+    href: "/portfolio/developer",
   },
 ];
 
@@ -57,6 +59,7 @@ const ExpertiseSection = () => {
             tag={item.tag}
             expertiseHeader={item.expertiseHeader}
             expertiseBody={item.expertiseBody}
+            href={item.href}
           />
         );
       })}

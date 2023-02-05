@@ -8,8 +8,8 @@ import TestimonialsSection from "./TestimonialsSection";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
-      <main className="mx-4">
+    <main className="container mx-auto">
+      <div className="mx-4">
         {/* Hero Section */}
         <section>
           <HeroSection />
@@ -36,7 +36,7 @@ export default function Home() {
 
         {/* <ProjectSection />
         <TestimonialsSection /> */}
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }

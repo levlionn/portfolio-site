@@ -11,6 +11,7 @@ interface Props {
   cardHeader: string;
   cardBody: string;
   tags: string[];
+  colour: string;
 }
 
 const PortfolioCard = ({
@@ -22,6 +23,7 @@ const PortfolioCard = ({
   cardHeader,
   cardBody,
   tags,
+  colour,
 }: Props) => {
   return (
     <div className="max-w-s md:max-w-2xl mx-auto my-2 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
@@ -37,7 +39,14 @@ const PortfolioCard = ({
         </div>
 
         <div className="px-5 pt-6 pb-6">
-          <div className="flex flex-row -mt-5 mb-3 py-2">
+          <span className="text-xs text-gray-500">{client}</span>
+
+          <h5 className="mb-2 text-2xl font-bold text-gray-900">
+            {cardHeader}
+          </h5>
+
+          <p className="my-4 text-gray-700">{cardBody}</p>
+          <div className="flex flex-row -mt-5 mb-2 py-2">
             {tags.map((tag, index) => {
               return (
                 <div
@@ -49,19 +58,13 @@ const PortfolioCard = ({
               );
             })}
           </div>
-          <span className="text-xs text-gray-500">{client}</span>
-
-          <h5 className="mb-2 text-2xl font-bold text-gray-900">
-            {cardHeader}
-          </h5>
-
-          <p className="my-4 text-gray-700">{cardBody}</p>
 
           <CoolButton
             btnLabel="Read More"
             href="#"
             btnwidth="full"
             textSize="s"
+            colour={colour}
           />
         </div>
       </div>
