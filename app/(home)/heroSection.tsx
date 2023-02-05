@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-//images
-import heroImage from "/public/images/heroImage.jpg";
-
 const HeroSection = () => {
   return (
     <div className="flex flex-col my-10 items-center">
@@ -14,7 +11,7 @@ const HeroSection = () => {
       {/* Image will go here */}
       <div className="my-4">
         <Image
-          src={heroImage}
+          src="/images/heroImage.jpg"
           height={250}
           width={250}
           alt="heroImage"
