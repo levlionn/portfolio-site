@@ -9,6 +9,7 @@ import pencilsvg from "/public/svg/pencil.svg";
 import pointerClicksvg from "/public/svg/pointer-click.svg";
 import megaphonesvg from "/public/svg/megaphone.svg";
 import computersvg from "/public/svg/computer.svg";
+import ToggleActiveMode from "@/components/ToggleActiveMode";
 
 const copywriterExpertise = [
   {
@@ -56,14 +57,19 @@ const ExpertiseSection = () => {
   const { mode } = useContext(ModeContext);
 
   return (
-    <div className="mb-32">
-      <h2 className="text-4xl font-extrabold my-4">My expertise</h2>
+    <div className="">
+      <h2 className="text-4xl font-extrabold">What I do</h2>
 
-      <p className="mb-4 py-2 text-gray-500">
-        I'm constantly improving my game, so this list is nonexhaustive.
+      <p className="py-4 text-independence">
+        50% developer, 50% copywriter. 100% fun.
       </p>
 
-      <CoolButton btnLabel="Let's Chat" href="#" btnwidth="s" textSize="sm" />
+      <div className="flex flex-row justify-between items-center">
+        <p className="text-sm text-gray-500">
+          HINT: Toggle to see my two sides.{" "}
+        </p>
+        <ToggleActiveMode />
+      </div>
 
       {mode === "copywriter"
         ? copywriterExpertise.map((item) => {

@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import { Open_Sans } from "@next/font/google";
+import { Open_Sans, Kanit } from "@next/font/google";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -13,6 +13,12 @@ const open_sans = Open_Sans({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-Open_Sans",
+});
+
+const kanit = Kanit({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-Kanit",
 });
 //I can put navs and footers here. It will apply across all pages.
 
@@ -30,10 +36,9 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`${open_sans.className}`}>
+      <body className={`${kanit.className}`}>
         <ModeContext.Provider value={{ mode, setMode }}>
           <Navbar />
-
           {children}
         </ModeContext.Provider>
         <Footer />

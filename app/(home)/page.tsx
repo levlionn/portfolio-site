@@ -1,6 +1,8 @@
-import ExpertiseSection from "./ExpertiseSection";
 import HeroSection from "./heroSection";
 import MeMeSection from "./MeMeSection";
+import ExplainTheWebsite from "./ExplainTheWebsite";
+import ResourceSection from "./ResourceSection";
+import ExpertiseSection from "./ExpertiseSection";
 import ProjectSection from "./projectSection";
 import TestimonialsSection from "./TestimonialsSection";
 
@@ -8,13 +10,32 @@ export default function Home() {
   return (
     <div className="container mx-auto">
       <main className="mx-4">
-        {/*  */}
-        <HeroSection />
-        <ProjectSection />
-        <ExpertiseSection />
-        {/*  */}
-        <TestimonialsSection />
-        <MeMeSection />
+        {/* Hero Section */}
+        <section>
+          <HeroSection />
+        </section>
+
+        {/* About Section */}
+        <section>
+          <MeMeSection />
+        </section>
+
+        <section className="my-28">
+          <ExplainTheWebsite />
+        </section>
+
+        {/* Resources Section */}
+        <section className="my-28">
+          <ResourceSection />
+        </section>
+
+        {/* Expertise Section */}
+        <section className="my-28">
+          <ExpertiseSection />
+        </section>
+
+        {/* <ProjectSection />
+        <TestimonialsSection /> */}
       </main>
     </div>
   );

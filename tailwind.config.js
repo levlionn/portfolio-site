@@ -24,7 +24,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        comfortaa: ["var(--font-comfortaa)"],
+        open_sans: ["var(--font-Open_Sans)"],
+        kanit: ["var(--font-Kanit"],
       },
       colors: {
         etonBlue: "#89BD9E",

@@ -4,6 +4,7 @@ import ToggleActiveMode from "./ToggleActiveMode";
 import FlyOutMenu from "./FlyOutMenu";
 
 import { useState } from "react";
+import CoolButton from "./CoolButton";
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between py-10 items-center sticky top-0 z-50 bg-white px-4">
+    <div className="flex justify-between py-6 items-center sticky w-full top-0 z-50 bg-white px-4">
       <div className="flex items-center" onClick={toggleMenu}>
         <button>
           <div className="space-y-2">
@@ -25,7 +26,8 @@ const Navbar = () => {
         <h3 className="ml-6 font-bold">levm</h3>
       </div>
 
-      <ToggleActiveMode />
+      <CoolButton href="#" btnLabel="Subscribe" colour="independence" />
+      {/* <ToggleActiveMode /> */}
       {menuToggle && <FlyOutMenu closeMenu={toggleMenu} />}
     </div>
   );

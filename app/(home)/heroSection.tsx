@@ -1,23 +1,26 @@
-"use client";
-
-import CoolButton from "@/components/CoolButton";
 import React from "react";
+import Image from "next/image";
 
-import { useContext } from "react";
-import { ModeContext } from "../../ModeContext";
+//images
+import heroImage from "@/public/images/heroImage.jpg";
 
 const HeroSection = () => {
-  const { mode } = useContext(ModeContext);
-
   return (
-    <div className="flex flex-col space-y-4 mb-60">
-      <h3 className="mb-4">Hi! 👋 I'm Lev Markelov</h3>
-
-      <h1 className="text-4xl font-extrabold mb-10">
-        ChatGPT, but in human form
+    <div className="flex flex-col my-10 items-center">
+      <h1 className="text-5xl font-black mb-10 text-center">
+        Innovate with code, captivate with copy
       </h1>
 
-      <CoolButton btnLabel="Connect with me" btnwidth="md" colour="etonBlue" />
+      {/* Image will go here */}
+      <div className="my-4">
+        <Image
+          src={heroImage}
+          height={250}
+          width={250}
+          alt="heroImage"
+          className="rounded-lg rotate-6"
+        />
+      </div>
     </div>
   );
 };
