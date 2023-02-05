@@ -26,7 +26,12 @@ const Navbar = () => {
         <h3 className="ml-6 font-bold">levm</h3>
       </div>
 
-      <CoolButton href="#" btnLabel="Subscribe" colour="independence" />
+      <CoolButton
+        href="#"
+        btnLabel="Subscribe"
+        colour="independence"
+        textSize="xs"
+      />
       {/* <ToggleActiveMode /> */}
       {menuToggle && <FlyOutMenu closeMenu={toggleMenu} />}
     </div>

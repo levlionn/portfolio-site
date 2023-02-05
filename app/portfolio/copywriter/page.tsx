@@ -5,15 +5,16 @@ import PortfolioCard from "@/components/PortfolioCard";
 import firstPic from "@/public/005.jpg";
 
 const copywriterData = [
-  {
-    source: firstPic,
-    client: "Food Coma",
-    altText: "Food Coma portfolio image",
-    cardHeader: "Social Media Campaign Strategy",
-    cardBody: "Drove 202 email signups in 6 days.",
-    tags: ["#socialmedia", "#advertising"],
-    colour: "cinnabar",
-  },
+  // {
+  //   source: firstPic,
+  //   client: "Food Coma",
+  //   altText: "Food Coma portfolio image",
+  //   cardHeader: "Social Media Campaign Strategy",
+  //   cardBody: "Drove 202 email signups in 6 days.",
+  //   tags: ["#socialmedia", "#advertising"],
+  //   colour: "cinnabar",
+  //   href: "#",
+  // },
   {
     source: firstPic,
     client: "Call Center Guys",
@@ -23,16 +24,18 @@ const copywriterData = [
       "Designed, developed and deployed a full-scale wesbite. Ran marketing operations afterwards.",
     tags: ["#uxui", "#webcopy"],
     colour: "cinnabar",
+    href: "/portfolio/copywriter/call-center-guys",
   },
-  {
-    source: firstPic,
-    client: "Data Union",
-    altText: "DataUnion portfolio image",
-    cardHeader: "Community Management",
-    cardBody: "Ran creative operations for a blockchain startup.",
-    tags: ["#blogs", "#socialmedia"],
-    colour: "cinnabar",
-  },
+  // {
+  //   source: firstPic,
+  //   client: "Data Union",
+  //   altText: "DataUnion portfolio image",
+  //   cardHeader: "Community Management",
+  //   cardBody: "Ran creative operations for a blockchain startup.",
+  //   tags: ["#blogs", "#socialmedia"],
+  //   colour: "cinnabar",
+  //   href: "#",
+  // },
 ];
 
 export default function CopywriterPortfolio() {
@@ -65,6 +68,7 @@ export default function CopywriterPortfolio() {
               cardBody={item.cardBody}
               tags={item.tags}
               colour={item.colour}
+              href={item.href}
             />
           );
         })}

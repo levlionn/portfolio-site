@@ -52,7 +52,7 @@ const ExpertiseSection = () => {
         <ToggleActiveMode />
       </div>
 
-      {shownCardData.map((item) => {
+      {shownCardData.map((item, index) => {
         return (
           <ExpertiseCard
             icon={item.icon}
@@ -60,6 +60,7 @@ const ExpertiseSection = () => {
             expertiseHeader={item.expertiseHeader}
             expertiseBody={item.expertiseBody}
             href={item.href}
+            key={index}
           />
         );
       })}

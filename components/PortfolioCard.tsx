@@ -12,6 +12,7 @@ interface Props {
   cardBody: string;
   tags: string[];
   colour: string;
+  href: string;
 }
 
 const PortfolioCard = ({
@@ -24,6 +25,7 @@ const PortfolioCard = ({
   cardBody,
   tags,
   colour,
+  href,
 }: Props) => {
   return (
     <div className="max-w-s md:max-w-2xl mx-auto my-2 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
@@ -61,7 +63,7 @@ const PortfolioCard = ({
 
           <CoolButton
             btnLabel="Read More"
-            href="#"
+            href={href}
             btnwidth="full"
             textSize="s"
             colour={colour}

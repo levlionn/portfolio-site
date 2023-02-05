@@ -5,24 +5,27 @@ import PortfolioCard from "@/components/PortfolioCard";
 import firstPic from "@/public/005.jpg";
 
 const developerData = [
-  {
-    source: firstPic,
-    client: "Personal Project",
-    altText: "Motivate Me portfolio card image",
-    cardHeader: "MotivateMe.ai",
-    cardBody: "Get daily motivational texts from your favourite characters.",
-    tags: ["#nextjs", "#api"],
-    colour: "etonBlue",
-  },
-  {
-    source: firstPic,
-    client: "Personal Project",
-    altText: "Quiz game portfolio image",
-    cardHeader: "Discord Quiz Game",
-    cardBody: "Challenge your friends to a daily triva challenge.",
-    tags: ["#api", "#discord"],
-    colour: "etonBlue",
-  },
+  // {
+  //   source: firstPic,
+  //   client: "Personal Project",
+  //   altText: "Motivate Me portfolio card image",
+  //   cardHeader: "MotivateMe.ai",
+  //   cardBody: "Get daily motivational texts from your favourite characters.",
+  //   tags: ["#nextjs", "#api"],
+  //   colour: "etonBlue",
+  //   href: "#",
+  // },
+  // {
+  //   source: firstPic,
+  //   client: "Personal Project",
+  //   altText: "Quiz game portfolio image",
+  //   cardHeader: "Discord Quiz Game",
+  //   cardBody: "Challenge your friends to a daily triva challenge.",
+  //   tags: ["#api", "#discord"],
+  //   colour: "etonBlue",
+  //   href: "#",
+  // },
+
   {
     source: firstPic,
     client: "Call Center Guys",
@@ -32,6 +35,7 @@ const developerData = [
       "Designed, developed and deployed a full-scale wesbite. Ran marketing operations afterwards.",
     tags: ["#uxui", "#webcopy"],
     colour: "etonBlue",
+    href: "/portfolio/developer/call-center-guys",
   },
 ];
 
@@ -65,6 +69,7 @@ export default function Developerfolio() {
               cardBody={item.cardBody}
               tags={item.tags}
               colour={item.colour}
+              href={item.href}
             />
           );
         })}

@@ -83,6 +83,7 @@ const ProjectSection = () => {
                 cardBody={item.cardBody}
                 tags={item.tags}
                 colour="cinnabar"
+                href="#"
                 key={index}
               />
             );
@@ -97,6 +98,7 @@ const ProjectSection = () => {
                 cardBody={item.cardBody}
                 tags={item.tags}
                 colour="etonBlue"
+                href="#"
                 key={index}
               />
             );

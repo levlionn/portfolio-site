@@ -1,11 +1,19 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import flyoutCloseIcon from "/public/svg/flyout-close.svg";
 
 //closeMenu is a callback function
 
+//images
+import pencilsvg from "/public/svg/pencil.svg";
+import computersvg from "/public/svg/computer.svg";
+import chevronDown from "/public/svg/chevron-down.svg";
+
 const FlyOutMenu = ({ closeMenu }: any) => {
+  const [toggleDrop, setToggleDrop] = useState(false);
+  console.log(toggleDrop);
   return (
     <div className="fixed top-0 left-0 w-full h-full z-50 bg-white rounded shadow">
       <div className="flex flex-col h-full justify-center items-center align-center space-y-8 text-2xl">
@@ -18,15 +26,51 @@ const FlyOutMenu = ({ closeMenu }: any) => {
         <div onClick={closeMenu}>
           <Link href="/about">My Story</Link>
         </div>
-        <div onClick={closeMenu}>
-          <Link href="/portfolio">Portfolio</Link>
+        <div className="flex flex-col space-y-2">
+          <div
+            className="flex flex-row items-center"
+            onClick={() => setToggleDrop(!toggleDrop)}
+          >
+            <span className="mr-2">Portfolio</span>
+            <Image src={chevronDown} alt="icon" width={15} height={15} />
+          </div>
+          {toggleDrop ? (
+            <ul className="flex flex-col items-center">
+              <div className="text-sm text-black flex flex-row my-4">
+                <Image
+                  src={pencilsvg}
+                  alt="icon"
+                  width={15}
+                  height={15}
+                  className="mr-2"
+                />
+                <Link href="/portfolio/copywriter" onClick={closeMenu}>
+                  Copywriter
+                </Link>
+              </div>
+              <div className="text-sm text-black flex flex-row my-4">
+                <Image
+                  src={computersvg}
+                  alt="icon"
+                  width={15}
+                  height={15}
+                  className="mr-2"
+                />
+                <Link href="/portfolio/developer" onClick={closeMenu}>
+                  Developer
+                </Link>
+              </div>
+            </ul>
+          ) : (
+            ""
+          )}
         </div>
         <div onClick={closeMenu}>
           <Link href="/contact">Contact</Link>
         </div>
       </div>
       {/* Social media icons */}
-      <div className="flex flex-row -mt-52 justify-center space-x-4 text-gray-700">
+      <div className="flex flex-row -mt-32 justify-center space-x-4 text-gray-700">
         {/* Discord */}
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
