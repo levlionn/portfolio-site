@@ -73,7 +73,7 @@ const ProjectSection = () => {
       </div>
 
       {mode === "copywriter"
-        ? copywriterData.map((item) => {
+        ? copywriterData.map((item, index) => {
             return (
               <PortfolioCard
                 source={item.source.src}
@@ -83,10 +83,11 @@ const ProjectSection = () => {
                 cardBody={item.cardBody}
                 tags={item.tags}
                 colour="cinnabar"
+                key={index}
               />
             );
           })
-        : developerData.map((item) => {
+        : developerData.map((item, index) => {
             return (
               <PortfolioCard
                 source={item.source.src}
@@ -96,6 +97,7 @@ const ProjectSection = () => {
                 cardBody={item.cardBody}
                 tags={item.tags}
                 colour="etonBlue"
+                key={index}
               />
             );
           })}

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 //images
-import heroImage from "@/public/images/heroImage.jpg";
+import heroImage from "/public/images/heroImage.jpg";
 
 const HeroSection = () => {
   return (
