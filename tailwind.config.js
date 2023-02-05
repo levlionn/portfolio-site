@@ -5,6 +5,12 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    {
+      pattern:
+        /(bg|text|border)-(etonBlue|goldCrayola|cinnabar|independence|pinkLace)/,
+    },
+  ],
   theme: {
     screens: {
       tablet: "640px",
