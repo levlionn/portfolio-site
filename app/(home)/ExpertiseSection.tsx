@@ -6,55 +6,34 @@ import { ModeContext } from "@/ModeContext";
 
 // Images
 import pencilsvg from "/public/svg/pencil.svg";
-import pointerClicksvg from "/public/svg/pointer-click.svg";
-import megaphonesvg from "/public/svg/megaphone.svg";
 import computersvg from "/public/svg/computer.svg";
 import ToggleActiveMode from "@/components/ToggleActiveMode";
 
 const copywriterExpertise = [
   {
     icon: pencilsvg.src,
-    expertiseHeader: "Copywriter | Ghostwriter",
+    tag: "copywriting",
+    expertiseHeader: "I write clean, concise, converting copy.",
     expertiseBody:
-      "Craft engaging & persuasive words to drive results. Specializing in web, email, ad copy, video scripts & more.",
-  },
-  {
-    icon: pointerClicksvg.src,
-    expertiseHeader: "SEO optimization",
-    expertiseBody:
-      "Get your brand noticed. High ranking articles, website audits, sitemaps, metadescriptions & more.",
-  },
-  {
-    icon: megaphonesvg.src,
-    expertiseHeader: "Social Media | Paid Ads",
-    expertiseBody:
-      "Create engaging content that makes people stop & click. Add a budget to boost performance and reach a larger audience.",
+      "Craft engaging & persuasive stories that drive results. Specialized in web, email, ad copy, video scripts & more.",
   },
 ];
 
 const developerExpertise = [
   {
     icon: computersvg.src,
-    expertiseHeader: "Front-end Developer",
+    tag: "front end",
+    expertiseHeader: "I develop & deploy gorgeous websites",
     expertiseBody:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, saepe architecto perferendis.",
-  },
-  {
-    icon: computersvg.src,
-    expertiseHeader: "System Building",
-    expertiseBody:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, saepe architecto perferendis.",
-  },
-  {
-    icon: computersvg.src,
-    expertiseHeader: "Backend",
-    expertiseBody:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, saepe architecto perferendis.",
+      "Responsive, secure & reliable websites that showcase your brand, and capture the hearts of users.",
   },
 ];
 
 const ExpertiseSection = () => {
   const { mode } = useContext(ModeContext);
+
+  const shownCardData =
+    mode === "copywriter" ? copywriterExpertise : developerExpertise;
 
   return (
     <div className="">
@@ -71,25 +50,16 @@ const ExpertiseSection = () => {
         <ToggleActiveMode />
       </div>
 
-      {mode === "copywriter"
-        ? copywriterExpertise.map((item) => {
-            return (
-              <ExpertiseCard
-                icon={item.icon}
-                expertiseHeader={item.expertiseHeader}
-                expertiseBody={item.expertiseBody}
-              />
-            );
-          })
-        : developerExpertise.map((item) => {
-            return (
-              <ExpertiseCard
-                icon={item.icon}
-                expertiseHeader={item.expertiseHeader}
-                expertiseBody={item.expertiseBody}
-              />
-            );
-          })}
+      {shownCardData.map((item) => {
+        return (
+          <ExpertiseCard
+            icon={item.icon}
+            tag={item.tag}
+            expertiseHeader={item.expertiseHeader}
+            expertiseBody={item.expertiseBody}
+          />
+        );
+      })}
     </div>
   );
 };
