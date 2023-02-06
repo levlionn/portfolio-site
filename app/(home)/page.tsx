@@ -3,8 +3,6 @@ import MeMeSection from "./MeMeSection";
 import ExplainTheWebsite from "./ExplainTheWebsite";
 import ResourceSection from "./ResourceSection";
 import ExpertiseSection from "./ExpertiseSection";
-import ProjectSection from "./projectSection";
-import TestimonialsSection from "./TestimonialsSection";
 
 export default function Home() {
   return (
@@ -33,9 +31,6 @@ export default function Home() {
         <section className="my-28">
           <ExpertiseSection />
         </section>
-
-        {/* <ProjectSection />
-        <TestimonialsSection /> */}
       </div>
     </main>
   );

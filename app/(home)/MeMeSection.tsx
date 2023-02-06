@@ -7,7 +7,6 @@ import signature from "@/public/images/Lev-Signature.png";
 const MeMeSection = () => {
   return (
     <div className="flex flex-col space-y-5">
-      <div className=""></div>
       <h2 className="text-3xl font-extrabold mb-2">Hi! It's Lev 👋 </h2>
       <p>
         Welcome to my slice of the internet – I hope you find something useful

@@ -37,26 +37,48 @@ const copywriterData = [
   //   href: "#",
   // },
 ];
+const copywriterPrinciples = [
+  {
+    principleHeader: "Have empathy towards the reader",
+    principleBody:
+      "I place myself in the shoes of the audience member; to understand their needs, wants and motivations to create copy that resonates and inspires action.",
+  },
+  {
+    principleHeader: "Write clear, clean & concise copy",
+    principleBody:
+      "My copy is easy to understand, illustrates a well-defined message and guides readers to where they need to go.",
+  },
+  {
+    principleHeader: "Always provide value",
+    principleBody:
+      "Whether educational, entertainment or persuasive, the end result must always be the same – communivate the benefits, and incentivize actions.",
+  },
+];
 
 export default function CopywriterPortfolio() {
   return (
     <main className="container mx-auto">
       <div className="flex flex-col m-4">
-        <h1 className="text-4xl font-black text-center mt-10 text-cinnabar">
-          Great copywriting tells a story.
+        <h1 className="text-4xl font-black text-center my-7 text-cinnabar">
+          Designing digital experiences, one pixel at a time.
         </h1>
 
-        <div className="my-32">
-          <h2 className="text-3xl font-semibold text-center justify-center align-center mb-4">
-            Principles I live by.
-          </h2>
-          <p className="text-center text-md px-4 text-gray-500">
-            Empathy to be in the shoes of the reader, clarity to write a
-            well-defined message, and a unique value proposition to persuade the
-            reader to take action.
-          </p>
+        <div className="mt-4">
+          {copywriterPrinciples.map((principle, index) => {
+            return (
+              <div key={index} className="mb-4">
+                <h3 className="text-xl text-semibold mb-4">
+                  {principle.principleHeader}
+                </h3>
+                <p className="text-gray-500 text-medium">
+                  {principle.principleBody}
+                </p>
+              </div>
+            );
+          })}
         </div>
-        <h2 className="text-3xl font-semibold mb-4">Copywriting Projects</h2>
+        <hr />
+        <h2 className="text-3xl font-semibold my-4">Copywriting Projects</h2>
 
         {copywriterData.map((item) => {
           return (

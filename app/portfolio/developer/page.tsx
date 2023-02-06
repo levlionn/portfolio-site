@@ -1,7 +1,5 @@
 import ContactMeButton from "@/components/ContactMeButton";
-import CoolButton from "@/components/CoolButton";
 import PortfolioCard from "@/components/PortfolioCard";
-
 import firstPic from "@/public/005.jpg";
 
 const developerData = [
@@ -39,25 +37,48 @@ const developerData = [
   },
 ];
 
+const developerPrinciples = [
+  {
+    principleHeader: "User-centric design",
+    principleBody:
+      "I prioritize the needs and goals of the user to create an intuivie and enjoyable user experience.",
+  },
+  {
+    principleHeader: "Mobile-first development",
+    principleBody:
+      "Responsive design and accessibility create better quality of life for the end-user – the way it should be; seamless.",
+  },
+  {
+    principleHeader: "Build for performance",
+    principleBody:
+      "I focus on optimizing load times and overall performance because no one likes to wait.",
+  },
+];
+
 export default function Developerfolio() {
   return (
     <main className="container mx-auto">
       <div className="flex flex-col m-4">
-        <h1 className="text-4xl font-black text-center mt-10 text-etonBlue">
+        <h1 className="text-4xl font-black text-center my-7 text-etonBlue">
           Designing digital experiences, one pixel at a time.
         </h1>
 
-        <div className="my-32">
-          <h2 className="text-3xl font-semibold text-center justify-center align-center mb-4">
-            Principles I live by.
-          </h2>
-          <p className="text-center text-md px-4 text-gray-500">
-            User-centric design to meet the needs of the user, accessibility so
-            everyone can participate, and performance optimized to avoid
-            frustrations.
-          </p>
+        <div className="mt-4">
+          {developerPrinciples.map((principle, index) => {
+            return (
+              <div key={index} className="mb-4">
+                <h3 className="text-xl text-semibold mb-4">
+                  {principle.principleHeader}
+                </h3>
+                <p className="text-gray-500 text-medium">
+                  {principle.principleBody}
+                </p>
+              </div>
+            );
+          })}
         </div>
-        <h2 className="text-3xl font-semibold mb-4">Developer Projects</h2>
+        <hr />
+        <h2 className="text-3xl font-semibold my-4">Developer Projects</h2>
 
         {developerData.map((item) => {
           return (

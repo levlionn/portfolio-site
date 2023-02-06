@@ -1,10 +1,12 @@
 "use client";
 
-import ToggleActiveMode from "./ToggleActiveMode";
-import FlyOutMenu from "./FlyOutMenu";
-
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import CoolButton from "./CoolButton";
+
+const FlyOutMenu = dynamic(() => import("../components/FlyOutMenu"), {
+  ssr: false,
+});
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -15,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between py-6 items-center sticky w-full top-0 z-50 bg-white px-4">
+    <header className="sticky top-0 z-50 p-5 flex items-center justify-between w-full bg-white">
       <div className="flex items-center" onClick={toggleMenu}>
         <button>
           <div className="space-y-2">
@@ -33,8 +35,8 @@ const Navbar = () => {
         textSize="xs"
       />
       {/* <ToggleActiveMode /> */}
-      {menuToggle && <FlyOutMenu closeMenu={toggleMenu} />}
-    </div>
+      {menuToggle && <FlyOutMenu isOpen={menuToggle} closeMenu={toggleMenu} />}
+    </header>
   );
 };
 
