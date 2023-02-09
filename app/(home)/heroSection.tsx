@@ -8,7 +8,8 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col my-10 items-center">
       <h1 className="text-5xl font-black mb-10 text-center">
-        Innovate with code, captivate with copy
+        Innovate with <span className="text-etonBlue">code</span>, captivate
+        with <span className="text-cinnabar">copy</span>
       </h1>
 
       {/* Image will go here */}

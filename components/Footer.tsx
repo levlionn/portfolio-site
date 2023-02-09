@@ -82,7 +82,7 @@ const Footer = () => {
         <span className="text-sm text-gray-500 sm:text-center">
           © 2023 Lev Markelov. Made with love.
         </span>
-        <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+        {/* <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a href="#" className="text-gray-500 hover:text-gray-900 ">
             <svg
               className="w-5 h-5"
@@ -109,7 +109,7 @@ const Footer = () => {
             </svg>
             <span className="sr-only">GitHub account</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

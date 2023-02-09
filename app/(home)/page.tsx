@@ -9,7 +9,7 @@ export default function Home() {
     <main className="container mx-auto">
       <div className="mx-4">
         {/* Hero Section */}
-        <section>
+        <section className="">
           <HeroSection />
         </section>
 
@@ -18,18 +18,18 @@ export default function Home() {
           <MeMeSection />
         </section>
 
-        <section className="my-28">
+        <section className="mt-12">
           <ExplainTheWebsite />
+        </section>
+
+        {/* Expertise Section */}
+        <section className="my-16">
+          <ExpertiseSection />
         </section>
 
         {/* Resources Section */}
         <section className="my-28">
           <ResourceSection />
-        </section>
-
-        {/* Expertise Section */}
-        <section className="my-28">
-          <ExpertiseSection />
         </section>
       </div>
     </main>

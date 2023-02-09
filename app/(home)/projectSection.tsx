@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import PortfolioCard from "@/components/PortfolioCard";
 // Images
-import firstPic from "../../public/005.jpg";
+import firstPic from "/public/images/005.jpg";
 import { ModeContext } from "@/ModeContext";
 
 const copywriterData = [

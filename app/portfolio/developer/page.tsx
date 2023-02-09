@@ -1,6 +1,6 @@
 import ContactMeButton from "@/components/ContactMeButton";
 import PortfolioCard from "@/components/PortfolioCard";
-import firstPic from "@/public/005.jpg";
+import firstPic from "/public/images/005.jpg";
 
 const developerData = [
   // {
@@ -59,9 +59,10 @@ export default function Developerfolio() {
   return (
     <main className="container mx-auto">
       <div className="flex flex-col m-4">
-        <h1 className="text-4xl font-black text-center my-7 text-etonBlue">
+        <h1 className="text-4xl font-black text-center my-9 text-etonBlue">
           Designing digital experiences, one pixel at a time.
         </h1>
+        <h2 className="text-2xl font-black">Principles I live by</h2>
 
         <div className="mt-4">
           {developerPrinciples.map((principle, index) => {

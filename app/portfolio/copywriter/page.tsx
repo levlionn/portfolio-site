@@ -2,7 +2,7 @@ import ContactMeButton from "@/components/ContactMeButton";
 import CoolButton from "@/components/CoolButton";
 import PortfolioCard from "@/components/PortfolioCard";
 
-import firstPic from "@/public/005.jpg";
+import firstPic from "/public/images/005.jpg";
 
 const copywriterData = [
   // {
@@ -59,9 +59,10 @@ export default function CopywriterPortfolio() {
   return (
     <main className="container mx-auto">
       <div className="flex flex-col m-4">
-        <h1 className="text-4xl font-black text-center my-7 text-cinnabar">
-          Designing digital experiences, one pixel at a time.
+        <h1 className="text-4xl font-black text-center my-9 text-cinnabar">
+          Great copywriting tells a story.
         </h1>
+        <h2 className="text-2xl font-black">Principles I live by</h2>
 
         <div className="mt-4">
           {copywriterPrinciples.map((principle, index) => {

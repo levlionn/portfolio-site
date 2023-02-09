@@ -20,7 +20,7 @@ const ResourceCard = ({
   resourceImage,
 }: Props) => {
   return (
-    <div className="relative max-w-sm my-6 bg-white border border-gray-200 overflow-hidden rounded-lg shadow-lg cursor-pointer">
+    <div className="relative max-w-sm my-4 bg-white border border-gray-200 overflow-hidden rounded-lg shadow-lg cursor-pointer">
       <Image src={resourceImage} alt="heroImage" className="fill" />
       <div className="absolute bottom-0 left-0 text-white w-full">
         <div className="p-4 space-y-3">

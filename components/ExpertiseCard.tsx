@@ -21,9 +21,9 @@ const ExpertiseCard = ({
   href,
 }: Props) => {
   return (
-    <div className="relative my-3 max-w-sm h-2/3 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+    <div className="relative my-3 h-2/3 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
       <div className="p-7 ">
-        <div className="flex flex-row items-center my-4">
+        <div className="max-w-xs flex flex-row items-center my-4">
           <Image
             src={icon}
             alt="icon"
@@ -35,12 +35,17 @@ const ExpertiseCard = ({
         </div>
         <h5 className="mb-6 text-xl font-black">{expertiseHeader}</h5>
         <p className="text-independence">{expertiseBody}</p>
-        <div className="text-sm text-black flex flex-row my-4">
-          <a href={href} className="mr-2 ">
-            See my work
-          </a>
-          <Image src={rightArrow} alt="icon" width={15} height={15} />
-        </div>
+
+        <a href={href} className="text-sm w-32 text-black flex flex-row my-4">
+          See my work
+          <Image
+            src={rightArrow}
+            alt="icon"
+            height={15}
+            width={15}
+            className="ml-2"
+          />
+        </a>
       </div>
 
       <Image src={mockPlaceholder2} alt="hi" className="fill" />

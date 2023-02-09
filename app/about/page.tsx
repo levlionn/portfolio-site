@@ -1,5 +1,7 @@
+import ContactMeButton from "@/components/ContactMeButton";
 import AboutHeroSection from "./aboutHeroSection";
-import WhatImDoingNow from "./nowSection";
+import WhatImDoingNowSection from "./nowSection";
+import TimelineSection from "./timelineSection";
 
 export default function About() {
   return (
@@ -9,7 +11,13 @@ export default function About() {
           <AboutHeroSection />
         </section>
         <section>
-          <WhatImDoingNow />
+          <WhatImDoingNowSection />
+        </section>
+        <section>
+          <TimelineSection />
+        </section>
+        <section>
+          <ContactMeButton colour={"cinnabar"} />
         </section>
       </div>
     </main>
