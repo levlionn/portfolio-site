@@ -41,7 +41,6 @@ const COPYWRITER_PROJECTS = [
   },
 ];
 
-//
 const copywriterPrinciples = [
   {
     principleHeader: "Have empathy towards the reader",
@@ -70,15 +69,13 @@ export default function CopywriterPortfolio() {
           </h1>
           <h2 className="text-2xl font-black">Principles I live by</h2>
 
-          {copywriterPrinciples.map((p, index) => {
-            return (
-              <PrincipleItem
-                principleHeader={p.principleHeader}
-                principleBody={p.principleBody}
-                key={index}
-              />
-            );
-          })}
+          {copywriterPrinciples.map((p, index) => (
+            <PrincipleItem
+              principleHeader={p.principleHeader}
+              principleBody={p.principleBody}
+              key={index}
+            />
+          ))}
           <hr />
         </section>
 
