@@ -11,7 +11,7 @@ const ExplainTheWebsite = () => {
       </div>
 
       <div className="text-center">
-        <p className="text-2xl font-semibold p-6  text-white">
+        <p className="text-2xl font-semibold p-6 laptop:px-44 laptop:text-3xl text-white">
           There is a lot to enjoy here 👀 So, let me be your guide! 🗺️ Grab your
           favourite drink, sit back, and let's explore 🧭
         </p>
@@ -21,9 +21,3 @@ const ExplainTheWebsite = () => {
 };
 
 export default ExplainTheWebsite;
-
-/**
- * bg border - full width
- * w-24 bottom-60 left-60 tablet:h-48 tablet:w-48 tablet:bottom-44 tablet:left-96 laptop:bottom-36
- *
- */

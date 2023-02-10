@@ -22,14 +22,14 @@ export default function Home() {
           <ExplainTheWebsite />
         </section>
 
-        {/* Expertise Section */}
-        <section className="my-16">
-          <ExpertiseSection />
-        </section>
-
-        {/* Resources Section */}
-        <section className="my-28">
-          <ResourceSection />
+        {/* Expertise & Resources Section */}
+        <section className="my-16 tablet:flex tablet:flex-row tablet:content-center mx-4">
+          <div className="tablet:basis-2/3 tablet:pr-6 mb-10">
+            <ExpertiseSection />
+          </div>
+          <div className="tablet:basis-1/3 ">
+            <ResourceSection />
+          </div>
         </section>
       </div>
     </main>

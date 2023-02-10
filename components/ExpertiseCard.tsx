@@ -11,17 +11,19 @@ interface Props {
   expertiseHeader: string;
   expertiseBody: string;
   href: string;
+  colour: string;
 }
 
 const ExpertiseCard = ({
   icon,
-  expertiseHeader,
   expertiseBody,
   tag,
+  colour,
   href,
+  expertiseHeader,
 }: Props) => {
   return (
-    <div className="relative my-3 h-2/3 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+    <div className="relative my-3 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
       <div className="p-7 ">
         <div className="max-w-xs flex flex-row items-center my-4">
           <Image
@@ -33,11 +35,19 @@ const ExpertiseCard = ({
           />
           <div className="uppercase text-xs text-gray-500">{tag}</div>
         </div>
-        <h5 className="mb-6 text-xl font-black">{expertiseHeader}</h5>
+        <h5 className="mb-6 text-xl font-black laptop:text-3xl">
+          <span className={`text-${colour}`}>{expertiseHeader}</span>
+          {/* <span className="text-etonBlue">
+            I write clean, concise, converting copy.
+          </span> */}
+        </h5>
         <p className="text-independence">{expertiseBody}</p>
 
-        <a href={href} className="text-sm w-32 text-black flex flex-row my-4">
-          See my work
+        <a
+          href={href}
+          className="text-sm w-32 text-black flex flex-row my-4 laptop:text-base laptop:w-40"
+        >
+          <span className={`text-${colour}`}>See my work</span>
           <Image
             src={rightArrow}
             alt="icon"
@@ -47,8 +57,9 @@ const ExpertiseCard = ({
           />
         </a>
       </div>
-
-      <Image src={mockPlaceholder2} alt="hi" className="fill" />
+      <div className="relative h-52 w-full">
+        <Image src={mockPlaceholder2} alt="hi" fill />
+      </div>
     </div>
   );
 };

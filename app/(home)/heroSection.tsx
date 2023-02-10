@@ -7,9 +7,9 @@ import heroImage from "public/images/heroImage.jpg";
 const HeroSection = () => {
   return (
     <div className="flex flex-col my-10 items-center">
-      <h1 className="text-5xl font-black mb-10 text-center">
-        Innovate with <span className="text-etonBlue">code</span>, captivate
-        with <span className="text-cinnabar">copy</span>
+      <h1 className="text-5xl font-black mb-10 tablet:text-center">
+        Captivate with <span className="text-cinnabar">copy</span> | Innovate
+        with <span className="text-etonBlue">code</span>
       </h1>
 
       {/* Image will go here */}

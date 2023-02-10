@@ -61,8 +61,12 @@ const ToggleActiveMode = () => {
           </div>
           {/* Current mode UI */}
         </button>
-        <div className="flex flex-row items-center">
-          <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+        <div className="flex flex-row items-center pt-1">
+          <span
+            className={`w-2 h-2 rounded-full mr-2 ${
+              mode === "copywriter" ? "bg-cinnabar" : "bg-etonBlue"
+            }`}
+          ></span>
           <span className="text-xs">{mode}</span>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from "react";
-import CoolButton from "@/components/CoolButton";
+
 import ExpertiseCard from "@/components/ExpertiseCard";
 import { ModeContext } from "@/ModeContext";
 
@@ -13,10 +13,11 @@ const copywriterExpertise = [
   {
     icon: pencilsvg.src,
     tag: "copywriting",
-    expertiseHeader: "I write clean, concise, converting copy.",
+    expertiseHeader: "I write clean, concise & converting copy.",
     expertiseBody:
       "Craft engaging & persuasive stories that drive results. Specialized in web, email, ad copy, video scripts & more.",
     href: "/portfolio/copywriter",
+    colour: "cinnabar",
   },
 ];
 
@@ -24,10 +25,11 @@ const developerExpertise = [
   {
     icon: computersvg.src,
     tag: "front end",
-    expertiseHeader: "I develop & deploy gorgeous websites",
+    expertiseHeader: "I develop & deploy gorgeous websites.",
     expertiseBody:
       "Responsive, secure & reliable websites that showcase your brand, and capture the hearts of users.",
     href: "/portfolio/developer",
+    colour: "etonBlue",
   },
 ];
 
@@ -38,11 +40,10 @@ const ExpertiseSection = () => {
     mode === "copywriter" ? copywriterExpertise : developerExpertise;
 
   return (
-    <div className="">
+    <div className="tablet:w-96 laptop:w-full mx-auto">
       <h2 className="text-4xl font-extrabold">What I do</h2>
-
-      <p className="py-4 text-independence">
-        50% developer, 50% copywriter. 100% fun.
+      <p className="py-3 text-independence">
+        50% copywriter, 50% developer. 100% fun.
       </p>
 
       <div className="flex flex-row justify-between items-center">
@@ -60,6 +61,7 @@ const ExpertiseSection = () => {
             expertiseHeader={item.expertiseHeader}
             expertiseBody={item.expertiseBody}
             href={item.href}
+            colour={item.colour}
             key={index}
           />
         );
