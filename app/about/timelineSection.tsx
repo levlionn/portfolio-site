@@ -12,6 +12,36 @@ const TIMELINE_DATA = [
     date: "March 2022",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
   },
+  {
+    header: "Started school",
+    date: "Started January 23,2022",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+  },
+  {
+    header: "Got a job",
+    date: "March 2022",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+  },
+  {
+    header: "Started school",
+    date: "Started January 23,2022",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+  },
+  {
+    header: "Got a job",
+    date: "March 2022",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+  },
+  {
+    header: "Started school",
+    date: "Started January 23,2022",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+  },
+  {
+    header: "Got a job",
+    date: "March 2022",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+  },
 ];
 
 interface Props {

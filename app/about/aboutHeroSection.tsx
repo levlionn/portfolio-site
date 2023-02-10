@@ -5,7 +5,7 @@ import heroImage from "public/images/heroImage.jpg";
 
 const AboutHeroSection = () => {
   return (
-    <div className="flex flex-col my-10 first:items-center">
+    <div className="flex flex-col my-10 laptop:pr-8 first:items-center">
       <div className="flex">
         <Image
           src={heroImage}
@@ -17,7 +17,7 @@ const AboutHeroSection = () => {
         />
       </div>
       <div>
-        <h1 className="text-3xl font-black my-6">About me in 10 seconds</h1>
+        <h1 className="text-5xl font-black my-6">About me in 10 seconds</h1>
         <p className="text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
           dignissimos rem similique, enim reiciendis autem veniam, quod labore
