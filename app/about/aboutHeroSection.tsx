@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
-import heroImage from "public/images/heroImage.jpg";
+// import heroImage from "public/images/heroImage.jpg";
 
 const AboutHeroSection = () => {
   return (
     <div className="flex flex-col my-10 laptop:pr-8 first:items-center">
       <div className="flex">
         <Image
-          src={heroImage}
+          src="/images/heroImage.jpg"
           height={250}
           width={250}
           alt="heroImage"
