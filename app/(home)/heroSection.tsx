@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 //images
-// import heroImage from "public/images/heroImage.jpg";
+import heroImage from "public/images/heroImage-compressed.jpg";
 
 const HeroSection = () => {
   return (
@@ -15,7 +15,7 @@ const HeroSection = () => {
       {/* Image will go here */}
       <div className="my-4">
         <Image
-          src="/images/heroImage-compressed.jpg"
+          src={heroImage}
           height={250}
           width={250}
           alt="heroImage"
