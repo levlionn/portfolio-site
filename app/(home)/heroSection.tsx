@@ -15,7 +15,7 @@ const HeroSection = () => {
       {/* Image will go here */}
       <div className="my-4">
         <Image
-          src="/images/heroImage.jpg"
+          src="/images/heroImage-compressed.jpg"
           height={250}
           width={250}
           alt="heroImage"

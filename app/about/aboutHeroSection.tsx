@@ -8,7 +8,7 @@ const AboutHeroSection = () => {
     <div className="flex flex-col my-10 laptop:pr-8 first:items-center">
       <div className="flex">
         <Image
-          src="/images/heroImage.jpg"
+          src="/images/heroImage-compressed.jpg"
           height={250}
           width={250}
           alt="heroImage"
