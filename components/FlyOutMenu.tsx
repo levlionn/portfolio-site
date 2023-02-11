@@ -9,9 +9,14 @@ import flyoutCloseIcon from "/public/svg/flyout-close.svg";
 //images
 import pencilsvg from "/public/svg/pencil.svg";
 import computersvg from "/public/svg/computer.svg";
+
 import chevronDown from "/public/svg/chevron-down.svg";
 
-const FlyOutMenu = ({ closeMenu }: any) => {
+interface Props {
+  closeMenu: () => void;
+  isOpen: boolean;
+}
+const FlyOutMenu = ({ closeMenu }: Props) => {
   const [toggleDrop, setToggleDrop] = useState(false);
   console.log(toggleDrop);
   return (
