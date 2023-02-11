@@ -25,7 +25,11 @@ export default async function handler(
     return;
   }
 
-  // Ensure all required fields are present at runtime. (basically, we are making sure that each field inside the req.body is a string, if not, return false.)
+  /**
+   * Ensure all required fields are present at runtime.
+   * (basically, we are making sure that
+   * each field inside the req.body is a string, if not, return false.)
+   */
   const requiredFields: (keyof VerifiedFormData)[] = [
     "name",
     "email",
