@@ -1,6 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import { FormData, HCaptchaObject } from "@/app/contact/ContactForm";
+import { verify } from "hcaptcha";
+import { HCAPTCHA_SECRET } from "@/constants";
 
 const MAX_FIELD_LENGTH = 10000;
 const TO_ADDRESS = "lev@levm.me";
@@ -33,14 +35,15 @@ export default async function handler(
   ];
 
   const invalid = requiredFields.some(
-    (field) => typeof req.body[field] === "string"
+    (field) => typeof req.body[field] !== "string"
   );
 
   if (invalid) {
-    return res.status(400).json({
+    res.status(400).json({
       success: false,
       errMsg: "Required fields are missing",
     });
+    return;
   }
 
   //truncate form input fields
@@ -51,6 +54,25 @@ export default async function handler(
   const truncatedMessage = message.substring(0, MAX_FIELD_LENGTH);
   const truncatedToken = token.substring(0, MAX_FIELD_LENGTH);
   const truncatedEkey = ekey.substring(0, MAX_FIELD_LENGTH);
+
+  console.log("right before trycat for human verifaction.");
+  try {
+    const hCaptchaData = await verify(HCAPTCHA_SECRET ?? "", truncatedToken);
+    //this is a bait&switch.
+    //if a person is trying to spam my site, and they don't pass human verification, it will 'appear' like the did, but lol, they didn't.
+    if (!hCaptchaData.success) {
+      console.log("Somebody was a bot but successful.");
+      res.status(200).json({ success: true });
+      return;
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({
+      success: false,
+      errMsg: "Something went wrong.",
+    });
+    return;
+  }
 
   try {
     await send({
