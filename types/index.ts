@@ -9,3 +9,28 @@ export type ButtonColours =
   | "cinnabar"
   | "independence"
   | "pinkLace";
+
+/**
+ * Typescript wizardry allowing us to produce a tuple that must contain a string
+ * for every key in an interface. Accidentally omitting some keys or including
+ * extras will cause a type error.
+ *
+ * Usage:
+ * ```
+ * interface Person {
+ *     name: string;
+ *     age: number;
+ * }
+ *
+ * const fields = arrayOfAll<keyof Person>()("name", "age");
+ * ```
+ *
+ * Source: https://stackoverflow.com/a/73457231
+ */
+export const arrayOfAll =
+  <T>() =>
+  <U extends T[]>(
+    ...array: U & ([T] extends [U[number]] ? unknown : Invalid<T>[])
+  ) =>
+    array;
+type Invalid<T> = ["Needs to be all of", T];

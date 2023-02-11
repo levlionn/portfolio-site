@@ -1,5 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
+import { arrayOfAll } from "@/types";
 import { FormData, HCaptchaObject } from "@/app/contact/ContactForm";
 import { verify } from "hcaptcha";
 import { HCAPTCHA_SECRET } from "@/constants";
@@ -30,13 +31,13 @@ export default async function handler(
    * (basically, we are making sure that
    * each field inside the req.body is a string, if not, return false.)
    */
-  const requiredFields: (keyof VerifiedFormData)[] = [
+  const requiredFields = arrayOfAll<keyof VerifiedFormData>()(
     "name",
     "email",
     "message",
     "token",
-    "ekey",
-  ];
+    "ekey"
+  );
 
   const invalid = requiredFields.some(
     (field) => typeof req.body[field] !== "string"
