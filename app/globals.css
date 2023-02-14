@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .contact-input {
+    @apply outline-none bg-slate-400/10 rounded-sm border-b
+    border-independence p-2 text-gray-500 placeholder-gray-500 transition-all
+    focus:border-etonBlue/40 focus:text-etonBlue hover:border-etonBlue/40;
+  }
+}

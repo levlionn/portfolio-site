@@ -91,6 +91,12 @@ export default async function handler(
       <p>[Message]: ${truncatedMessage}</p>
     `,
     });
+    console.log({
+      truncatedName,
+      truncatedEmail,
+      truncatedMessage,
+      TO_ADDRESS,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json({ success: false, errMsg: "Unable to send email." });

@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { HCAPTCHA_SECRET, HCAPTCHA_SITEKEY } from "@/constants";
+import { HCAPTCHA_SITEKEY } from "@/constants";
 
 export interface FormData {
   name: string;
@@ -37,13 +37,17 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="border border-black">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col mx-auto space-y-2"
+    >
       <input
         {...register("name")}
         type="text"
         name="name"
         placeholder="Name"
         maxLength={49}
+        className="contact-input"
       />
       <input
         {...register("email")}
@@ -51,12 +55,15 @@ const ContactForm = () => {
         name="email"
         placeholder="Email"
         maxLength={69}
+        className="contact-input"
       />
+
       <textarea
         {...register("message")}
         name="message"
         placeholder="message"
         maxLength={420}
+        className="contact-input"
       ></textarea>
       <HCaptcha
         sitekey={HCAPTCHA_SITEKEY ?? ""}
