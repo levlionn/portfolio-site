@@ -102,5 +102,6 @@ export default async function handler(
     res.status(500).json({ success: false, errMsg: "Unable to send email." });
     return;
   }
+
   res.status(200).json({ success: true });
 }

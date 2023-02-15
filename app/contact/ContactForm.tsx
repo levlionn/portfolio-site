@@ -39,7 +39,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col mx-auto space-y-2"
+      className="flex flex-col mx-auto w-fit space-y-2"
     >
       <input
         {...register("name")}
@@ -65,13 +65,20 @@ const ContactForm = () => {
         maxLength={420}
         className="contact-input"
       ></textarea>
+
       <HCaptcha
         sitekey={HCAPTCHA_SITEKEY ?? ""}
         onVerify={(token, ekey) => {
           setHCaptchaObject({ token, ekey });
         }}
       />
-      <button type="submit">Submit</button>
+
+      <button
+        type="submit"
+        className="bg-etonBlue py-4 px-6 rounded-md text-white font-bold"
+      >
+        Submit
+      </button>
     </form>
   );
 };
