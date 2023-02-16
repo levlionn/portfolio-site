@@ -6,8 +6,8 @@ const year = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer className="">
-      <div className="text-sm text-gray-500 sm:text-center">
+    <footer className=" bg-independence text-white p-5 pt-10">
+      <div className="text-sm text-white/50">
         © {year} Lev Markelov. Made with love.
       </div>
     </footer>
