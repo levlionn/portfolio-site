@@ -1,24 +1,12 @@
-"use client";
-
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useState } from "react";
 import { SocialIcon } from "react-social-icons";
-
-import CoolButton from "./CoolButton";
 
 const FlyOutMenu = dynamic(() => import("../components/FlyOutMenu"), {
   ssr: false,
 });
 
 const Navbar = () => {
-  const [menuToggle, setMenuToggle] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuToggle(!menuToggle);
-    console.log(menuToggle);
-  };
-  ``;
   return (
     <nav className="sticky top-0 z-50 flex items-start justify-between bg-goldCrayola shadow-lg text-white p-5 max-w-6xl rounded-b-lg mx-auto laptop:items-center">
       <div className="flex flex-row items-center space-x-1 cursor-pointer outline-none">
@@ -76,33 +64,13 @@ const Navbar = () => {
               className="cursor-pointer"
               style={{ height: 25, width: 25 }}
             />
+
             <span className="hidden tablet:inline-flex text-xs uppercase">
               Lets Connect
             </span>
           </Link>
         </div>
       </div>
-
-      {/* <div className="flex items-center">
-        <button>
-          <div className="space-y-2" onClick={toggleMenu}>
-            <span className="block w-8 h-0.5 bg-gray-600"></span>
-            <span className="block w-5 h-0.5 bg-gray-600"></span>
-          </div>
-        </button>
-        <h3 className="ml-6 font-bold">
-          <Link href="/">levm</Link>
-        </h3>
-      </div>
-
-      <CoolButton
-        href="/contact"
-        btnLabel="Subscribe"
-        colour="independence"
-        textSize="xs"
-      />
-      {/* <ToggleActiveMode /> */}
-      {/* {menuToggle && <FlyOutMenu isOpen={menuToggle} closeMenu={toggleMenu} />} */}
     </nav>
   );
 };
