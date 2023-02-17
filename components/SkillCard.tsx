@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import ToggleActiveMode from "./ToggleActiveMode";
 
-import mockPlaceholder from "/public/images/phone-mock.png";
+//images
 import mockPlaceholder2 from "/public/images/mock2.png";
 import rightArrow from "/public/svg/right-arrow-long.svg";
+import Link from "next/link";
 
 interface Props {
   icon: string;
@@ -14,7 +17,7 @@ interface Props {
   colour: string;
 }
 
-const ExpertiseCard = ({
+const SkillCard = ({
   icon,
   expertiseBody,
   tag,
@@ -23,9 +26,10 @@ const ExpertiseCard = ({
   expertiseHeader,
 }: Props) => {
   return (
-    <div className="relative my-3 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-      <div className="p-7 ">
-        <div className="max-w-xs flex flex-row items-center my-4">
+    <div className="">
+      <ToggleActiveMode />
+      <div className="relative my-3 p-7 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+        <div className="flex flex-row items-center mb-4">
           <Image
             src={icon}
             alt="icon"
@@ -35,15 +39,13 @@ const ExpertiseCard = ({
           />
           <div className="uppercase text-xs text-gray-500">{tag}</div>
         </div>
+
         <h5 className="mb-6 text-xl font-black laptop:text-3xl">
           <span className={`text-${colour}`}>{expertiseHeader}</span>
-          {/* <span className="text-etonBlue">
-            I write clean, concise, converting copy.
-          </span> */}
         </h5>
         <p className="text-independence">{expertiseBody}</p>
 
-        <a
+        <Link
           href={href}
           className="text-sm w-32 text-black flex flex-row my-4 laptop:text-base laptop:w-40"
         >
@@ -55,13 +57,14 @@ const ExpertiseCard = ({
             width={15}
             className="ml-2"
           />
-        </a>
-      </div>
-      <div className="relative h-52 w-full">
-        <Image src={mockPlaceholder2} alt="hi" fill />
+        </Link>
+
+        <div className="relative h-52 w-full">
+          <Image src={mockPlaceholder2} alt="hi" fill />
+        </div>
       </div>
     </div>
   );
 };
 
-export default ExpertiseCard;
+export default SkillCard;

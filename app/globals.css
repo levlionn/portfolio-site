@@ -8,4 +8,23 @@
     border-independence p-2 text-gray-500 placeholder-gray-500 transition-all
     focus:border-etonBlue/40 focus:text-etonBlue hover:border-etonBlue/40 tablet:w-96;
   }
+  .section-h1 {
+    @apply text-5xl font-black my-6;
+  }
+
+  .section-h2 {
+    @apply text-4xl font-extrabold my-1;
+  }
+
+  .section-y-spacing {
+    @apply my-8;
+  }
+
+  .section-x-outer-margin-width {
+    @apply w-10/12  mx-auto;
+  }
+
+  .section-x-inner-margin-width {
+    @apply w-9/12 mx-auto;
+  }
 }

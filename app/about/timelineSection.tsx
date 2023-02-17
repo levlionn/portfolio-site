@@ -3,44 +3,39 @@ import React from "react";
 //Data for timeline
 const TIMELINE_DATA = [
   {
-    header: "Started school",
-    date: "Started January 23,2022",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+    header: "Finished Highschool",
+    date: "2014",
+    body: "Went to A.Y Jackson, where my focus was on music, maths & sport.",
   },
   {
-    header: "Got a job",
-    date: "March 2022",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+    header: "Pursued Acting",
+    date: "2015",
+    body: "Worked as a background extra, stunt performer, secondary-director, gaffer, camera operator, and commercial actor. See me on Netflix.",
   },
   {
-    header: "Started school",
-    date: "Started January 23,2022",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+    header: "Became a Bartender",
+    date: "2016",
+    body: "Became a part-time psychologist for the local bar patrons. Worked at dive bars, private events & fancy restaurants. Care for a Negroni?",
   },
   {
-    header: "Got a job",
-    date: "March 2022",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+    header: "Started My Degree",
+    date: "2019",
+    body: "I have a passion for creative pursuits & problem-solving. Getting in software development felt like the perfect mix of the two. ",
   },
   {
-    header: "Started school",
-    date: "Started January 23,2022",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+    header: "Started a Marketing Agency",
+    date: "2019",
+    body: "Covid hit and everything went only. I saw a need for digital marketing services. Grew a team of 7 & served many great clients. ",
   },
   {
-    header: "Got a job",
-    date: "March 2022",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+    header: "Became a freelancer",
+    date: "2022",
+    body: "Combining my passion for coding & writing – I now offer services across both disciplines for brands that need help with their online presence. ",
   },
   {
-    header: "Started school",
-    date: "Started January 23,2022",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
-  },
-  {
-    header: "Got a job",
-    date: "March 2022",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum.",
+    header: "????",
+    date: "2023+",
+    body: "Looking for more opportunities to connect with amazing people, work on cool projects & expand my skillsets.",
   },
 ];
 
@@ -82,7 +77,9 @@ const TimelineItem = ({ header, date, body }: Props) => {
 const TimelineSection = () => {
   return (
     <div>
-      <h2 className="text-2xl font-black mb-4">Timeline</h2>
+      <h2 className="text-3xl font-black">Timeline</h2>
+      <p className="text-gray-500 mb-6">Summary of events.</p>
+
       <ol className="relative border-l border-gray-200">
         {TIMELINE_DATA.map((i, index) => {
           return (

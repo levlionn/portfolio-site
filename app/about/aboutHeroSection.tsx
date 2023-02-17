@@ -18,12 +18,16 @@ const AboutHeroSection = () => {
         />
       </div>
       <div>
-        <h1 className="text-5xl font-black my-6">About me in 10 seconds</h1>
+        <h1 className="section-h1">My story in 10 seconds</h1>
+        <p className="text-gray-500 mb-4">
+          My Mentality: Never stop working on yourself.
+        </p>
         <p className="text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-          dignissimos rem similique, enim reiciendis autem veniam, quod labore
-          deleniti temporibus atque et alias suscipit explicabo? Laboriosam quis
-          tempore voluptate odio.
+          I juggle a few hobbies: writing, coding, guitar, martial arts and
+          gaming. I love diving into new challenges without knowing the path
+          forward. In my 26 years of life, my biggest takaway is: comfort kills,
+          life's too short, and live with intention. Yet, give yourself space to
+          breathe and enjoy the moment – enjoy life.
         </p>
       </div>
     </div>

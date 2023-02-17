@@ -6,13 +6,16 @@ import heroImage from "public/images/heroImage-compressed.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col my-10 items-center">
-      <h1 className="text-5xl font-black mb-10 tablet:text-center">
-        Innovate with <span className="text-etonBlue">code </span> | Captivate
-        with <span className="text-cinnabar">copy</span>
-      </h1>
+    <div className="flex flex-col items-center">
+      <div className="mb-4">
+        <p className="text-3xl tablet:text-5xl font-black">
+          innovate with <span className="text-etonBlue">code</span>
+        </p>
+        <p className="text-3xl tablet:text-5xl font-black ml-6">
+          captivate with <span className="text-cinnabar">copy</span>
+        </p>
+      </div>
 
-      {/* Image will go here */}
       <div className="my-4">
         <Image
           src={heroImage}

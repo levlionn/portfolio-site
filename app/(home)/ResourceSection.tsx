@@ -1,39 +1,19 @@
 import ResourceCard from "@/components/ResourceCard";
 import React from "react";
 
-//images
-import resourcePlaceholder from "@/public/images/resource-placeholder.png";
-
-const resourceData = [
-  {
-    resourceImage: resourcePlaceholder,
-    badgeLbl: "Free Lifetime Updates",
-    header: "ADHD Notion Planner",
-    linkLbl: "Check it out",
-    href: "#",
-  },
-  {
-    resourceImage: resourcePlaceholder,
-    badgeLbl: "Lifetime Updates",
-    header: "ADHD Notion Planner",
-    linkLbl: "Check it out",
-    href: "#",
-  },
-];
+import { RESOURCE_DATA } from "../../ALL_DATA";
 
 const ResourceSection = () => {
   return (
     <div className="">
-      <div className="space-y-3 desktop:pl-11">
-        <h2 className="text-4xl font-extrabold tablet:text-xl laptop:text-2xl text-gray-800">
-          Resources
-        </h2>
-        <p className="text-gray-500 tablet:text-sm laptop:text-base">
+      <div className="max-w-sm laptop:max-w-xs mx-auto">
+        <h2 className="section-h2">Resources</h2>
+        <p className="py-3 text-independence">
           Templates, tools & guides – something for everyone.
         </p>
       </div>
       <div className="flex flex-col items-center">
-        {resourceData.map((resource, index) => {
+        {RESOURCE_DATA.map((resource, index) => {
           return (
             <ResourceCard
               resourceImage={resource.resourceImage}
