@@ -40,7 +40,7 @@ export default function Portfolio() {
   const shownCardData =
     mode === "copywriter" ? copywriterExpertise : developerExpertise;
   return (
-    <main className="mx-auto min-h-screen desktop:w-9/12 tablet:flex tablet:space-x-12 section-x-outer-margin-width">
+    <main className="flex justify-center mx-auto min-h-screen desktop:max-w-6xl tablet:space-x-12 section-x-outer-margin-width">
       <section className="section-y-spacing basis-2/3">
         <h1 className="section-h1">Skills</h1>
         <p className="text-gray-500 font-sm mb-4">
