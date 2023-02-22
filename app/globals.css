@@ -12,8 +12,12 @@
     @apply text-5xl font-black my-6;
   }
 
+  .caseStudy-h1 {
+    @apply text-3xl font-black mt-10 mb-5;
+  }
+
   .section-h2 {
-    @apply text-4xl font-extrabold my-1;
+    @apply text-4xl font-extrabold my-2;
   }
 
   .section-y-spacing {

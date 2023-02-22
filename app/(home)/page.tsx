@@ -13,7 +13,7 @@ export default function Home() {
       </section>
 
       {/* About Me Section */}
-      <section className="section-y-spacing section-x-outer-margin-width">
+      <section className="section-y-spacing section-x-outer-margin-width desktop:max-w-6xl">
         <MeMeSection />
       </section>
 
@@ -25,7 +25,7 @@ export default function Home() {
       <section
         className="section-y-spacing 
         section-x-outer-margin-width
-        tablet:flex tablet:space-x-12
+        tablet:flex tablet:space-x-12 desktop:max-w-6xl
 "
       >
         <div className="basis-2/3">

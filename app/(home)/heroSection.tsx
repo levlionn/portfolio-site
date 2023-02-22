@@ -16,7 +16,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div className="my-4">
+      <div className="my-8">
         <Image
           src={heroImage}
           height={250}
