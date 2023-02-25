@@ -52,7 +52,7 @@ const Navbar = () => {
           <Link href="/about" className="text-sm uppercase">
             About
           </Link>
-          <Link href="#" className="text-sm uppercase">
+          <Link href="/blog" className="text-sm uppercase">
             Blog
           </Link>
           <div className="flex flex-row items-center text-bold">

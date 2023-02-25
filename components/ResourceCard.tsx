@@ -2,7 +2,8 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 
 //images
-import rightArrow from "/public/svg/right-arrow-long.svg";
+import rightTopArrow from "/public/svg/right-top-arrow.svg";
+
 import Link from "next/link";
 
 interface Props {
@@ -31,11 +32,11 @@ const ResourceCard = ({
           <h3 className="w-full tracking-tight font-bold text-xl laptop:text-2xl tablet:text-xs text-black">
             {header}
           </h3>
-          <div className="text-sm tablet:text-xs laptop:text-base text-bold flex flex-row">
+          <div className="text-sm tablet:text-xs laptnop:text-base text-bold flex flex-row">
             <Link href={href} className="mr-2 ">
               {linkLbl}
             </Link>
-            <Image src={rightArrow} alt="icon" width={15} height={15} />
+            <Image src={rightTopArrow} alt="icon" width={15} height={15} />
           </div>
         </div>
       </div>

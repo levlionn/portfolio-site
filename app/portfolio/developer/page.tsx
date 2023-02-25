@@ -8,38 +8,16 @@ const DEVELOPER_PROJECTS = [
     source: firstPic,
     client: "Call Center Guys",
     altText: "Call Center Guys portfolio image",
-    cardHeader: "Website Makover",
+    cardHeader: "Full Custom Website",
     cardBody:
-      "Designed, developed and deployed a full-scale wesbite. Ran marketing operations afterwards.",
-    tags: ["#uxui", "#webcopy"],
-    colour: "etonBlue",
-    href: "/portfolio/developer/call-center-guys",
-  },
-  {
-    source: firstPic,
-    client: "Call Center Guys",
-    altText: "Call Center Guys portfolio image",
-    cardHeader: "Website Makover",
-    cardBody:
-      "Designed, developed and deployed a full-scale wesbite. Ran marketing operations afterwards.",
-    tags: ["#uxui", "#webcopy"],
-    colour: "etonBlue",
-    href: "/portfolio/developer/call-center-guys",
-  },
-  {
-    source: firstPic,
-    client: "Call Center Guys",
-    altText: "Call Center Guys portfolio image",
-    cardHeader: "Website Makover",
-    cardBody:
-      "Designed, developed and deployed a full-scale wesbite. Ran marketing operations afterwards.",
-    tags: ["#uxui", "#webcopy"],
+      "Designed, developed and deployed a full-scale website. Ran marketing operations afterwards.",
+    tags: ["#uxui", "#frontend"],
     colour: "etonBlue",
     href: "/portfolio/developer/call-center-guys",
   },
 ];
 
-const developerPrinciples = [
+const DEVELOPER_PRINCIPLES = [
   {
     principleHeader: "User-centric design",
     principleBody:
@@ -57,55 +35,78 @@ const developerPrinciples = [
   },
 ];
 
-export default function Developerfolio() {
+export default function DeveloperPortfolio() {
   return (
-    <main className="container mx-auto">
-      <div className="flex flex-col m-4">
-        <section className="tablet:mx-10 laptop:mx-24">
-          <h1 className="text-5xl font-black text-center my-10 tablet:my-20 text-etonBlue">
-            Designing digital experiences, one pixel at a time.
-          </h1>
+    <main className="min-h-screen mx-auto">
+      <h1 className="section-h1 text-center text-etonBlue section-y-spacing section-x-outer-margin-width">
+        Designing digital experiences, one pixel at a time.
+      </h1>
+      <div className="laptop:flex laptop:section-x-outer-margin-width max-w-6xl laptop:gap-6">
+        <section className="section-y-spacing section-x-outer-margin-width">
+          <h2 className="section-h2">Principles I live by</h2>
 
-          <h2 className="text-2xl font-black">Principles I live by</h2>
+          {DEVELOPER_PRINCIPLES.map((p, index) => (
+            <PrincipleItem
+              principleHeader={p.principleHeader}
+              principleBody={p.principleBody}
+              key={index}
+            />
+          ))}
+          <hr />
+        </section>
 
-          {developerPrinciples.map((p, index) => {
+        <section className="section-y-spacing section-x-outer-margin-width">
+          <h2 className="section-h2">Expertise</h2>
+
+          <p className="text-gray-500 font-sm my-4">
+            For me, programming is the perfect synergy of creativity and
+            problem-solving capabilities – it's both challenging, yet incredibly
+            fun. I LOVE building useful projects, and will continue to for the
+            rest of my life.
+          </p>
+
+          <p className="text-gray-500 font-sm mb-4">
+            <span className="text-gray-700 font-sm uppercase">
+              key skills:{" "}
+            </span>
+            Responsive design, security principles, problem-solving, version
+            control, testing & debugging, CRM, SEO
+          </p>
+          <p className="text-gray-500 font-sm mb-4">
+            <span className="text-gray-700 font-sm uppercase">
+              Tools, Libraries & Frameworks:{" "}
+            </span>
+            React, NextJS,HTML, CSS, Javascript, Node, MongoDB, Postman,
+            Storyblok, Vercel, Express, Wordpress, Git, Github
+          </p>
+          <hr />
+        </section>
+      </div>
+      {/* COPYWRITING PROJECTS */}
+      <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
+        <h2 className="section-h2">Developer Projects</h2>
+
+        <div className="laptop:grid laptop:grid-cols-2 laptop:gap-4">
+          {DEVELOPER_PROJECTS.map((item, index) => {
             return (
-              <PrincipleItem
-                principleHeader={p.principleHeader}
-                principleBody={p.principleBody}
+              <PortfolioCard
+                source={item.source.src}
+                altText={item.altText}
+                client={item.client}
+                cardHeader={item.cardHeader}
+                cardBody={item.cardBody}
+                tags={item.tags}
+                colour={item.colour}
+                href={item.href}
                 key={index}
               />
             );
           })}
-        </section>
+        </div>
+        <ContactMeButton colour="cinnabar" />
+      </section>
 
-        <hr />
-        <section className="mb-10 tablet:mx-10 laptop:mx-24">
-          <h2 className="text-3xl font-semibold my-4">Developer Projects</h2>
-
-          <div className="laptop:grid laptop:grid-cols-2 laptop:gap-4">
-            {DEVELOPER_PROJECTS.map((item, index) => {
-              return (
-                <PortfolioCard
-                  source={item.source.src}
-                  altText={item.altText}
-                  client={item.client}
-                  cardHeader={item.cardHeader}
-                  cardBody={item.cardBody}
-                  tags={item.tags}
-                  colour={item.colour}
-                  href={item.href}
-                  key={index}
-                />
-              );
-            })}
-          </div>
-        </section>
-
-        <ContactMeButton colour="etonBlue" />
-
-        {/* end of file */}
-      </div>
+      {/* end of file */}
     </main>
   );
 }

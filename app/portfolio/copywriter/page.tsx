@@ -1,22 +1,10 @@
 import ContactMeButton from "@/components/ContactMeButton";
-import CoolButton from "@/components/CoolButton";
 import PortfolioCard from "@/components/PortfolioCard";
 import PrincipleItem from "../PrincipleItem";
 
 import firstPic from "/public/images/005.jpg";
 
 const COPYWRITER_PROJECTS = [
-  {
-    source: firstPic,
-    client: "Call Center Guys",
-    altText: "Call Center Guys portfolio image",
-    cardHeader: "Complete Website Makover",
-    cardBody:
-      "Designed, developed and deployed a custom-built wesbite – including copy, and marketing.",
-    tags: ["#uxui", "#webcopy"],
-    colour: "cinnabar",
-    href: "/portfolio/copywriter/call-center-guys",
-  },
   {
     source: firstPic,
     client: "Call Center Guys",

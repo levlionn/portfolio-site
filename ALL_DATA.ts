@@ -4,7 +4,7 @@ export const RESOURCE_DATA = [
   {
     resourceImage: resourcePlaceholder,
     badgeLbl: "Free Lifetime Updates",
-    header: "ADHD Notion Productivity Planner",
+    header: "The ADHD Freelancer Kit",
     linkLbl: "Check it out",
     href: "#",
   },
