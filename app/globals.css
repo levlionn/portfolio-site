@@ -31,4 +31,8 @@
   .section-x-inner-margin-width {
     @apply w-9/12 mx-auto;
   }
+
+  .no-outline {
+    @apply outline-none focus:outline-none;
+  }
 }

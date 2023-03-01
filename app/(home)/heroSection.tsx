@@ -1,19 +1,40 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 
 //images
 import heroImage from "public/images/heroImage-compressed.jpg";
+import { motion } from "framer-motion";
+
+const variants = {
+  hidden: { opacity: 0, x: -200 },
+  enter: { opacity: 1, x: 0 },
+  exit: { opacity: 0, y: 15 },
+};
 
 const HeroSection = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="mb-4">
-        <p className="text-3xl tablet:text-5xl font-black">
+        <motion.p
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ delay: 0.5 }}
+          className="text-3xl tablet:text-5xl font-black"
+        >
           innovate with <span className="text-etonBlue">code</span>
-        </p>
-        <p className="text-3xl tablet:text-5xl font-black ml-6">
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, y: 15 }}
+          transition={{ delay: 0.5 }}
+          className="text-3xl tablet:text-5xl font-black ml-6"
+        >
           captivate with <span className="text-cinnabar">copy</span>
-        </p>
+        </motion.p>
       </div>
 
       <div className="my-8">

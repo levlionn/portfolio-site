@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import { ModeContext } from "../ModeContext";
 import { useState } from "react";
 import { Mode } from "@/types";
+import { AnimatePresence } from "framer-motion";
 
 const open_sans = Open_Sans({
   weight: ["400", "700"],
@@ -39,7 +40,13 @@ export default function RootLayout({
       <body className={`${kanit.className}`}>
         <ModeContext.Provider value={{ mode, setMode }}>
           <Navbar />
-          {children}
+          <AnimatePresence
+            mode="wait"
+            initial={false}
+            onExitComplete={() => window.scrollTo(0, 0)}
+          >
+            {children}
+          </AnimatePresence>
         </ModeContext.Provider>
         <Footer />
       </body>
