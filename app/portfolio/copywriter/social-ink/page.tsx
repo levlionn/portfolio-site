@@ -30,7 +30,7 @@ const ARTICLE_DATA = [
   {
     href: "https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a",
     src: resourcePlaceholder,
-    title: "Web3 Article",
+    title: "The Future of Web3",
     body: "To help drive traffic to Social Ink's website, I routinely wrote SEO-optimized articles on popular trends within the Web3 space.",
     client: "Social Ink",
     badgeLbl: "article",
@@ -38,7 +38,7 @@ const ARTICLE_DATA = [
   {
     href: "https://twitter.com/DataunionA",
     src: resourcePlaceholder,
-    title: "Twitter Management",
+    title: "Twitter Account Management",
     body: "Ran the official Twitter acccount for DUF. Used best social media practices to engage viewers (stop them from scrolling), provide value and inspire action (follow/like/share)",
     client: "Data Union Foundation",
     badgeLbl: "smm",
@@ -46,7 +46,7 @@ const ARTICLE_DATA = [
   {
     href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
     src: resourcePlaceholder,
-    title: "Created Pitch Deck",
+    title: "Timecapsule Pitch Deck",
     body: "Co-Founders of DataUnion Foundation, Mark & Robin, spoke at the world’s first Experimental Zone Event (“EZ1”).",
     client: "Data Union Foundation",
     badgeLbl: "pitch deck",
@@ -54,10 +54,26 @@ const ARTICLE_DATA = [
   {
     href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
     src: resourcePlaceholder,
-    title: "Twitter Tweet Storm",
+    title: "Twitter Thread (#BigData)",
     body: "An example of an educational Twitter thread discussing the problems of #BigData, and the benefits of DataUnions for the collective good of the world. ",
     client: "Data Union Foundation",
     badgeLbl: "smm",
+  },
+  {
+    href: "https://blog.dataunion.app/what-is-a-dataunion-6b43a618af1b",
+    src: resourcePlaceholder,
+    title: "What is a DataUnion?",
+    body: " A blog written to explore the revolutionary potential of Data Unions, their impact on society and how we, collectively, can bring about positive change to all areas of life – through democratized data.",
+    client: "Data Union Foundation",
+    badgeLbl: "article",
+  },
+  {
+    href: "https://blog.dataunion.app/dataunion-foundation-to-further-on-chain-adoption-and-build-reputation-oracle-with-human-protocol-dfeb04a1e24a",
+    src: resourcePlaceholder,
+    title: "Partnership with Human Protocol",
+    body: "A press release written to investors (and the public) announcing the expansion of DataUnion Foundation – this time with HUMAN protocol; a decentralized job marketplace.  ",
+    client: "Data Union Foundation",
+    badgeLbl: "press release",
   },
 ];
 
