@@ -1,23 +1,52 @@
 "use client";
-
-import CoolButton from "@/components/CoolButton";
 import React from "react";
+import Image from "next/image";
 
-import { useContext } from "react";
-import { ModeContext } from "../../ModeContext";
+//images
+import heroImage from "public/images/heroImage-compressed.jpg";
+import { motion } from "framer-motion";
+
+const variants = {
+  hidden: { opacity: 0, x: -200 },
+  enter: { opacity: 1, x: 0 },
+  exit: { opacity: 0, y: 15 },
+};
 
 const HeroSection = () => {
-  const { mode } = useContext(ModeContext);
-
   return (
-    <div className="flex flex-col space-y-4 mb-60">
-      <h3 className="mb-4">Hi! 👋 I'm Lev Markelov</h3>
+    <div className="flex flex-col items-center">
+      <div className="mb-4">
+        <motion.p
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={variants}
+          transition={{ delay: 0.5 }}
+          className="text-3xl tablet:text-5xl font-black"
+        >
+          innovate with <span className="text-etonBlue">code</span>
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, y: 15 }}
+          transition={{ delay: 0.5 }}
+          className="text-3xl tablet:text-5xl font-black ml-6"
+        >
+          captivate with <span className="text-cinnabar">copy</span>
+        </motion.p>
+      </div>
 
-      <h1 className="text-4xl font-extrabold mb-10">
-        {mode === "copywriter" ? "ChatGPT, but in human form" : "ha"}
-      </h1>
-
-      <CoolButton btnLabel="Connect with me" btnwidth="md" />
+      <div className="my-8">
+        <Image
+          src={heroImage}
+          height={250}
+          width={250}
+          alt="heroImage"
+          className="rounded-lg rotate-6"
+          priority
+        />
+      </div>
     </div>
   );
 };

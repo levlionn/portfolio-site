@@ -1,68 +1,61 @@
 "use client";
 
 import { ModeContext } from "@/ModeContext";
-import { Mode } from "@/types";
+import Image from "next/image";
+
 import React, { useContext } from "react";
-import { useState } from "react";
+
+//images
+import pencilsvg from "/public/svg/pencil.svg";
+import computersvg from "/public/svg/computer.svg";
 
 const ToggleActiveMode = () => {
   const { mode, setMode } = useContext(ModeContext);
 
   return (
-    <div>
-      <ul className="flex flex-col items-center">
-        <div className="p-1 inline-flex border bg-gray-200 rounded-xl ">
+    <div className="flex flex-row justify-between items-center">
+      <p className="text-sm text-gray-500">
+        HINT: Toggle to see my other side.{" "}
+      </p>
+
+      <div className="flex flex-col items-center">
+        <button
+          className="inline-flex border bg-gray-200 rounded-xl"
+          onClick={() =>
+            setMode(mode === "copywriter" ? "developer" : "copywriter")
+          }
+        >
           {/* Copywriter Button */}
-          <button
+          <div
             className={`px-2 py-1 rounded-lg ${
-              mode === "copywriter" ? "bg-white shadow" : ""
+              mode === "copywriter"
+                ? "bg-white/50 shadow border border-cinnabar"
+                : ""
             }`}
-            onClick={() => setMode("developer")}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-5 h-5 "
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
-              />
-            </svg>
-          </button>
+            <Image src={pencilsvg} alt="icon" width={20} height={20} />
+          </div>
           {/* Dev Button */}
-          <button
+          <div
             className={`px-2 py-1 rounded-lg ${
-              mode === "developer" ? "bg-white shadow" : ""
+              mode === "developer"
+                ? "bg-white/50 shadow border border-etonBlue"
+                : ""
             }`}
-            onClick={() => setMode("copywriter")}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                strokeLinejoin="round"
-                d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-              />
-            </svg>
-          </button>
+            <Image src={computersvg} alt="icon" width={20} height={20} />
+          </div>
           {/* Current mode UI */}
-        </div>
-        <div className="flex flex-row items-center">
-          <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+        </button>
+        <div className="flex flex-row items-center pt-1">
+          <span
+            className={`w-2 h-2 rounded-full mr-2 ${
+              mode === "copywriter" ? "bg-cinnabar" : "bg-etonBlue"
+            }`}
+          ></span>
           <span className="text-xs">{mode}</span>
         </div>
-      </ul>
+      </div>
     </div>
   );
 };

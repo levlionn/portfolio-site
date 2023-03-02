@@ -1,31 +1,34 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
-import firstPic from "../../public/me-nobg.png";
+import Link from "next/link";
 
 const MeMeSection = () => {
   return (
-    <div className="flex flex-col pt-10 space-y-5">
-      <h2 className="text-4xl font-extrabold mb-2">My story</h2>
+    <main className="flex flex-col mx-auto space-y-4">
+      <h2 className="section-h2">Hi! It's Lev 👋 </h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        dolorum ullam expedita qui exercitationem quas doloribus illum,
-        reprehenderit soluta, laboriosam, ratione ut necessitatibus repudiandae!
-        Corporis et in alias quae. Sapiente!
+        Welcome to my slice of the internet – I hope you find something useful
+        here.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        dolorum ullam expedita qui exercitationem quas doloribus illum,
-        reprehenderit soluta, laboriosam, ratione ut necessitatibus repudiandae!
-        Corporis et in alias quae. Sapiente!
+        I{" "}
+        <Link href="/portfolio/developer" className="font-bold">
+          develop{" "}
+        </Link>{" "}
+        frontend applications,{" "}
+        <Link href="/portfolio/copywriter" className="font-bold">
+          copywrite{" "}
+        </Link>{" "}
+        & share my personal ADHD-related journey via my newsletter.
       </p>
-      <Image
-        src={firstPic}
-        width={356}
-        height={50}
-        alt="hello"
-        className="rounded"
-      />
-    </div>
+      <p>
+        Read more{" "}
+        <Link href="/about" className="font-bold">
+          about me{" "}
+        </Link>
+        or keep scrolling!
+      </p>
+      <p>Thanks for dropping by,</p>
+    </main>
   );
 };
 

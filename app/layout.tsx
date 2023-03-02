@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import { Open_Sans } from "@next/font/google";
+import { Kanit } from "@next/font/google";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -8,11 +8,12 @@ import Footer from "../components/Footer";
 import { ModeContext } from "../ModeContext";
 import { useState } from "react";
 import { Mode } from "@/types";
+import { AnimatePresence } from "framer-motion";
 
-const open_sans = Open_Sans({
+const kanit = Kanit({
   weight: ["400", "700"],
   subsets: ["latin"],
-  variable: "--font-Open_Sans",
+  variable: "--font-Kanit",
 });
 //I can put navs and footers here. It will apply across all pages.
 
@@ -30,11 +31,16 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`${open_sans.className}`}>
+      <body className={`${kanit.className}`}>
         <ModeContext.Provider value={{ mode, setMode }}>
           <Navbar />
-
-          {children}
+          <AnimatePresence
+            mode="wait"
+            initial={false}
+            // onExitComplete={() => window.scrollTo(0, 0)}
+          >
+            {children}
+          </AnimatePresence>
         </ModeContext.Provider>
         <Footer />
       </body>
