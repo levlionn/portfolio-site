@@ -41,9 +41,6 @@ export default function About() {
             </div>
           </div>
         </section>
-        <div className="section-x-outer-margin-width">
-          <ContactMeButton colour={"cinnabar"} />
-        </div>
       </main>
     </SectionWrapper>
   );

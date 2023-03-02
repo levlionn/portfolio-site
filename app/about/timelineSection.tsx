@@ -80,7 +80,7 @@ const TimelineSection = () => {
       <h2 className="text-3xl font-black">Timeline</h2>
       <p className="text-gray-500 mb-6">Summary of events.</p>
 
-      <ol className="relative border-l border-gray-200">
+      <ol className="relative border-l border-gray-200 ">
         {TIMELINE_DATA.map((i, index) => {
           return (
             <TimelineItem

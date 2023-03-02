@@ -29,8 +29,8 @@ const navLinks = [
 const Navbar = () => {
   const path = usePathname();
   return (
-    <nav className="sticky top-0 z-50  bg-goldCrayola shadow-lg text-white p-6">
-      <ul className="flex ">
+    <nav className="sticky top-0 z-50  bg-goldCrayola shadow-lg text-white p-6 tablet:max-w-6xl mx-auto rounded-b-lg">
+      <ul className="flex justify-between ">
         <div className="flex items-center">
           <li>
             <Link href="/" className="mr-2 font-black no-outline">

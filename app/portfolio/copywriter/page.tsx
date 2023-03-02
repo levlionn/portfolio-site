@@ -114,7 +114,6 @@ export default function CopywriterPortfolio() {
               );
             })}
           </div>
-          <ContactMeButton colour="cinnabar" />
         </section>
 
         {/* end of file */}

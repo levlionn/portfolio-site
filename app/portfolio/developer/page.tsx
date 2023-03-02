@@ -103,7 +103,6 @@ export default function DeveloperPortfolio() {
             );
           })}
         </div>
-        <ContactMeButton colour="cinnabar" />
       </section>
 
       {/* end of file */}

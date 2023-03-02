@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css";
-import { Open_Sans, Kanit } from "@next/font/google";
+import { Kanit } from "@next/font/google";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -9,12 +9,6 @@ import { ModeContext } from "../ModeContext";
 import { useState } from "react";
 import { Mode } from "@/types";
 import { AnimatePresence } from "framer-motion";
-
-const open_sans = Open_Sans({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-Open_Sans",
-});
 
 const kanit = Kanit({
   weight: ["400", "700"],
@@ -43,7 +37,7 @@ export default function RootLayout({
           <AnimatePresence
             mode="wait"
             initial={false}
-            onExitComplete={() => window.scrollTo(0, 0)}
+            // onExitComplete={() => window.scrollTo(0, 0)}
           >
             {children}
           </AnimatePresence>

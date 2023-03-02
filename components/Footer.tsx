@@ -44,14 +44,14 @@ export default function Footer() {
   return (
     <motion.footer>
       <motion.div
-        className="relative  w-full bg-gradient-to-bl from-independence to-independence/90 text-white p-5"
+        className="relative w-full  bg-gradient-to-br from-independence to-independence/90 text-white p-5"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.25 }}
         viewport={{ once: true }}
       >
         <h3 className="section-h2 laptop:section-h1">Got a project?</h3>
-        <p className="text-sm my-2">
+        <p className="text-sm mb-4">
           I&apos;d love to hear from you! Drop me a message and let&apos;s bring
           it to life.
         </p>
@@ -105,7 +105,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="absolute bottom-0 left-0 p-2 text-xs text-white/50">
+        <p className="absolute bottom-0 left-0 px-5 py-2 text-xs text-white/50">
           &copy; {year} Lev Markelov. Made with ❤️
         </p>
       </motion.div>
