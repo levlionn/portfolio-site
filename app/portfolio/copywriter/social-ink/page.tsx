@@ -1,10 +1,13 @@
+"use client";
 import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
-import compressedPlaceholder from "/public/images/compressed-placeholder.jpg";
-import compressedVerticalPlaceholder from "/public/images/compressed-vertical-placeholder.jpg";
+
 import Image, { StaticImageData } from "next/image";
+import resourcePlaceholder from "@/public/images/resource-placeholder.png";
 
 import rightArrow from "/public/svg/right-top-arrow.svg";
 import { SectionWrapper } from "@/app/SectionWrapper";
+
+import { useState } from "react";
 
 interface PDFItem {
   href: string;
@@ -12,13 +15,68 @@ interface PDFItem {
   title: string;
   body: string;
   client: string;
+  badgeLbl: string;
 }
 
-const ArticleComponent = ({ href, src, title, body, client }: PDFItem) => {
+const ARTICLE_DATA = [
+  {
+    href: "https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a",
+    src: resourcePlaceholder,
+    title: "Press Release",
+    body: "DataUnion successfully closed a $1.5million seed round. Considering the buzz, and the impact of the company, I wrote out a Press Release to let other investors know the direction we were heading in.",
+    client: "Data Union Foundation",
+    badgeLbl: "press release",
+  },
+  {
+    href: "https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a",
+    src: resourcePlaceholder,
+    title: "Web3 Article",
+    body: "To help drive traffic to Social Ink's website, I routinely wrote SEO-optimized articles on popular trends within the Web3 space.",
+    client: "Social Ink",
+    badgeLbl: "article",
+  },
+  {
+    href: "https://twitter.com/DataunionA",
+    src: resourcePlaceholder,
+    title: "Twitter Management",
+    body: "Ran the official Twitter acccount for DUF. Used best social media practices to engage viewers (stop them from scrolling), provide value and inspire action (follow/like/share)",
+    client: "Data Union Foundation",
+    badgeLbl: "smm",
+  },
+  {
+    href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
+    src: resourcePlaceholder,
+    title: "Created Pitch Deck",
+    body: "Co-Founders of DataUnion Foundation, Mark & Robin, spoke at the world’s first Experimental Zone Event (“EZ1”).",
+    client: "Data Union Foundation",
+    badgeLbl: "pitch deck",
+  },
+  {
+    href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
+    src: resourcePlaceholder,
+    title: "Twitter Tweet Storm",
+    body: "An example of an educational Twitter thread discussing the problems of #BigData, and the benefits of DataUnions for the collective good of the world. ",
+    client: "Data Union Foundation",
+    badgeLbl: "smm",
+  },
+];
+
+const ArticleComponent = ({
+  href,
+  src,
+  title,
+  body,
+  client,
+  badgeLbl,
+}: PDFItem) => {
   return (
-    <div className="max-w-xs flex flex-col">
+    <div className="relative max-w-xs flex flex-col">
       <div className="relative w-full h-32 rounded-lg bg-white shadow-xl cursor-pointer">
         <Image src={src} alt="CCG Brochure" className="rounded-lg" fill />
+        {/* Badge */}
+        <div className="absolute top-0 left-0 m-2 p-0.5 w-fit text-center text-white text-xs  font-medium px-2 bg-etonBlue rounded-lg">
+          {badgeLbl}
+        </div>
       </div>
       <div className="py-2">
         <span className="text-xs text-gray-500">{client}</span>
@@ -44,12 +102,22 @@ const ArticleComponent = ({ href, src, title, body, client }: PDFItem) => {
 };
 
 export default function SocialInkCaseStudy() {
+  // State Management
+  const [filter, setFilter] = useState("article");
+
   return (
     <SectionWrapper>
       <main className="min-h-screen mx-auto ">
         {/* Header Image */}
         <div className=" relative h-52 max-w-6xl mx-auto">
-          <Image src={ccgThumbnail} alt="Social Section Image" fill />
+          <Image
+            src={ccgThumbnail}
+            alt="Social Section Image"
+            fill
+            sizes="(max-width: 768px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
+          />
         </div>
 
         {/* H1 & CTA & Stats */}
@@ -130,36 +198,61 @@ export default function SocialInkCaseStudy() {
             Below are examples of articles and social media posts/tweets that I
             created for the various Blockchain clients we had.
           </p>
+          {/* Filter Menu --*/}
+          <div className="flex justify-between items-center max-w-6xl cursor-pointer">
+            <div className="text-xs font-bold text-independence/80">
+              filter:
+            </div>
+            <div className="flex items-center space-x-4 my-2">
+              <span
+                className="text-xs text-independence/80"
+                onClick={() => {
+                  setFilter("article");
+                }}
+              >
+                article
+              </span>
+              <span
+                className="text-xs text-independence/80"
+                onClick={() => {
+                  setFilter("press release");
+                }}
+              >
+                press release
+              </span>
+              <span
+                className="text-xs text-independence/80"
+                onClick={() => {
+                  setFilter("smm");
+                }}
+              >
+                smm
+              </span>
+              <span
+                className="text-xs text-independence/80"
+                onClick={() => {
+                  setFilter("pitch deck");
+                }}
+              >
+                pitch deck
+              </span>
+            </div>
+          </div>
+          {/* End Filter Menu -- */}
           <hr />
           <div className="grid grid-cols-2 laptop:grid-cols-4 gap-5 py-2">
-            <ArticleComponent
-              href="https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a"
-              src={compressedVerticalPlaceholder}
-              title="Press Release"
-              body="DataUnion successfully closed a $1.5million seed round. Considering the buzz, and the impact of the company, I wrote out a Press Release to let other investors know the direction we were heading in."
-              client="Data Union Foundation"
-            />
-            <ArticleComponent
-              href="https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a"
-              src={compressedVerticalPlaceholder}
-              title="Web3 Article"
-              body="To help drive traffic to Social Ink's website, I routinely wrote SEO-optimized articles on popular trends within the Web3 space."
-              client="Social Ink"
-            />
-            <ArticleComponent
-              href="https://twitter.com/DataunionA"
-              src={compressedVerticalPlaceholder}
-              title="Twitter Management"
-              body="Ran the official Twitter acccount for DUF. Used best social media practices to engage viewers (stop them from scrolling), provide value and inspire action (follow/like/share)"
-              client="Data Union Foundation"
-            />
-            <ArticleComponent
-              href="https://twitter.com/DataunionA"
-              src={compressedVerticalPlaceholder}
-              title="Created Pitch Deck"
-              body="Co-Founders of DataUnion Foundation, Mark & Robin, spoke at "
-              client="Data Union Foundation"
-            />
+            {ARTICLE_DATA.filter((a) => a.badgeLbl === filter).map(
+              (article, key) => (
+                <ArticleComponent
+                  href="https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a"
+                  src={article.src}
+                  title={article.title}
+                  body={article.body}
+                  client={article.client}
+                  badgeLbl={article.badgeLbl}
+                />
+              )
+            )}
           </div>
         </section>
       </main>
