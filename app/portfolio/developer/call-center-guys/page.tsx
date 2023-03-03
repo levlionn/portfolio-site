@@ -41,8 +41,8 @@ export default function CallCenterGuysDeveloperCaseStudy() {
     <SectionWrapper>
       <main className="min-h-screen mx-auto ">
         {/* Header Image */}
-        <div className=" relative h-52 max-w-6xl mx-auto">
-          <Image src={ccgThumbnail} alt="Call Center Guys Section Image" fill />
+        <div className=" relative max-w-6xl mx-auto">
+          <Image src={ccgThumbnail} alt="Call Center Guys Section Image" />
         </div>
 
         {/* H1 & CTA & Stats */}
