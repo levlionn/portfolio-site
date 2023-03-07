@@ -25,7 +25,7 @@ export default function About() {
             {/* Resource Section */}
             <div className="mt-8">
               <h2 className="text-3xl font-black">Resources</h2>
-              <p className="text-gray-500 mb-6">I come baring gifts.</p>
+              <p className="text-gray-500 mb-6">I come bearing gifts!</p>
               {RESOURCE_DATA.map((resource, index) => {
                 return (
                   <ResourceCard

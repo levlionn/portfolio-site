@@ -28,8 +28,12 @@ const socialLinks = [
 
 const footerLinks = [
   {
-    href: "/portfolio",
-    text: "portfolio",
+    href: "/portfolio/copywriter",
+    text: "copywriter",
+  },
+  {
+    href: "/portfolio/developer",
+    text: "developer",
   },
   {
     href: "/about",
@@ -50,64 +54,81 @@ export default function Footer() {
         transition={{ delay: 0.25 }}
         viewport={{ once: true }}
       >
-        <h3 className="section-h2 laptop:section-h1">Got a project?</h3>
-        <p className="text-sm mb-4">
-          I&apos;d love to hear from you! Drop me a message and let&apos;s bring
-          it to life.
-        </p>
-        <CoolButton
-          btnLabel="Get in touch!"
-          href="/contact"
-          btnwidth="s"
-          textSize="md"
-          colour="goldCrayola"
-        />
-        <div className="my-6 grid auto-grid-auto grid-cols-3 gap-6 uppercase">
-          <div>
-            {socialLinks.map((item: any) => (
-              <li key={item.url} className="list-none">
-                <SocialIcon
-                  url={item.url}
-                  network={item.network}
-                  label={item.label}
-                  fgColor="white"
-                  bgColor="transparent"
-                  target="_blank"
-                  style={{ height: 25, width: 25 }}
-                />
-              </li>
-            ))}
+        <div className="max-w-6xl mx-auto">
+          <div className="border border-gray-100 w-fit p-5 rounded-lg shadow-lg">
+            <h3 className="mb-4 font-black text-5xl laptop:text-6xl">
+              Got a project?
+            </h3>
+            <p className="text-sm my-4">
+              I&apos;d love to hear from you! Drop me a message and let&apos;s
+              bring it to life.
+            </p>
+            <CoolButton
+              btnLabel="Get in touch!"
+              href="/contact"
+              btnwidth="s"
+              textSize="md"
+              colour="goldCrayola"
+            />
+          </div>
+          <div className="my-6 grid auto-grid-auto grid-cols-3 gap-6 uppercase">
+            <div>
+              {socialLinks.map((item: any) => (
+                <li key={item.url} className="list-none">
+                  <SocialIcon
+                    url={item.url}
+                    network={item.network}
+                    label={item.label}
+                    fgColor="white"
+                    bgColor="transparent"
+                    target="_blank"
+                    style={{ height: 25, width: 25 }}
+                  />
+                </li>
+              ))}
+            </div>
+
+            <div className="grid auto-rows-auto">
+              <p className="font-black text-lg">Projects</p>
+
+              <Link
+                href="portfolio/copywriter/call-center-guys"
+                className="text-sm"
+              >
+                CCG
+              </Link>
+              <Link href="portfolio/copywriter/social-ink" className="text-sm">
+                Social Ink
+              </Link>
+              <Link href="portfolio/copywriter/omni-agency" className="text-sm">
+                Omni Agency
+              </Link>
+            </div>
+            <div className="grid auto-rows-auto">
+              <p className="font-black  text-lg">Pages</p>
+              {/* Page Links */}
+
+              {footerLinks.map((link) => (
+                <li key={link.href} className="list-none">
+                  <Link
+                    href={link.href}
+                    className={`${
+                      link.href === path
+                        ? "text-sm  text-goldCrayola font-bold"
+                        : "text-sm "
+                    }`}
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </div>
           </div>
 
-          <div className="grid auto-rows-auto">
-            <p className="font-bold  text-lg">Projects</p>
-            <Link href="portfolio/copywriter/call-center-guys">CCG</Link>
-            <Link href="portfolio/copywriter/social-ink">Social Ink</Link>
-          </div>
-          <div className="grid auto-rows-auto">
-            <p className="font-bold  text-lg">Pages</p>
-            {/* Page Links */}
-
-            {footerLinks.map((link) => (
-              <li key={link.href} className="list-none">
-                <Link
-                  href={link.href}
-                  className={`${
-                    link.href === path
-                      ? "text-sm  text-goldCrayola font-bold"
-                      : "text-sm "
-                  }`}
-                >
-                  {link.text}
-                </Link>
-              </li>
-            ))}
-          </div>
+          <p className="absolute bottom-0 pb-2 text-xs text-white/50">
+            &copy; {year} Lev Markelov. Made with ❤️
+          </p>
         </div>
-
-        <p className="absolute bottom-0 left-0 px-5 py-2 text-xs text-white/50">
-          &copy; {year} Lev Markelov. Made with ❤️
-        </p>
       </motion.div>
     </motion.footer>
   );

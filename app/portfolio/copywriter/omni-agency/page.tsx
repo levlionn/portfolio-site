@@ -21,60 +21,20 @@ interface PDFItem {
 
 const ARTICLE_DATA = [
   {
-    href: "https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a",
+    href: "https://twitter.com/Raiinmakerapp?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
     src: resourcePlaceholder,
-    title: "Press Release",
-    body: "DataUnion successfully closed a $1.5million seed round. Considering the buzz, and the impact of the company, I wrote out a Press Release to let other investors know the direction we were heading in.",
-    client: "Data Union Foundation",
-    badgeLbl: "press release",
+    title: "Twitter Management",
+    body: "Ideated and crafted content to help grow Raiinmaker's–a decentralized social media platform–Twitter account by 28K new users in 3 months.",
+    client: "Raiinmaker",
+    badgeLbl: "Social",
   },
   {
-    href: "https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a",
+    href: "https://twitter.com/DepressCitizens",
     src: resourcePlaceholder,
-    title: "The Future of Web3",
-    body: "To help drive traffic to Social Ink's website, I routinely wrote SEO-optimized articles on popular trends within the Web3 space.",
-    client: "Social Ink",
-    badgeLbl: "article",
-  },
-  {
-    href: "https://twitter.com/DataunionA",
-    src: resourcePlaceholder,
-    title: "Twitter Account Management",
-    body: "Ran the official Twitter acccount for DUF. Used best social media practices to engage viewers (stop them from scrolling), provide value and inspire action (follow/like/share)",
-    client: "Data Union Foundation",
-    badgeLbl: "smm",
-  },
-  {
-    href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
-    src: resourcePlaceholder,
-    title: "Timecapsule Pitch Deck",
-    body: "Co-Founders of DataUnion Foundation, Mark & Robin, spoke at the world’s first Experimental Zone Event (“EZ1”).",
-    client: "Data Union Foundation",
-    badgeLbl: "pitch deck",
-  },
-  {
-    href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
-    src: resourcePlaceholder,
-    title: "Twitter Thread (#BigData)",
-    body: "An example of an educational Twitter thread discussing the problems of #BigData, and the benefits of DataUnions for the collective good of the world. ",
-    client: "Data Union Foundation",
-    badgeLbl: "smm",
-  },
-  {
-    href: "https://blog.dataunion.app/what-is-a-dataunion-6b43a618af1b",
-    src: resourcePlaceholder,
-    title: "What is a DataUnion?",
-    body: " A blog written to explore the revolutionary potential of Data Unions, their impact on society and how we, collectively, can bring about positive change to all areas of life – through democratized data.",
-    client: "Data Union Foundation",
-    badgeLbl: "article",
-  },
-  {
-    href: "https://blog.dataunion.app/dataunion-foundation-to-further-on-chain-adoption-and-build-reputation-oracle-with-human-protocol-dfeb04a1e24a",
-    src: resourcePlaceholder,
-    title: "Partnership with Human Protocol",
-    body: "A press release written to investors (and the public) announcing the expansion of DataUnion Foundation – this time with HUMAN protocol; a decentralized job marketplace.  ",
-    client: "Data Union Foundation",
-    badgeLbl: "press release",
+    title: "Twitter Management",
+    body: "Depressed Citizens is an NFT collection about the people, for the people. Through creative, engaging content, I helped drive 1,150% organic growth on Twitter.",
+    client: "Depressed Citizens",
+    badgeLbl: "Social",
   },
 ];
 
@@ -118,7 +78,7 @@ const ArticleComponent = ({
   );
 };
 
-export default function SocialInkCaseStudy() {
+export default function OmniAgencyCaseStudy() {
   // State Management
   const [filter, setFilter] = useState(ARTICLE_DATA[0].badgeLbl);
 
@@ -139,25 +99,26 @@ export default function SocialInkCaseStudy() {
             33vw"
           />
         </div>
+
         <CaseStudyQuickPeek
-          title=" Helped a fractional CMO run marketing operations for multiple blockchain startups."
-          href="https://www.socialink.co/"
-          timeline="May 2021 - July 2022"
+          title="Worked as contract copywriter & a guerrilla marketing mastermind
+        for a digital marketing agency."
+          href="https://www.omniagency.ca"
+          timeline="September 2022 - January 2023"
           platform="Many"
-          role="Content Manager"
-          services="Copywriting, Digital Marketing, Research Community, Building, Content Marketing, Communications, & Social Media Management."
+          role="Lead Copywriter"
+          services="Copywriting, Digital Marketing, Guerrilla Marketing, Community
+          Building, Content Marketing, Communications, & Social Media Management."
         />
 
         {/* Laptop Up, Convert to Grid view */}
-        {/* Summary & Services */}
+        {/* Summary*/}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
           <h2 className="section-h2">Summary</h2>
           <p className="text-gray-800 my-4">
-            I paired together with an incredible fractional CMO, Chris Bruno, to
-            be his right-hand man. From writing content for his marketing
-            agency, to interviewing founders of cutting-edge blockchain startups
-            and developing their content strategy – I was a one man army for all
-            things digital marketing.
+            I worked as a freelance copywriter juggling responsibilities of
+            content marketing, social media management, and community building
+            strategies across multiple Web3/NFT brands.
           </p>
         </section>
 
@@ -166,21 +127,30 @@ export default function SocialInkCaseStudy() {
           <div className="">
             <h2 className="section-h2">My Role</h2>
             <p className="text-gray-800 my-4">
-              Content marketing requires a systematic approach. You need to be
-              organized, detailed, know your analytics and understand where the
-              trends are going. For every client we worked on, my job was to
-              figure out their target audience, analyze competitors, create a
-              content calendar, write the content, design it and publish it
-              across the web.
+              As a copywriter, your main objective is centered around driving
+              growth through value-packed, engaging content. The formula is
+              simple; create great content, and you'll inevitably attract an
+              audience.
             </p>
             <p className="text-gray-800 my-4">
-              Additionally, I acted as a business optimizer. My love for
-              system-building, and productivity, allowed me to create a more
-              stream-lined approach to creating content by using Notion. I built
-              out an entire system that allowed everyone on the team to quickly
-              get uptodate on priority tasks, view project briefs, and deliver
-              on deadlines.
+              Considering I was working in a new field–Web3 wasn't a common term
+              yet–a major obstacle that needed to be overcome is audience
+              education; few people really understood what the space was
+              about/had to offer.
             </p>
+            <p className="text-gray-800 my-4">
+              My strategy was three-prong: find ways to convert uninitiated
+              users into loyal brand advocates, retain their engagement across
+              social channels, and drive user-acquisition for the accounts I was
+              managing.
+            </p>
+            <ul className="text-gray-800 my-4">
+              <span className="font-bold">My Key Responsibilities </span>
+              <li>1️⃣ Build a Community</li>
+              <li>2️⃣ Generate User Acquisition</li>
+              <li>3️⃣ Write Educational/Engaging Content</li>
+              <li>4️⃣ Increase Engagement Rate</li>
+            </ul>
           </div>
         </section>
 
@@ -188,8 +158,8 @@ export default function SocialInkCaseStudy() {
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
           <h2 className="section-h2">Articles & Socials</h2>
           <p className="text-gray-800 my-2">
-            Below are examples of articles and social media posts/tweets that I
-            created for the various Blockchain clients we had.
+            Below are examples of articles and social media content that I
+            created for the various Web3 clients we had.
           </p>
           {/* Filter Menu --*/}
           <div className="flex justify-between items-center max-w-6xl cursor-pointer">
