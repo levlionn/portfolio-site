@@ -26,7 +26,7 @@ const ARTICLE_DATA = [
     title: "Press Release",
     body: "DataUnion successfully closed a $1.5million seed round. Considering the buzz, and the impact of the company, I wrote out a Press Release to let other investors know the direction we were heading in.",
     client: "Data Union Foundation",
-    badgeLbl: "press release",
+    badgeLbl: "Press Release",
   },
   {
     href: "https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a",
@@ -34,7 +34,7 @@ const ARTICLE_DATA = [
     title: "The Future of Web3",
     body: "To help drive traffic to Social Ink's website, I routinely wrote SEO-optimized articles on popular trends within the Web3 space.",
     client: "Social Ink",
-    badgeLbl: "article",
+    badgeLbl: "Article",
   },
   {
     href: "https://twitter.com/DataunionA",
@@ -42,7 +42,7 @@ const ARTICLE_DATA = [
     title: "Twitter Account Management",
     body: "Ran the official Twitter acccount for DUF. Used best social media practices to engage viewers (stop them from scrolling), provide value and inspire action (follow/like/share)",
     client: "Data Union Foundation",
-    badgeLbl: "smm",
+    badgeLbl: "Social",
   },
   {
     href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
@@ -50,7 +50,7 @@ const ARTICLE_DATA = [
     title: "Timecapsule Pitch Deck",
     body: "Co-Founders of DataUnion Foundation, Mark & Robin, spoke at the world’s first Experimental Zone Event (“EZ1”).",
     client: "Data Union Foundation",
-    badgeLbl: "pitch deck",
+    badgeLbl: "Pitch Deck",
   },
   {
     href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
@@ -58,7 +58,7 @@ const ARTICLE_DATA = [
     title: "Twitter Thread (#BigData)",
     body: "An example of an educational Twitter thread discussing the problems of #BigData, and the benefits of DataUnions for the collective good of the world. ",
     client: "Data Union Foundation",
-    badgeLbl: "smm",
+    badgeLbl: "Social",
   },
   {
     href: "https://blog.dataunion.app/what-is-a-dataunion-6b43a618af1b",
@@ -66,7 +66,7 @@ const ARTICLE_DATA = [
     title: "What is a DataUnion?",
     body: " A blog written to explore the revolutionary potential of Data Unions, their impact on society and how we, collectively, can bring about positive change to all areas of life – through democratized data.",
     client: "Data Union Foundation",
-    badgeLbl: "article",
+    badgeLbl: "Article",
   },
   {
     href: "https://blog.dataunion.app/dataunion-foundation-to-further-on-chain-adoption-and-build-reputation-oracle-with-human-protocol-dfeb04a1e24a",
@@ -74,7 +74,7 @@ const ARTICLE_DATA = [
     title: "Partnership with Human Protocol",
     body: "A press release written to investors (and the public) announcing the expansion of DataUnion Foundation – this time with HUMAN protocol; a decentralized job marketplace.  ",
     client: "Data Union Foundation",
-    badgeLbl: "press release",
+    badgeLbl: "Rress Release",
   },
 ];
 
@@ -148,48 +148,101 @@ export default function SocialInkCaseStudy() {
           services="Copywriting, Digital Marketing, Research Community, Building, Content Marketing, Communications, & Social Media Management."
         />
 
-        {/* Laptop Up, Convert to Grid view */}
-        {/* Summary & Services */}
+        {/* Project Summary */}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
-          <h2 className="section-h2">Summary</h2>
+          <h2 className="section-h2">Project Summary</h2>
           <p className="text-gray-800 my-4">
-            I paired together with an incredible fractional CMO, Chris Bruno, to
-            be his right-hand man. From writing content for his marketing
-            agency, to interviewing founders of cutting-edge blockchain startups
-            and developing their content strategy – I was a one man army for all
-            things digital marketing.
+            I worked alongside fractional CMO Chris Bruno at Social Ink,
+            providing a range of digital marketing services to clients. My role
+            was to create a comprehensive content marketing strategy for each
+            client, from identifying their target audience to designing and
+            publishing content across the web.
           </p>
         </section>
 
-        {/* Copywriting*/}
+        {/* My Role*/}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
           <div className="">
             <h2 className="section-h2">My Role</h2>
             <p className="text-gray-800 my-4">
-              Content marketing requires a systematic approach. You need to be
-              organized, detailed, know your analytics and understand where the
-              trends are going. For every client we worked on, my job was to
-              figure out their target audience, analyze competitors, create a
-              content calendar, write the content, design it and publish it
-              across the web.
+              Beyond content marketing, I had the privilage of being in charge
+              of many moving parts – a challenge I never shy away from.
             </p>
+            <ul className="text-gray-800 my-4">
+              <span className="font-bold">My Key Responsibilities </span>
+              <li className="my-3">
+                1️⃣ Conducting in-depth research to identify each client's target
+                audience and develop a content strategy that resonated with
+                them.
+              </li>
+              <li className="my-3">
+                2️⃣ Analyzing competitors to identify gaps in the market and
+                opportunities for differentiation.
+              </li>
+              <li className="my-3">
+                3️⃣ Creating a content calendar that aligned with each client's
+                goals and objectives.
+              </li>
+              <li className="my-3">
+                4️⃣ Writing and designing high-quality content that engaged the
+                target audience and drove traffic to the client's website.
+              </li>
+              <li className="my-3">
+                5️⃣ Implementing a streamlined content creation process using
+                Notion, which allowed the team to quickly get up-to-date on
+                priority tasks, view project briefs, and meet deadlines.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Process & Timeline*/}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
+          <div className="">
+            <h2 className="section-h2">Process & Timeline</h2>
             <p className="text-gray-800 my-4">
-              Additionally, I acted as a business optimizer. My love for
-              system-building, and productivity, allowed me to create a more
-              stream-lined approach to creating content by using Notion. I built
-              out an entire system that allowed everyone on the team to quickly
-              get uptodate on priority tasks, view project briefs, and deliver
-              on deadlines.
+              To create an effective content marketing strategy for each client,
+              we followed a detailed process that included:
+            </p>
+            <ul className="text-gray-800 my-4">
+              <li className="my-3">
+                <span className="font-bold">Research: </span>
+                We conducted thorough research on each client's industry, target
+                audience, and competitors to identify key trends and
+                opportunities.
+              </li>
+              <li className="my-3">
+                <span className="font-bold">Strategy: </span>
+                Based on our research, we developed a content marketing strategy
+                that aligned with each client's goals and objectives.
+              </li>
+              <li className="my-3">
+                <span className="font-bold">Content Creation: </span>
+                We created a variety of content types, including blog posts,
+                social media content, email campaigns, and more, designed to
+                engage the target audience and drive traffic to the client's
+                website.
+              </li>
+              <li className="my-3">
+                <span className="font-bold">Implementation: </span>
+                We used a variety of tools and platforms to distribute the
+                content across the web and ensure maximum exposure.
+              </li>
+            </ul>
+            <p className="text-gray-800 my-4">
+              The project timeline varied depending on the scope of each
+              client's project, but we worked closely with clients throughout
+              the process to ensure that their goals and objectives were met.{" "}
             </p>
           </div>
         </section>
 
-        {/* eBooks & PDFs */}
+        {/* Articles & Socials */}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
           <h2 className="section-h2">Articles & Socials</h2>
           <p className="text-gray-800 my-2">
-            Below are examples of articles and social media posts/tweets that I
-            created for the various Blockchain clients we had.
+            Below are examples of articles and social media content I created
+            for CCG.
           </p>
           {/* Filter Menu --*/}
           <div className="flex justify-between items-center max-w-6xl cursor-pointer">
@@ -221,7 +274,7 @@ export default function SocialInkCaseStudy() {
           <hr />
           <div className="grid grid-cols-2 laptop:grid-cols-4 gap-5 py-2">
             {ARTICLE_DATA.filter((a) => a.badgeLbl === filter).map(
-              (article, key) => (
+              (article, index) => (
                 <ArticleComponent
                   href={article.href}
                   src={article.src}
@@ -229,9 +282,61 @@ export default function SocialInkCaseStudy() {
                   body={article.body}
                   client={article.client}
                   badgeLbl={article.badgeLbl}
+                  key={index}
                 />
               )
             )}
+          </div>
+        </section>
+
+        {/* Next Steps & Outcomes + 3 Images*/}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl desktop:grid desktop:grid-rows-1 desktop:grid-cols-2 desktop:gap-4">
+          <div className="desktop:order-last">
+            <h2 className="section-h2">Next Steps and Outcomes</h2>
+            <p className="text-gray-800 my-4">
+              As a result of our work, clients experienced significant
+              improvements in website traffic, engagement, and overall brand
+              awareness. Our content marketing strategies helped clients stand
+              out in their industries and establish themselves as thought
+              leaders, resulting in increased leads and sales.
+            </p>
+          </div>
+          <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
+            <div className="row-start-1 row-end-1 relative">
+              <Image
+                src={resourcePlaceholder}
+                alt="Call Center Guys Section Image"
+                className="rounded-md"
+              />
+            </div>
+            <div className="col-span-1 row-span-2 relative">
+              <Image
+                src={resourcePlaceholder}
+                alt="Call Center Guys Section Image"
+                className="rounded-md"
+              />
+            </div>
+            <div className="col-span-2 row-span-3 relative">
+              <Image
+                src={resourcePlaceholder}
+                alt="Call Center Guys Section Image"
+                className="rounded-md"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Final Thoughts*/}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl desktop:grid desktop:grid-rows-1 desktop:grid-cols-2 desktop:gap-4">
+          <div className="desktop:order-last">
+            <h2 className="section-h2">Final Thoughts</h2>
+            <p className="text-gray-800 my-4">
+              Overall, my role at Social Ink allowed me to develop my skills as
+              a content marketer and contribute to the growth and success of
+              numerous clients. I'm proud to have been part of such a talented
+              team and to have made a positive impact on the digital marketing
+              efforts of our clients.
+            </p>
           </div>
         </section>
       </main>
