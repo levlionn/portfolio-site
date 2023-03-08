@@ -55,6 +55,7 @@ export default function SenecaBTHLab2() {
               href="https://elements.envato.com/cute-dog-behind-the-kitchen-table-YQUCN9X"
               className="text-xs text-gray-600 my-1"
               target="_blank"
+              rel="noreferrer"
             >
               View Original Source
             </a>

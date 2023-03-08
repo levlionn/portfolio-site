@@ -4,81 +4,32 @@ import compressedVerticalPlaceholder from "/public/images/compressed-vertical-pl
 import Image from "next/image";
 
 import { SectionWrapper } from "@/app/SectionWrapper";
-
-// interface PDFItem {
-//   href: string;
-//   src: StaticImageData;
-//   title: string;
-// }
-
-// const PDFComponenet = ({ href, src, title }: PDFItem) => {
-//   return (
-//     <div className=" rounded-lg bg-white shadow-xl cursor-pointer my-2">
-//       <Image src={src} alt="CCG Brochure" className="rounded-t-lg" />
-
-//       <div className="p-2 ">
-//         <h5 className=" text-sm leading-tight text-neutral-500">{title}</h5>
-
-//         <a href={href} target="_blank">
-//           <div className="flex py-1 text-sm font-semibold">
-//             Read Now
-//             <Image
-//               src={rightArrow}
-//               alt="arrow pointing north east"
-//               height={10}
-//               width={10}
-//               className="ml-1"
-//             />
-//           </div>
-//         </a>
-//       </div>
-//     </div>
-//   );
-// };
+import CaseStudyQuickPeek from "@/components/CaseStudyQuickPeek";
 
 export default function CallCenterGuysDeveloperCaseStudy() {
   return (
     <SectionWrapper>
       <main className="min-h-screen mx-auto ">
         {/* Header Image */}
-        <div className=" relative h-52 max-w-6xl mx-auto">
-          <Image src={ccgThumbnail} alt="Call Center Guys Section Image" fill />
+        <div className="relative max-w-6xl mx-auto">
+          <Image src={ccgThumbnail} alt="Call Center Guys Section Image" />
         </div>
 
-        {/* H1 & CTA & Stats */}
-        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
-          {/* Quote Box */}
-          <div className="border-l-2 border-gray-600 pl-4">
-            <h1 className="caseStudy-h1 ">
-              Designed, built and launched a complete custom website for CCG, a
-              complete brand identity and ran lead generation/social media
-              marketing.
-            </h1>
-            <button
-              type="button"
-              className="border border-black rounded-md p-2 uppercase focus:outline-none"
-            >
-              <a href="https://www.callcenterguys.com/" target="_blank">
-                Visit Live Site
-              </a>
-            </button>
-          </div>
-
-          {/* Stats Row */}
-          <div className="grid grid-rows-2 grid-cols-3 gap-x-2 pt-8 pb-4">
-            <div className="uppercase text-gray-600">Timeline</div>
-            <div className="uppercase text-gray-600">Platform</div>
-            <div className="uppercase text-gray-600">Role</div>
-            <div className="text-gray-400">March - April 2023</div>
-            <div className="text-gray-400">Custom</div>
-            <div className="text-gray-400">Developer | Copywriter</div>
-          </div>
-          <hr />
-        </section>
+        <CaseStudyQuickPeek
+          title="Designed, built and launched a complete custom website for CCG, a
+        complete brand identity and ran lead generation/social media
+        marketing."
+          href="https://www.callcenterguys.com/"
+          timeline="March - April 2023"
+          platform="Custom"
+          role="Developer & Copywriter"
+          services="Design, Development, Copywriting, Digital Marketing,Community
+          Building, Content Marketing, Communications, & Social Media Management."
+        />
 
         {/* Laptop Up, Convert to Grid view */}
         <div className="desktop:flex desktop:section-x-outer-margin-width desktop:max-w-6xl desktop:gap-6">
-          {/* Summary & Services */}
+          {/* Summary */}
           <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
             <h2 className="section-h2">Summary</h2>
             <p className="text-gray-800 my-4">
@@ -91,11 +42,6 @@ export default function CallCenterGuysDeveloperCaseStudy() {
               devices. The result was a site that helped Call Center Guys
               establish their brand and achieve their business objectives.
             </p>
-            <h3 className="text-gray-700 uppercase text-xs tablet:text-sm my-2">
-              <span className="text-gray-900 text-bold">Services: </span>Web
-              Design, Web Development, Copywriting, Digital Marketing, Brand
-              Identity, Lead Generation & SMM.
-            </h3>
           </section>
 
           {/* Requirements of The Project*/}

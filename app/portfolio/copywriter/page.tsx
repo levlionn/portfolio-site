@@ -13,7 +13,7 @@ const COPYWRITER_PROJECTS = [
     cardHeader: "Complete Website Makover",
     cardBody:
       "Designed, developed and deployed a custom-built wesbite – including copy, and marketing.",
-    tags: ["#uxui", "#webcopy"],
+    tags: ["#uxui", "#contentmarketing"],
     colour: "cinnabar",
     href: "/portfolio/copywriter/call-center-guys",
   },
@@ -24,9 +24,20 @@ const COPYWRITER_PROJECTS = [
     cardHeader: "Content Manager",
     cardBody:
       "Ran the complete content pipeline from ideation, design, copywriting and publishing.",
-    tags: ["#blogs", "#smm"],
+    tags: ["#contentmarketing", "#smm"],
     colour: "cinnabar",
     href: "/portfolio/copywriter/social-ink",
+  },
+  {
+    source: firstPic,
+    client: "Omni Agency",
+    altText: "Social Ink portfolio image",
+    cardHeader: "Lead Copywriter",
+    cardBody:
+      "Ideated & wrote social media content, website blogs, and guerrilla marketing ideas for multiple Web3-based startups.",
+    tags: ["#smm", "#seo"],
+    colour: "cinnabar",
+    href: "/portfolio/copywriter/omni-agency",
   },
 ];
 

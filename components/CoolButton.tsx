@@ -18,15 +18,13 @@ const CoolButton = ({
   colour,
 }: Props) => {
   return (
-    <div>
-      <Link href={href}>
-        <button
-          className={`py-2 px-2 w-${btnwidth} bg-${colour} text-white text-${textSize} font-semibold rounded-md shadow-md leading-relaxed `}
-        >
-          {btnLabel}
-        </button>
-      </Link>
-    </div>
+    <Link href={href} className="my-4">
+      <button
+        className={`py-2 px-2 w-${btnwidth} bg-${colour} text-white text-${textSize} font-semibold rounded-md shadow-md leading-relaxed `}
+      >
+        {btnLabel}
+      </button>
+    </Link>
   );
 };
 
