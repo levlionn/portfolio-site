@@ -11,12 +11,12 @@ const DATA = [
   },
   {
     header: "Writing my newsletter",
-    subtitle: "ADHD & optimization tips.",
+    subtitle: "ADHD & life-optimization tips.",
     href: "https://thelevletter.substack.com/",
   },
   {
     header: "Building my YouTube",
-    subtitle: "AI content & vlog.",
+    subtitle: "ADHD-related support videos.",
     href: "https://thelevletter.substack.com/",
   },
 ];
@@ -50,8 +50,8 @@ const WhatImDoingNowSection = () => {
   return (
     <div className="flex flex-col">
       <div>
-        <h2 className="text-3xl font-black">Now</h2>
-        <p className="text-gray-500 mb-6">What I'm currently up to</p>
+        <h2 className="section-h2">Now</h2>
+        <p className="text-gray-500 mb-4">What I'm currently up to</p>
       </div>
       {DATA.map((item, index) => {
         return (

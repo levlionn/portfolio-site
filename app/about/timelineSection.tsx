@@ -77,8 +77,8 @@ const TimelineItem = ({ header, date, body }: Props) => {
 const TimelineSection = () => {
   return (
     <div>
-      <h2 className="text-3xl font-black">Timeline</h2>
-      <p className="text-gray-500 mb-6">Summary of events</p>
+      <h2 className="section-h2">Timeline</h2>
+      <p className="text-gray-500 mb-4">Summary of events</p>
 
       <ol className="relative border-l border-gray-200 ">
         {TIMELINE_DATA.map((i, index) => {
