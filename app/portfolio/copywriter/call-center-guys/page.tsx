@@ -245,8 +245,8 @@ export default function CallCenterGuysCaseStudy() {
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
           <h2 className="section-h2">Articles & Socials</h2>
           <p className="text-gray-800 my-2">
-            Below are examples of articles and social media content I created
-            for CCG.
+            Below is published content promoting the brand(s) in order to
+            further increasing their reach across the web and build authority.
           </p>
           {/* Filter Menu --*/}
           <div className="flex justify-between items-center max-w-6xl cursor-pointer">
