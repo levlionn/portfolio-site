@@ -176,45 +176,82 @@ export default function CallCenterGuysCaseStudy() {
           Building, Content Marketing, Communications, & Social Media Management."
         />
 
-        {/* Summary */}
+        {/* Project Summary */}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
-          <h2 className="section-h2">Summary</h2>
+          <h2 className="section-h2">Project Summary</h2>
           <p className="text-gray-800 my-4">
-            Call Center Guys needed a full brand refresh; a fresh start; a new
-            face to showoff their company. Their main objective was to generate
-            leads through their website, so they needed a brand identity that
-            communicated professionalism, yet retained an air of casual
-            playfullness so as to not appear overly corporate, and stay relevant
-            with modern trends.
+            Call Center Guys needed a complete brand overhaul to establish a
+            fresh image and generate leads through their website. They wanted a
+            brand identity that communicated professionalism while retaining a
+            playful vibe to stay relevant in the modern business landscape.
           </p>
         </section>
 
-        {/* Copywriting*/}
+        {/* Challenges & Solutions*/}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
           <div className="">
-            <h2 className="section-h2">Copywriting</h2>
+            <h2 className="section-h2">Challenges and Solutions</h2>
             <p className="text-gray-800 my-4">
-              Quality research would make-or-break this project, so I made sure
-              to dig in and get a full grasp of the telecommunications industry
-              before writing a single word down. This gave me a deeper
-              understanding of common pain points for businesses within the
-              vertical, while simutaneously adding ammunition to my marketing
-              gun – offering the chance to shoot off timely messages to our
-              target audience who needed to hear it most.
+              One of the biggest challenges I faced in this project was the need
+              to communicate professionalism while retaining a playful and
+              casual vibe. To overcome this, I conducted extensive research on
+              the telecommunications industry to understand the common pain
+              points for businesses and identify the characteristics of the
+              target audience.
             </p>
+            <p className="text-gray-800 my-4">
+              This allowed me to craft copy that resonated with the audience
+              while also presenting Call Center Guys as a professional and
+              trustworthy brand.
+            </p>
+          </div>
+        </section>
+
+        {/* Process & Timeline*/}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
+          <div className="">
+            <h2 className="section-h2">My Role</h2>
+            <p className="text-gray-800 my-4">
+              I wore many hats for this project as I played the part of a
+              designer, copywriter and developer (along with my team). This gave
+              me unique insight into every area of the project, providing the
+              necessary viewpoint to create a comprehensive, consistent brand
+              experience.{" "}
+            </p>
+            <ul className="text-gray-800 my-4">
+              <span className="font-bold">My Key Responsibilities </span>
+              <li className="my-3">
+                1️⃣ Conducting extensive research on the telecommunications
+                industry and the target audience to identify their pain points
+                and needs.
+              </li>
+              <li className="my-3">
+                2️⃣ Crafting compelling and engaging copy that resonated with the
+                target audience and motivated them to engage with the brand.
+              </li>
+              <li className="my-3">
+                3️⃣ Creating a brand identity that communicated professionalism
+                and approachability.
+              </li>
+              <li className="my-3">
+                4️⃣ Working closely with the Call Center Guys team to ensure that
+                their goals and objectives were met throughout the project.
+              </li>
+            </ul>
           </div>
         </section>
 
         {/* Brand Identity - 3 Images*/}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl desktop:grid desktop:grid-rows-1 desktop:grid-cols-2 desktop:gap-4">
           <div className="desktop:order-last">
-            <h2 className="section-h2">Brand Identity</h2>
+            <h2 className="section-h2">Next Steps and Outcomes</h2>
             <p className="text-gray-800 my-4">
-              Initially, CCG was a blank slate. There was no defined target
-              audience, no main persona, and few details on how the company was
-              planning to generate leads. My mission, was to hone in on the
-              characteristics of their target audience, and craft engaging copy
-              to persuade them to book a call with CCG.
+              Following the completion of the project, Call Center Guys
+              experienced significant improvements in lead generation and
+              engagement. The lead-gen ads we ran on Facebook and LinkedIn
+              generated 1 million impressions and a 13% CTR, and the educational
+              and engaging content we created helped to increase engagement
+              rates and drive traffic to the website.
             </p>
           </div>
           <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
@@ -244,11 +281,7 @@ export default function CallCenterGuysCaseStudy() {
 
         {/* Facebook Ads - VIDEOS */}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
-          <h2 className="section-h2">Facebook Ads</h2>
-          <p className="text-gray-800 my-4">
-            A collection of lead-gen ads ran via Facebook & LinkedIn. Generating
-            1M impressions and a 13% CTR.
-          </p>
+          <h2 className="section-h2">Advertisement</h2>
           <div className="flex justify-between gap-4 my-4">
             {[
               "/videos/CCG-vid1.mp4",

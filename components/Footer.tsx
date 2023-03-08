@@ -28,16 +28,16 @@ const socialLinks = [
 
 const footerLinks = [
   {
+    href: "/about",
+    text: "about",
+  },
+  {
     href: "/portfolio/copywriter",
     text: "copywriter",
   },
   {
     href: "/portfolio/developer",
     text: "developer",
-  },
-  {
-    href: "/about",
-    text: "about",
   },
 ];
 
@@ -57,11 +57,13 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto">
           <div className="border border-gray-100 w-fit p-5 rounded-lg shadow-lg">
             <h3 className="mb-4 font-black text-5xl laptop:text-6xl">
-              Got a project?
+              Got a project? 🎉
             </h3>
-            <p className="text-sm my-4">
-              I&apos;d love to hear from you! Drop me a message and let&apos;s
-              bring it to life.
+            <p className="text-sm font-semibold">
+              I&apos;d love to hear from you!
+            </p>
+            <p className="text-sm mb-4">
+              Drop me a message and let&apos;s bring it to life.
             </p>
             <CoolButton
               btnLabel="Get in touch!"

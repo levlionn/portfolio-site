@@ -32,7 +32,7 @@ const CaseStudyQuickPeek = ({
         </button>
       </div>
       {/* Stats Row */}
-      <div className="grid grid-rows-2 grid-cols-3 gap-x-2 pt-8 pb-4 text-xs">
+      <div className="grid grid-rows-2 grid-cols-3 gap-x-2 pt-8 pb-4">
         <div className="uppercase text-gray-600">Timeline</div>
         <div className="uppercase text-gray-600">Platform</div>
         <div className="uppercase text-gray-600">Role</div>
@@ -41,7 +41,7 @@ const CaseStudyQuickPeek = ({
         <div className="text-gray-400">{role}</div>
       </div>
       <hr />
-      <p className="text-gray-400 my-4 text-xs">Services: {services}</p>
+      <p className="text-gray-400 my-4">Services: {services}</p>
     </section>
   );
 };
