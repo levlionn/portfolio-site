@@ -5,7 +5,7 @@ const TIMELINE_DATA = [
   {
     header: "Finished Highschool",
     date: "2014",
-    body: "Went to A.Y Jackson, where my focus was on music, maths & sport.",
+    body: "Went to A.Y Jackson, where my focus was on music, maths, and sport.",
   },
   {
     header: "Pursued Acting",
@@ -15,22 +15,22 @@ const TIMELINE_DATA = [
   {
     header: "Became a Bartender",
     date: "2016",
-    body: "Became a part-time psychologist for the local bar patrons. Worked at dive bars, private events & fancy restaurants. Care for a Negroni?",
+    body: "Became a part-time psychologist for the local bar patrons. Worked at dive bars, private events, and fancy restaurants. Care for a Negroni?",
   },
   {
     header: "Started My Degree",
     date: "2019",
-    body: "I have a passion for creative pursuits & problem-solving. Getting in software development felt like the perfect mix of the two. ",
+    body: "I have a passion for creative pursuits & problem-solving. Getting in software development felt like the perfect mix of the two.",
   },
   {
     header: "Started a Marketing Agency",
     date: "2019",
-    body: "Covid hit and everything went only. I saw a need for digital marketing services. Grew a team of 7 & served many great clients. ",
+    body: "Covid hit and everything/everyone went online. I saw a need for digital marketing services to help local business adapt. Grew a creative team of 7, and serviced many great clients.",
   },
   {
-    header: "Became a freelancer",
+    header: "Became a Freelancer",
     date: "2022",
-    body: "Combining my passion for coding & writing – I now offer services across both disciplines for brands that need help with their online presence. ",
+    body: "Combining my passion for coding & writing – I now offer services across both disciplines for brands that need help with their online presence.",
   },
   {
     header: "????",
@@ -78,7 +78,7 @@ const TimelineSection = () => {
   return (
     <div>
       <h2 className="text-3xl font-black">Timeline</h2>
-      <p className="text-gray-500 mb-6">Summary of events.</p>
+      <p className="text-gray-500 mb-6">Summary of events</p>
 
       <ol className="relative border-l border-gray-200 ">
         {TIMELINE_DATA.map((i, index) => {
