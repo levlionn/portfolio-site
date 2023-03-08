@@ -241,68 +241,7 @@ export default function CallCenterGuysCaseStudy() {
           </div>
         </section>
 
-        {/* Brand Identity - 3 Images*/}
-        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl desktop:grid desktop:grid-rows-1 desktop:grid-cols-2 desktop:gap-4">
-          <div className="desktop:order-last">
-            <h2 className="section-h2">Next Steps and Outcomes</h2>
-            <p className="text-gray-800 my-4">
-              Following the completion of the project, Call Center Guys
-              experienced significant improvements in lead generation and
-              engagement. The lead-gen ads we ran on Facebook and LinkedIn
-              generated 1 million impressions and a 13% CTR, and the educational
-              and engaging content we created helped to increase engagement
-              rates and drive traffic to the website.
-            </p>
-          </div>
-          <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
-            <div className="row-start-1 row-end-1 relative">
-              <Image
-                src={compressedVerticalPlaceholder}
-                alt="Call Center Guys Section Image"
-                className="rounded-md"
-              />
-            </div>
-            <div className="col-span-1 row-span-2 relative">
-              <Image
-                src={compressedVerticalPlaceholder}
-                alt="Call Center Guys Section Image"
-                className="rounded-md"
-              />
-            </div>
-            <div className="col-span-2 row-span-3 relative">
-              <Image
-                src={compressedVerticalPlaceholder}
-                alt="Call Center Guys Section Image"
-                className="rounded-md"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Facebook Ads - VIDEOS */}
-        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
-          <h2 className="section-h2">Advertisement</h2>
-          <div className="flex justify-between gap-4 my-4">
-            {[
-              "/videos/CCG-vid1.mp4",
-              "/videos/CCG-vid2.mp4",
-              "/videos/CCG-vid3.mp4",
-            ].map((vid, index) => {
-              return (
-                <div
-                  className="rounded-lg overflow-hidden shadow-lg"
-                  key={index}
-                >
-                  <video width="300" height="300" muted loop autoPlay>
-                    <source src={vid} type="video/mp4" />
-                  </video>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* eBooks & PDFs */}
+        {/* Articles & Socials */}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
           <h2 className="section-h2">Articles & Socials</h2>
           <p className="text-gray-800 my-2">
@@ -351,6 +290,77 @@ export default function CallCenterGuysCaseStudy() {
                 />
               )
             )}
+          </div>
+        </section>
+
+        {/* Brand Identity - 3 Images*/}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl desktop:grid desktop:grid-rows-1 desktop:grid-cols-2 desktop:gap-4">
+          <div className="desktop:order-last">
+            <h2 className="section-h2">Next Steps and Outcomes</h2>
+            <p className="text-gray-800 my-4">
+              Following the completion of the project, Call Center Guys
+              experienced significant improvements in lead generation and
+              engagement. The lead-gen ads we ran on Facebook and LinkedIn
+              generated 1 million impressions and a 13% CTR, and the educational
+              and engaging content we created helped to increase engagement
+              rates and drive traffic to the website.
+            </p>
+          </div>
+          <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
+            <div className="row-start-1 row-end-1 relative">
+              <Image
+                src={compressedVerticalPlaceholder}
+                alt="Call Center Guys Section Image"
+                className="rounded-md"
+              />
+            </div>
+            <div className="col-span-1 row-span-2 relative">
+              <Image
+                src={compressedVerticalPlaceholder}
+                alt="Call Center Guys Section Image"
+                className="rounded-md"
+              />
+            </div>
+            <div className="col-span-2 row-span-3 relative">
+              <Image
+                src={compressedVerticalPlaceholder}
+                alt="Call Center Guys Section Image"
+                className="rounded-md"
+              />
+            </div>
+          </div>
+        </section>
+        {/* Facebook Ads - VIDEOS */}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
+          <div className="flex justify-between gap-4">
+            {[
+              "/videos/CCG-vid1.mp4",
+              "/videos/CCG-vid2.mp4",
+              "/videos/CCG-vid3.mp4",
+            ].map((vid, index) => {
+              return (
+                <div
+                  className="rounded-lg overflow-hidden shadow-lg"
+                  key={index}
+                >
+                  <video width="300" height="300" muted loop autoPlay>
+                    <source src={vid} type="video/mp4" />
+                  </video>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* Final Thoughts*/}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl desktop:grid desktop:grid-rows-1 desktop:grid-cols-2 desktop:gap-4">
+          <div className="desktop:order-last">
+            <h2 className="section-h2">Final Thoughts</h2>
+            <p className="text-gray-800 my-4">
+              Overall, this project was a great success, and I'm proud to have
+              played a key role in helping Call Center Guys establish a strong
+              brand identity and generate leads for their business.
+            </p>
           </div>
         </section>
       </main>
