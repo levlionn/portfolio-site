@@ -68,8 +68,8 @@ export default function Footer() {
       viewport={{ once: true }}
       className="relative w-full text-white"
     >
-      <motion.div className="relative w-full  bg-independence/95 max-w-6xl mx-auto">
-        <div className="w-fit p-5">
+      <motion.div className="relative w-full p-5 bg-independence/95">
+        <motion.div className=" max-w-6xl mx-auto py-4">
           <h3 className="mb-4 font-black text-4xl laptop:text-6xl">
             Got a project? 🎉
           </h3>
@@ -86,71 +86,72 @@ export default function Footer() {
             textSize="md"
             colour="goldCrayola"
           />
-        </div>
+        </motion.div>
       </motion.div>
+      <motion.div className="relative w-full p-5 bg-independence">
+        <motion.div className="max-w-6xl mx-auto">
+          <div className="grid auto-grid-auto grid-cols-3 gap-3 uppercase">
+            <div className="flex">
+              {socialLinks.map((item: any) => (
+                <li key={item.url} className="list-none">
+                  <SocialIcon
+                    url={item.url}
+                    network={item.network}
+                    label={item.label}
+                    fgColor="white"
+                    bgColor="transparent"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ height: 25, width: 25 }}
+                  />
+                </li>
+              ))}
+            </div>
 
-      <motion.div className="relative w-full bg-independence">
-        <div className="p-5 grid auto-grid-auto grid-cols-3 gap-3 uppercase">
-          <div className="flex">
-            {socialLinks.map((item: any) => (
-              <li key={item.url} className="list-none">
-                <SocialIcon
-                  url={item.url}
-                  network={item.network}
-                  label={item.label}
-                  fgColor="white"
-                  bgColor="transparent"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ height: 25, width: 25 }}
-                />
-              </li>
-            ))}
+            <div className="grid auto-rows-auto">
+              <p className="font-black text-lg">Projects</p>
+              {/* Project Links */}
+
+              {projectLinks.map((link) => (
+                <li key={link.href} className="list-none">
+                  <Link
+                    href={link.href}
+                    className={`${
+                      link.href === path
+                        ? "text-xs  text-goldCrayola font-bold"
+                        : "text-xs "
+                    }`}
+                  >
+                    {link.text}{" "}
+                  </Link>
+                </li>
+              ))}
+            </div>
+
+            <div className="grid auto-rows-auto">
+              <p className="font-black text-lg">Pages</p>
+              {/* Page Links */}
+
+              {pageLinks.map((link) => (
+                <li key={link.href} className="list-none">
+                  <Link
+                    href={link.href}
+                    className={`${
+                      link.href === path
+                        ? "text-xs  text-goldCrayola font-bold"
+                        : "text-xs "
+                    }`}
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </div>
           </div>
-
-          <div className="grid auto-rows-auto">
-            <p className="font-black text-lg">Projects</p>
-            {/* Project Links */}
-
-            {projectLinks.map((link) => (
-              <li key={link.href} className="list-none">
-                <Link
-                  href={link.href}
-                  className={`${
-                    link.href === path
-                      ? "text-xs  text-goldCrayola font-bold"
-                      : "text-xs "
-                  }`}
-                >
-                  {link.text}{" "}
-                </Link>
-              </li>
-            ))}
-          </div>
-
-          <div className="grid auto-rows-auto">
-            <p className="font-black text-lg">Pages</p>
-            {/* Page Links */}
-
-            {pageLinks.map((link) => (
-              <li key={link.href} className="list-none">
-                <Link
-                  href={link.href}
-                  className={`${
-                    link.href === path
-                      ? "text-xs  text-goldCrayola font-bold"
-                      : "text-xs "
-                  }`}
-                >
-                  {link.text}
-                </Link>
-              </li>
-            ))}
-          </div>
-        </div>
-        <p className="absolute bottom-0 left-0 p-0.5 text-xs text-white/30">
-          &copy; {year} Lev Markelov. Made with ❤
-        </p>
+          <p className="absolute bottom-0 left-0 p-0.5 text-xs text-white/30">
+            &copy; {year} Lev Markelov. Made with ❤
+          </p>
+        </motion.div>
       </motion.div>
     </motion.footer>
   );
