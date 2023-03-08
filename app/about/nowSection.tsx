@@ -51,7 +51,7 @@ const WhatImDoingNowSection = () => {
     <div className="flex flex-col">
       <div>
         <h2 className="text-3xl font-black">Now</h2>
-        <p className="text-gray-500 mb-6">What I'm currently up to.</p>
+        <p className="text-gray-500 mb-6">What I'm currently up to</p>
       </div>
       {DATA.map((item, index) => {
         return (
