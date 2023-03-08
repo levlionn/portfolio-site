@@ -31,7 +31,7 @@ const CurrentlyDoingNowHeaderLink = ({ header, subtitle, href }: NowItem) => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-row">
-        <a href={href} target="_blank">
+        <a href={href} target="_blank" rel="noreferrer">
           <h3 className="text-md font-normal text-gray-900 mr-2">{header}</h3>
         </a>
 

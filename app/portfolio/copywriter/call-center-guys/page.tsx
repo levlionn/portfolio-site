@@ -126,7 +126,7 @@ const ArticleComponent = ({
         <h5 className="text-lg font-bold leading-tight">{title}</h5>
 
         <p className="text-xs desktop:text-base text-gray-600 my-3 ">{body}</p>
-        <a href={href} target="_blank">
+        <a href={href} target="_blank" rel="noreferrer">
           <div className="flex py-1 text-sm font-semibold">
             Read Now
             <Image

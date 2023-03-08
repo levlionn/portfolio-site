@@ -26,7 +26,7 @@ const CaseStudyQuickPeek = ({
           type="button"
           className="border border-black rounded-md p-2 uppercase"
         >
-          <a href={href} target="_blank">
+          <a href={href} target="_blank" rel="noreferrer">
             Visit Website
           </a>
         </button>

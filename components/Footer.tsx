@@ -82,6 +82,7 @@ export default function Footer() {
                     fgColor="white"
                     bgColor="transparent"
                     target="_blank"
+                    rel="noreferrer"
                     style={{ height: 25, width: 25 }}
                   />
                 </li>
