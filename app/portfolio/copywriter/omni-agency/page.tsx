@@ -8,7 +8,8 @@ import CaseStudyQuickPeek from "@/components/CaseStudyQuickPeek";
 import ArticleComponent from "@/components/CaseStudyArticleMenu";
 
 //images
-import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
+import OmniProjectImage from "/public/images/Marketing-Plan.png";
+
 import resourcePlaceholder from "@/public/images/resource-placeholder.png";
 
 //article images
@@ -46,13 +47,13 @@ export default function OmniAgencyCaseStudy() {
     <SectionWrapper>
       <main className="min-h-screen mx-auto ">
         {/* Header Image */}
-        <div className=" relative max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <Image
-            src={ccgThumbnail}
+            src={OmniProjectImage}
             alt="Social Section Image"
-            sizes="(max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            33vw"
+            height={400}
+            width={400}
+            className="mx-auto"
           />
         </div>
 
