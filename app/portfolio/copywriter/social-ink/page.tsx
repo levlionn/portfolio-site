@@ -140,7 +140,7 @@ export default function SocialInkCaseStudy() {
           />
         </div>
         <CaseStudyQuickPeek
-          title=" Helped a fractional CMO run marketing operations for multiple blockchain startups."
+          title="Helped a fractional CMO run marketing operations for multiple blockchain startups."
           href="https://www.socialink.co/"
           timeline="May 2021 - July 2022"
           platform="Many"

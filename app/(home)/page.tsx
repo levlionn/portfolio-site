@@ -27,15 +27,13 @@ export default function Home() {
         {/* Skills & Resources Section */}
         <section
           className="section-y-spacing 
-        section-x-outer-margin-width
-        tablet:flex tablet:space-x-12 desktop:max-w-6xl
-"
+        section-x-outer-margin-width flex flex-col laptop:flex-row gap-10 justify-start desktop:max-w-6xl"
         >
-          <div className="basis-2/3">
+          <div className="basis-1/2">
             <SkillsSection />
           </div>
 
-          <div className="basis-1/3">
+          <div className="basis-1/2">
             <ResourceSection />
           </div>
         </section>

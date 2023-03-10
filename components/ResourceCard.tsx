@@ -10,6 +10,7 @@ interface Props {
   resourceImage: StaticImageData;
   badgeLbl: string;
   header: string;
+  body: string;
   linkLbl: string;
   href: string;
 }
@@ -17,27 +18,41 @@ interface Props {
 const ResourceCard = ({
   badgeLbl,
   header,
+  body,
   linkLbl,
   href,
   resourceImage,
 }: Props) => {
   return (
-    <div className="relative max-w-sm laptop:max-w-xs w-full h-60 tablet:h-40 laptop:h-72 my-2 bg-white border border-gray-200 overflow-hidden rounded-lg shadow-lg cursor-pointer">
-      <Image src={resourceImage} alt="heroImage" fill />
-      <span className="bg-independence text-white text-xs font-medium p-1 rounded opacity-50 m-4 absolute top-0 right-0 w-22 tracking-tighter">
-        {badgeLbl}
-      </span>
-      <div className="absolute bottom-0 left-0  w-full">
-        <div className="p-4 space-y-2">
-          <h3 className="w-full tracking-tight font-bold text-xl laptop:text-2xl tablet:text-xs text-black">
-            {header}
-          </h3>
-          <div className="text-sm tablet:text-xs laptnop:text-base text-bold flex flex-row">
-            <Link href={href} className="mr-2 ">
-              {linkLbl}
-            </Link>
-            <Image src={rightTopArrow} alt="icon" width={15} height={15} />
-          </div>
+    <div className="flex w-fit h-fit rounded-md overflow-hidden shadow-lg my-2 border border-independence">
+      <div className="relative basis-1/2 flex items-center justify-center border border-r-independence">
+        <Image
+          src={resourceImage}
+          alt="Resource Card Image of a male brick layer building a wall. Style in Notion illustration."
+          className="mx-auto "
+          height={150}
+          width={150}
+        />
+        <span className="absolute top-0 left-0 w-fit m-2 p-1.5 bg-independence/80 text-white text-xs rounded-md tracking-tighter">
+          {badgeLbl}
+        </span>
+      </div>
+      <div className="basis-1/2 p-3">
+        <h3 className="tracking-tighter font-bold text-2xl text-black">
+          {header}
+        </h3>
+        <p className="text-xs desktop:text-sm text-gray-600 my-3">{body}</p>
+
+        <div className="flex text-sm w-fit text-bold">
+          <Link href={href} className="mr-2 ">
+            {linkLbl}
+          </Link>
+          <Image
+            src={rightTopArrow}
+            alt="pointing top-right arrow icon"
+            width={10}
+            height={10}
+          />
         </div>
       </div>
     </div>

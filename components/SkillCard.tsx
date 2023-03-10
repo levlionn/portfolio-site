@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import ToggleActiveMode from "./ToggleActiveMode";
 
 //images
-import mockPlaceholder2 from "/public/images/mock2.png";
 import rightArrow from "/public/svg/right-arrow-long.svg";
 import Link from "next/link";
 
 interface Props {
+  src: StaticImageData;
   icon: string;
   tag: string;
   expertiseHeader: string;
@@ -18,6 +18,7 @@ interface Props {
 }
 
 const SkillCard = ({
+  src,
   icon,
   expertiseBody,
   tag,
@@ -40,9 +41,14 @@ const SkillCard = ({
           <div className="uppercase text-xs text-gray-500">{tag}</div>
         </div>
 
-        <h5 className="mb-6 text-xl font-black laptop:text-3xl">
+        <h5 className="text-2xl font-black laptop:text-3xl">
           <span className={`text-${colour}`}>{expertiseHeader}</span>
         </h5>
+
+        <div className="relative h-52 w-52 mx-auto">
+          <Image src={src} alt="Copywriter | Developer Skill Image" fill />
+        </div>
+
         <p className="text-independence">{expertiseBody}</p>
 
         <Link
@@ -58,10 +64,6 @@ const SkillCard = ({
             className="ml-2"
           />
         </Link>
-
-        <div className="relative h-52 w-full">
-          <Image src={mockPlaceholder2} alt="hi" fill />
-        </div>
       </div>
     </div>
   );

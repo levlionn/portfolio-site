@@ -3,11 +3,12 @@ import ContactMeButton from "@/components/ContactMeButton";
 import PortfolioCard from "@/components/PortfolioCard";
 import PrincipleItem from "../PrincipleItem";
 
-import firstPic from "/public/images/005.jpg";
+import callCenterNotionPic from "/public/images/Call-Center.png";
+import planetPic from "/public/images/Notion_Planet.png";
 
 const COPYWRITER_PROJECTS = [
   {
-    source: firstPic,
+    source: callCenterNotionPic,
     client: "Call Center Guys",
     altText: "Call Center Guys portfolio image",
     cardHeader: "Complete Website Makover",
@@ -18,7 +19,7 @@ const COPYWRITER_PROJECTS = [
     href: "/portfolio/copywriter/call-center-guys",
   },
   {
-    source: firstPic,
+    source: planetPic,
     client: "Social Ink",
     altText: "Social Ink portfolio image",
     cardHeader: "Content Manager",
@@ -29,7 +30,7 @@ const COPYWRITER_PROJECTS = [
     href: "/portfolio/copywriter/social-ink",
   },
   {
-    source: firstPic,
+    source: callCenterNotionPic,
     client: "Omni Agency",
     altText: "Social Ink portfolio image",
     cardHeader: "Lead Copywriter",

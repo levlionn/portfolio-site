@@ -7,6 +7,8 @@ import { ModeContext } from "@/ModeContext";
 // Images
 import pencilsvg from "/public/svg/pencil.svg";
 import computersvg from "/public/svg/computer.svg";
+import copywriterSkillCardImage from "/public/images/Magic_.png";
+import developerSkillCardImage from "/public/images/Coding.png";
 
 const copywriterExpertise = [
   {
@@ -38,6 +40,9 @@ const SkillsSection = () => {
   const shownCardData =
     mode === "copywriter" ? copywriterExpertise : developerExpertise;
 
+  const shownCardImageData =
+    mode === "copywriter" ? copywriterSkillCardImage : developerSkillCardImage;
+
   return (
     <main className="">
       <h2 className="section-h2">What I do</h2>
@@ -48,6 +53,7 @@ const SkillsSection = () => {
       {shownCardData.map((item, index) => {
         return (
           <SkillCard
+            src={shownCardImageData}
             icon={item.icon}
             tag={item.tag}
             expertiseHeader={item.expertiseHeader}
