@@ -1,11 +1,13 @@
-import ContactMeButton from "@/components/ContactMeButton";
+import { SectionWrapper } from "@/app/SectionWrapper";
 import PortfolioCard from "@/components/PortfolioCard";
-import firstPic from "/public/images/005.jpg";
 import PrincipleItem from "../PrincipleItem";
+
+//images
+import copywriterSkillCardImage from "/public/images/Magic_.png";
 
 const DEVELOPER_PROJECTS = [
   {
-    source: firstPic,
+    source: copywriterSkillCardImage,
     client: "Call Center Guys",
     altText: "Call Center Guys portfolio image",
     cardHeader: "Full Custom Website",
@@ -37,75 +39,77 @@ const DEVELOPER_PRINCIPLES = [
 
 export default function DeveloperPortfolio() {
   return (
-    <main className="min-h-screen mx-auto">
-      <h1 className="section-h1 text-center text-etonBlue section-y-spacing section-x-outer-margin-width">
-        Designing digital experiences, one pixel at a time.
-      </h1>
-      <div className="laptop:flex laptop:section-x-outer-margin-width max-w-6xl laptop:gap-6">
-        <section className="section-y-spacing section-x-outer-margin-width">
-          <h2 className="section-h2">Principles I live by</h2>
+    <SectionWrapper>
+      <main className="min-h-screen mx-auto">
+        <section className="flex flex-col section-y-spacing section-x-outer-margin-width max-w-6xl mx-auto">
+          <h1 className="section-h1 text-etonBlue">
+            Designing digital experiences, one pixel at a time.
+          </h1>
 
-          {DEVELOPER_PRINCIPLES.map((p, index) => (
-            <PrincipleItem
-              principleHeader={p.principleHeader}
-              principleBody={p.principleBody}
-              key={index}
-            />
-          ))}
-          <hr />
-        </section>
+          {/* PRINCIPLES SECTION */}
 
-        <section className="section-y-spacing section-x-outer-margin-width">
-          <h2 className="section-h2">Expertise</h2>
+          <div>
+            <h2 className="section-h2">Principles I live by</h2>
 
-          <p className="text-gray-500 font-sm my-4">
-            For me, programming is the perfect synergy of creativity and
-            problem-solving capabilities – it's both challenging, yet incredibly
-            fun. I LOVE building useful projects, and will continue to for the
-            rest of my life.
-          </p>
-
-          <p className="text-gray-500 font-sm mb-4">
-            <span className="text-gray-700 font-sm uppercase">
-              key skills:{" "}
-            </span>
-            Responsive design, security principles, problem-solving, version
-            control, testing & debugging, CRM, SEO
-          </p>
-          <p className="text-gray-500 font-sm mb-4">
-            <span className="text-gray-700 font-sm uppercase">
-              Tools, Libraries & Frameworks:{" "}
-            </span>
-            React, NextJS,HTML, CSS, Javascript, Node, MongoDB, Postman,
-            Storyblok, Vercel, Express, Wordpress, Git, Github
-          </p>
-          <hr />
-        </section>
-      </div>
-      {/* COPYWRITING PROJECTS */}
-      <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
-        <h2 className="section-h2">Developer Projects</h2>
-
-        <div className="laptop:grid laptop:grid-cols-2 laptop:gap-4">
-          {DEVELOPER_PROJECTS.map((item, index) => {
-            return (
-              <PortfolioCard
-                source={item.source.src}
-                altText={item.altText}
-                client={item.client}
-                cardHeader={item.cardHeader}
-                cardBody={item.cardBody}
-                tags={item.tags}
-                colour={item.colour}
-                href={item.href}
+            {DEVELOPER_PRINCIPLES.map((p, index) => (
+              <PrincipleItem
+                principleHeader={p.principleHeader}
+                principleBody={p.principleBody}
                 key={index}
               />
-            );
-          })}
-        </div>
-      </section>
+            ))}
+          </div>
+          {/* EXPERTISE SECTION */}
+          <div>
+            <h2 className="section-h2">Expertise</h2>
 
-      {/* end of file */}
-    </main>
+            <p className="text-gray-500 font-sm my-4">
+              For me, programming is the perfect synergy of creativity and
+              problem-solving capabilities – it's both challenging, yet
+              incredibly fun. I LOVE building useful projects, and will continue
+              to for the rest of my life.
+            </p>
+
+            <p className="text-gray-500 font-sm">
+              <span className="text-gray-700 font-sm uppercase">
+                key skills:{" "}
+              </span>
+              Responsive design, security principles, problem-solving, version
+              control, testing & debugging, CRM, SEO
+            </p>
+            <p className="text-gray-500 font-sm">
+              <span className="text-gray-700 font-sm uppercase">Tech: </span>
+              React, NextJS,HTML, CSS, Javascript, Node, MongoDB, Postman,
+              Storyblok, Vercel, Express, Wordpress, Git, Github
+            </p>
+          </div>
+        </section>
+
+        {/* COPYWRITING PROJECTS */}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl mx-auto">
+          <h2 className="section-h2">Developer Projects</h2>
+
+          <div className="laptop:grid laptop:grid-cols-2 laptop:gap-4">
+            {DEVELOPER_PROJECTS.map((item, index) => {
+              return (
+                <PortfolioCard
+                  source={item.source.src}
+                  altText={item.altText}
+                  client={item.client}
+                  cardHeader={item.cardHeader}
+                  cardBody={item.cardBody}
+                  tags={item.tags}
+                  colour={item.colour}
+                  href={item.href}
+                  key={index}
+                />
+              );
+            })}
+          </div>
+        </section>
+
+        {/* end of file */}
+      </main>
+    </SectionWrapper>
   );
 }

@@ -1,24 +1,26 @@
 import { SectionWrapper } from "@/app/SectionWrapper";
-import ContactMeButton from "@/components/ContactMeButton";
 import PortfolioCard from "@/components/PortfolioCard";
 import PrincipleItem from "../PrincipleItem";
 
-import firstPic from "/public/images/005.jpg";
+//images
+import CCGProjectImage from "/public/images/Call-Center.png";
+import SocialInkProjectImage from "/public/images/Modern-Socialization.png";
+import OmniProjectImage from "/public/images/Marketing-Plan.png";
 
 const COPYWRITER_PROJECTS = [
   {
-    source: firstPic,
+    source: CCGProjectImage,
     client: "Call Center Guys",
     altText: "Call Center Guys portfolio image",
-    cardHeader: "Complete Website Makover",
+    cardHeader: "Call Center Guys Brand Overhaul",
     cardBody:
-      "Designed, developed and deployed a custom-built wesbite – including copy, and marketing.",
+      "Revamped Call Center Guys' brand, crafted compelling copy, and achieved success with improved engagement and website traffic.",
     tags: ["#uxui", "#contentmarketing"],
     colour: "cinnabar",
     href: "/portfolio/copywriter/call-center-guys",
   },
   {
-    source: firstPic,
+    source: SocialInkProjectImage,
     client: "Social Ink",
     altText: "Social Ink portfolio image",
     cardHeader: "Content Manager",
@@ -29,7 +31,7 @@ const COPYWRITER_PROJECTS = [
     href: "/portfolio/copywriter/social-ink",
   },
   {
-    source: firstPic,
+    source: OmniProjectImage,
     client: "Omni Agency",
     altText: "Social Ink portfolio image",
     cardHeader: "Lead Copywriter",
@@ -63,11 +65,14 @@ export default function CopywriterPortfolio() {
   return (
     <SectionWrapper>
       <main className="min-h-screen mx-auto">
-        <h1 className="section-h1 text-center text-cinnabar section-y-spacing section-x-outer-margin-width">
-          Great copywriting tells a story.
-        </h1>
-        <div className="laptop:flex laptop:section-x-outer-margin-width max-w-6xl laptop:gap-7">
-          <section className="section-y-spacing section-x-outer-margin-width">
+        <section className="flex flex-col section-y-spacing section-x-outer-margin-width max-w-6xl mx-auto">
+          <h1 className="section-h1 text-cinnabar">
+            Great copywriting tells a story.
+          </h1>
+
+          {/* PRINCIPLES SECTION */}
+
+          <div>
             <h2 className="section-h2">Principles I live by</h2>
 
             {copywriterPrinciples.map((p, index) => (
@@ -77,10 +82,9 @@ export default function CopywriterPortfolio() {
                 key={index}
               />
             ))}
-            <hr />
-          </section>
-
-          <section className="section-y-spacing section-x-outer-margin-width">
+          </div>
+          {/* EXPERTISE SECTION */}
+          <div>
             <h2 className="section-h2">Expertise</h2>
 
             <p className="text-gray-500 font-sm my-4">
@@ -90,22 +94,22 @@ export default function CopywriterPortfolio() {
               myself to improve my game.
             </p>
 
-            <p className="text-gray-500 font-sm mb-4">
+            <p className="text-gray-500 font-sm">
               <span className="text-gray-700 font-sm uppercase">
                 key skills:{" "}
               </span>
               Writing, editing, research, marketing, time management,
               communication.
             </p>
-            <p className="text-gray-500 font-sm mb-4">
+            <p className="text-gray-500 font-sm">
               <span className="text-gray-700 font-sm uppercase">Tech: </span>
               Google Suite, Microsoft Suite, Adobe Suite, Canva
             </p>
-            <hr />
-          </section>
-        </div>
+          </div>
+        </section>
+
         {/* COPYWRITING PROJECTS */}
-        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl mx-auto">
           <h2 className="section-h2">Copywriting Projects</h2>
 
           <div className="laptop:grid laptop:grid-cols-2 laptop:gap-4">

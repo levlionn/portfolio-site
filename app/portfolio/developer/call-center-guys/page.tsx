@@ -23,62 +23,90 @@ export default function CallCenterGuysDeveloperCaseStudy() {
           timeline="March - April 2023"
           platform="Custom"
           role="Developer & Copywriter"
-          services="Design, Development, Copywriting, Digital Marketing,Community
-          Building, Content Marketing, Communications, & Social Media Management."
+          services="Design, Development, Copywriting, Digital Marketing, Community
+          Building, Content Marketing, Communications & Social Media Management."
         />
 
-        {/* Laptop Up, Convert to Grid view */}
-        <div className="desktop:flex desktop:section-x-outer-margin-width desktop:max-w-6xl desktop:gap-6">
-          {/* Summary */}
-          <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
-            <h2 className="section-h2">Summary</h2>
+        {/* Project Summary */}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
+          <h2 className="section-h2">Project Summary</h2>
+          <p className="text-gray-800 my-4">
+            Call Center Guys, a startup without a brand identity or website,
+            needed a full brand refresh to generate leads. As a web developer, I
+            collaborated with them to create a functional, approachable, and
+            easy-to-navigate website that turned new visitors into customers.
+            Using a user-centered design approach, I incorporated custom
+            graphics and created a responsive site that worked well across all
+            devices. The result was a site that helped Call Center Guys
+            establish their brand and achieve their business objectives.
+          </p>
+        </section>
+
+        {/* Challenges & Solutions*/}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
+          <div className="">
+            <h2 className="section-h2">Challenges and Solutions</h2>
             <p className="text-gray-800 my-4">
-              Call Center Guys, a startup without a brand identity or website,
-              needed a full brand refresh to generate leads. As a web developer,
-              I collaborated with them to create a functional, approachable, and
-              easy-to-navigate website that turned new visitors into customers.
-              Using a user-centered design approach, I incorporated custom
-              graphics and created a responsive site that worked well across all
-              devices. The result was a site that helped Call Center Guys
-              establish their brand and achieve their business objectives.
+              One of the biggest challenges I faced in this project was the need
+              to communicate professionalism while retaining a playful and
+              casual vibe. To overcome this, I conducted extensive research on
+              the telecommunications industry to understand the common pain
+              points for businesses and identify the characteristics of the
+              target audience.
             </p>
-          </section>
+            <p className="text-gray-800 my-4">
+              I then incorporated my findings into the design to create an
+              optimal user journey while also presenting Call Center Guys as a
+              professional and trustworthy brand.
+            </p>
+          </div>
+        </section>
 
-          {/* Requirements of The Project*/}
-          <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
-            <div className="">
-              <h2 className="section-h2">Requirements of the project</h2>
-              <p className="text-gray-800 my-4">
-                Call Center Guys is a telecommunications company that needed a
-                full brand refresh and a custom website to generate leads. Their
-                target audience was businesses in need of call center services,
-                and their main goals for the project were to establish their
-                brand identity, educate visitors about their services, capture
-                leads and rank on Google organically.
-              </p>
-            </div>
+        {/* Process & Timeline*/}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
+          <div className="">
+            <h2 className="section-h2">My Role</h2>
+            <p className="text-gray-800 my-4">
+              I wore many hats for this project as I played the part of a
+              designer, copywriter and developer (along with my team). This gave
+              me unique insight into every area of the project, providing the
+              necessary viewpoint to create a comprehensive, consistent brand
+              experience.{" "}
+            </p>
+            <ul className="text-gray-800 my-4">
+              <span className="font-bold">My Key Responsibilities </span>
+              <li className="my-3">
+                1️⃣ Conducting extensive research on the telecommunications
+                industry and the target audience to identify their pain points
+                and needs.
+              </li>
+              <li className="my-3">
+                2️⃣ Designing & Developing their website using NextJS
+              </li>
+              <li className="my-3">
+                3️⃣ Creating a brand identity that communicated professionalism
+                and approachability.
+              </li>
+              <li className="my-3">
+                4️⃣ Working closely with the Call Center Guys team to ensure that
+                their goals and objectives were met throughout the project.
+              </li>
+            </ul>
+          </div>
+        </section>
 
-            <div className="relative w-full h-72 my-2">
-              <Image
-                src={compressedPlaceholder}
-                alt="Call Center Guys Section Image"
-                fill
-                className="rounded-md"
-              />
-            </div>
-          </section>
-        </div>
-
-        {/* Project Scope - 3 Images*/}
+        {/* Brand Identity - 3 Images*/}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl desktop:grid desktop:grid-rows-1 desktop:grid-cols-2 desktop:gap-4">
           <div className="desktop:order-last">
-            <h2 className="section-h2">Project Scope</h2>
+            <h2 className="section-h2">Technical Requirements</h2>
             <p className="text-gray-800 my-4">
-              The website needed to have a modern design and be easy to
-              navigate, with a contact form to capture leads. It also needed to
-              be optimized for search engines to drive organic traffic. The
-              client requested a custom color scheme and graphics to match their
-              new brand identity.
+              The website was built using NextJS as the framework, Vercel for
+              hosting, BulmaCSS for styling, and Storyblok as a headless CMS.
+              Various analytics tools like Google, LinkedIn, Facebook,
+              MouseFlow, and Segment were used to track user behavior and
+              engagement on the site. The site was SSR to ensure quick loading
+              times, and anti-spam security principles were implemented to
+              prevent abuse of the contact form and protect sensitive data.
             </p>
           </div>
           <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
@@ -105,20 +133,9 @@ export default function CallCenterGuysDeveloperCaseStudy() {
             </div>
           </div>
         </section>
-
-        {/* Technical Requirements - VIDEOS */}
+        {/* Facebook Ads - VIDEOS */}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
-          <h2 className="section-h2">Technical Requirements</h2>
-          <p className="text-gray-800 my-4">
-            The website was built using NextJS as the framework, Vercel for
-            hosting, BulmaCSS for styling, and Storyblok as a headless CMS.
-            Various analytics tools like Google, LinkedIn, Facebook, MouseFlow,
-            and Segment were used to track user behavior and engagement on the
-            site. The site was SSR to ensure quick loading times, and anti-spam
-            security principles were implemented to prevent abuse of the contact
-            form and protect sensitive data.
-          </p>
-          <div className="flex justify-between gap-4 my-4">
+          <div className="flex justify-between gap-4">
             {[
               "/videos/CCG-vid1.mp4",
               "/videos/CCG-vid2.mp4",
@@ -138,16 +155,16 @@ export default function CallCenterGuysDeveloperCaseStudy() {
           </div>
         </section>
 
-        {/* Timeline & Budget */}
-        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
-          <h2 className="section-h2">Timeline & Budget</h2>
-          <p className="text-gray-800">
-            The project had a tight timeline of 3 months and a budget of $20K.
-            We established clear milestones for the completion of the website
-            and worked closely with the client throughout the process to ensure
-            that everything ran smoothly. By breaking the project into chunks,
-            we were able to deliver a quality product on time and within budget.
-          </p>
+        {/* Final Thoughts*/}
+        <section className="section-y-spacing section-x-outer-margin-width max-w-6xl desktop:grid desktop:grid-rows-1 desktop:grid-cols-2 desktop:gap-4">
+          <div className="desktop:order-last">
+            <h2 className="section-h2">Final Thoughts</h2>
+            <p className="text-gray-800 my-4">
+              Overall, this project was a great success, and I'm proud to have
+              played a key role in helping Call Center Guys establish a strong
+              brand identity and generate leads for their business.
+            </p>
+          </div>
         </section>
       </main>
     </SectionWrapper>

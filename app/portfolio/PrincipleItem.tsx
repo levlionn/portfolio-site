@@ -7,10 +7,10 @@ interface Props {
 
 const PrincipleItem = ({ principleHeader, principleBody }: Props) => {
   return (
-    <div className="mt-4">
-      <div className="mb-4">
-        <h3 className="text-xl text-black mb-4">{principleHeader}</h3>
-        <p className="text-gray-500 text-base">{principleBody}</p>
+    <div className="flex flex-col my-4">
+      <div>
+        <h3 className="text-2xl text-black">{principleHeader}</h3>
+        <p className="text-gray-600 text-base">{principleBody}</p>
       </div>
     </div>
   );

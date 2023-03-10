@@ -1,44 +1,61 @@
 "use client";
-import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
-
-import Image, { StaticImageData } from "next/image";
-import resourcePlaceholder from "@/public/images/resource-placeholder.png";
-
-import rightArrow from "/public/svg/right-top-arrow.svg";
+import { useState } from "react";
+import Image from "next/image";
 import { SectionWrapper } from "@/app/SectionWrapper";
 
-import { useState } from "react";
+//components
 import CaseStudyQuickPeek from "@/components/CaseStudyQuickPeek";
+import ArticleComponent from "@/components/CaseStudyArticleMenu";
 
-interface PDFItem {
-  href: string;
-  src: StaticImageData;
-  title: string;
-  body: string;
-  client: string;
-  badgeLbl: string;
-}
+//images
+import resourcePlaceholder from "@/public/images/resource-placeholder.png";
+import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
+
+//article images
+import pressReleaseImage from "/public/images/Target.png";
+import pressReleaseImage2 from "/public/images/Announcement.png";
+import articleImage from "/public/images/Nodes_.png";
+import articleImage2 from "/public/images/Chart_.png";
+import socialImage from "/public/images/Modern-Socialization.png";
+import socialImage2 from "/public/images/Notion_Planet.png";
+import pitchDeckImage from "/public/images/Gestures.png";
 
 const ARTICLE_DATA = [
   {
     href: "https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a",
-    src: resourcePlaceholder,
+    src: pressReleaseImage,
     title: "Press Release",
-    body: "DataUnion successfully closed a $1.5million seed round. Considering the buzz, and the impact of the company, I wrote out a Press Release to let other investors know the direction we were heading in.",
+    body: "DataUnion successfully closed a $1.5million seed round; this article let the other investors know the direction the company was heading in.",
+    client: "Data Union Foundation",
+    badgeLbl: "Press Release",
+  },
+  {
+    href: "https://blog.dataunion.app/dataunion-foundation-to-further-on-chain-adoption-and-build-reputation-oracle-with-human-protocol-dfeb04a1e24a",
+    src: pressReleaseImage2,
+    title: "Partnership with Human Protocol",
+    body: "A press release written to investors (and the public) announcing the expansion of DataUnion Foundation – this time with HUMAN protocol; a decentralized job marketplace.  ",
     client: "Data Union Foundation",
     badgeLbl: "Press Release",
   },
   {
     href: "https://medium.com/@dataunionapp/dataunion-foundation-successfully-closes-its-seed-round-c74e7e3f4b4a",
-    src: resourcePlaceholder,
+    src: articleImage,
     title: "The Future of Web3",
     body: "To help drive traffic to Social Ink's website, I routinely wrote SEO-optimized articles on popular trends within the Web3 space.",
     client: "Social Ink",
     badgeLbl: "Article",
   },
   {
+    href: "https://blog.dataunion.app/what-is-a-dataunion-6b43a618af1b",
+    src: articleImage2,
+    title: "What is a DataUnion?",
+    body: " A blog written to explore the revolutionary potential of Data Unions, their impact on society and how we, collectively, can bring about positive change to all areas of life – through democratized data.",
+    client: "Data Union Foundation",
+    badgeLbl: "Article",
+  },
+  {
     href: "https://twitter.com/DataunionA",
-    src: resourcePlaceholder,
+    src: socialImage,
     title: "Twitter Account Management",
     body: "Ran the official Twitter acccount for DUF. Used best social media practices to engage viewers (stop them from scrolling), provide value and inspire action (follow/like/share)",
     client: "Data Union Foundation",
@@ -46,77 +63,21 @@ const ARTICLE_DATA = [
   },
   {
     href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
-    src: resourcePlaceholder,
-    title: "Timecapsule Pitch Deck",
-    body: "Co-Founders of DataUnion Foundation, Mark & Robin, spoke at the world’s first Experimental Zone Event (“EZ1”).",
-    client: "Data Union Foundation",
-    badgeLbl: "Pitch Deck",
-  },
-  {
-    href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
-    src: resourcePlaceholder,
+    src: socialImage2,
     title: "Twitter Thread (#BigData)",
     body: "An example of an educational Twitter thread discussing the problems of #BigData, and the benefits of DataUnions for the collective good of the world. ",
     client: "Data Union Foundation",
     badgeLbl: "Social",
   },
   {
-    href: "https://blog.dataunion.app/what-is-a-dataunion-6b43a618af1b",
-    src: resourcePlaceholder,
-    title: "What is a DataUnion?",
-    body: " A blog written to explore the revolutionary potential of Data Unions, their impact on society and how we, collectively, can bring about positive change to all areas of life – through democratized data.",
+    href: "https://blog.dataunion.app/dataunion-foundation-builds-proof-of-concept-dataunion-to-capture-a-time-capsule-of-the-fdb5ecce249a",
+    src: pitchDeckImage,
+    title: "Timecapsule Pitch Deck",
+    body: "Co-Founders of DataUnion Foundation, Mark & Robin, spoke at the world’s first Experimental Zone Event (“EZ1”).",
     client: "Data Union Foundation",
-    badgeLbl: "Article",
-  },
-  {
-    href: "https://blog.dataunion.app/dataunion-foundation-to-further-on-chain-adoption-and-build-reputation-oracle-with-human-protocol-dfeb04a1e24a",
-    src: resourcePlaceholder,
-    title: "Partnership with Human Protocol",
-    body: "A press release written to investors (and the public) announcing the expansion of DataUnion Foundation – this time with HUMAN protocol; a decentralized job marketplace.  ",
-    client: "Data Union Foundation",
-    badgeLbl: "Rress Release",
+    badgeLbl: "Pitch Deck",
   },
 ];
-
-const ArticleComponent = ({
-  href,
-  src,
-  title,
-  body,
-  client,
-  badgeLbl,
-}: PDFItem) => {
-  return (
-    <div className="relative max-w-xs flex flex-col">
-      <div className="relative w-full h-32 rounded-lg bg-white shadow-xl cursor-pointer">
-        <Image src={src} alt="CCG Brochure" className="rounded-lg" fill />
-        {/* Badge */}
-        <div className="absolute top-0 left-0 m-2 p-0.5 w-fit text-center text-white text-xs  font-medium px-2 bg-etonBlue rounded-lg">
-          {badgeLbl}
-        </div>
-      </div>
-      <div className="py-2">
-        <span className="text-xs text-gray-500">{client}</span>
-
-        <h5 className="text-lg font-bold leading-tight">{title}</h5>
-
-        <p className="text-xs desktop:text-base text-gray-600 my-3 ">{body}</p>
-        <a href={href} target="_blank" rel="noreferrer">
-          <div className="flex py-1 text-sm font-semibold">
-            Read Now
-            <Image
-              src={rightArrow}
-              alt="arrow pointing north east"
-              height={10}
-              width={10}
-              className="ml-1"
-            />
-          </div>
-        </a>
-      </div>
-    </div>
-  );
-};
 
 export default function SocialInkCaseStudy() {
   // State Management
@@ -140,7 +101,7 @@ export default function SocialInkCaseStudy() {
           />
         </div>
         <CaseStudyQuickPeek
-          title=" Helped a fractional CMO run marketing operations for multiple blockchain startups."
+          title="Helped a fractional CMO run marketing operations for multiple blockchain startups."
           href="https://www.socialink.co/"
           timeline="May 2021 - July 2022"
           platform="Many"

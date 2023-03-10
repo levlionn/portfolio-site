@@ -1,82 +1,38 @@
 "use client";
-import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
+import { useState } from "react";
+import { SectionWrapper } from "@/app/SectionWrapper";
+import Image from "next/image";
 
-import Image, { StaticImageData } from "next/image";
+//components
+import CaseStudyQuickPeek from "@/components/CaseStudyQuickPeek";
+import ArticleComponent from "@/components/CaseStudyArticleMenu";
+
+//images
+import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
 import resourcePlaceholder from "@/public/images/resource-placeholder.png";
 
-import rightArrow from "/public/svg/right-top-arrow.svg";
-import { SectionWrapper } from "@/app/SectionWrapper";
-
-import { useState } from "react";
-import CaseStudyQuickPeek from "@/components/CaseStudyQuickPeek";
-
-interface PDFItem {
-  href: string;
-  src: StaticImageData;
-  title: string;
-  body: string;
-  client: string;
-  badgeLbl: string;
-}
+//article images
+import socialImage from "/public/images/Modern-Socialization.png";
+import socialImage2 from "/public/images/Notion_Planet.png";
 
 const ARTICLE_DATA = [
   {
     href: "https://twitter.com/Raiinmakerapp?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
-    src: resourcePlaceholder,
-    title: "Twitter Management",
+    src: socialImage,
+    title: "Web3-Based Content",
     body: "Ideated and crafted content to help grow Raiinmaker's–a decentralized social media platform–Twitter account by 28K new users in 3 months.",
     client: "Raiinmaker",
     badgeLbl: "Social",
   },
   {
     href: "https://twitter.com/DepressCitizens",
-    src: resourcePlaceholder,
-    title: "Twitter Management",
+    src: socialImage2,
+    title: "NFT-Based Content",
     body: "Depressed Citizens is an NFT collection about the people, for the people. Through creative, engaging content, I helped drive 1,150% organic growth on Twitter.",
     client: "Depressed Citizens",
     badgeLbl: "Social",
   },
 ];
-
-const ArticleComponent = ({
-  href,
-  src,
-  title,
-  body,
-  client,
-  badgeLbl,
-}: PDFItem) => {
-  return (
-    <div className="relative max-w-xs flex flex-col">
-      <div className="relative w-full h-32 rounded-lg bg-white shadow-xl cursor-pointer">
-        <Image src={src} alt="CCG Brochure" className="rounded-lg" fill />
-        {/* Badge */}
-        <div className="absolute top-0 left-0 m-2 p-0.5 w-fit text-center text-white text-xs  font-medium px-2 bg-etonBlue rounded-lg">
-          {badgeLbl}
-        </div>
-      </div>
-      <div className="py-2">
-        <span className="text-xs text-gray-500">{client}</span>
-
-        <h5 className="text-lg font-bold leading-tight">{title}</h5>
-
-        <p className="text-xs desktop:text-base text-gray-600 my-3 ">{body}</p>
-        <a href={href} target="_blank" rel="noreferrer">
-          <div className="flex py-1 text-sm font-semibold">
-            Read Now
-            <Image
-              src={rightArrow}
-              alt="arrow pointing north east"
-              height={10}
-              width={10}
-              className="ml-1"
-            />
-          </div>
-        </a>
-      </div>
-    </div>
-  );
-};
 
 export default function OmniAgencyCaseStudy() {
   // State Management
