@@ -51,6 +51,7 @@ const ContactForm = () => {
         type="text"
         name="name"
         placeholder="Name"
+        minLength={1}
         maxLength={49}
         className="contact-input"
       />
@@ -60,6 +61,7 @@ const ContactForm = () => {
         type="email"
         name="email"
         placeholder="Email"
+        minLength={1}
         maxLength={69}
         className="contact-input"
       />
@@ -69,6 +71,7 @@ const ContactForm = () => {
         {...register("message")}
         name="message"
         placeholder="message"
+        minLength={1}
         maxLength={420}
         className="contact-input"
       ></textarea>

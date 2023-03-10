@@ -26,7 +26,7 @@ const ArticleComponent = ({
       <div className="absolute top-0 right-0 m-3 p-1 w-fit text-center text-white text-xs font-semibold px-2 bg-etonBlue/70 rounded-md">
         {badgeLbl}
       </div>
-      <h5 className="text-xl font-bold laptop:text-3xl">
+      <h5 className="text-xl font-bold laptop:text-3xl my-4">
         <span>{title}</span>
       </h5>
 
@@ -43,7 +43,7 @@ const ArticleComponent = ({
       <p className="text-independence text-sm">{body}</p>
 
       <a href={href} target="_blank" rel="noreferrer">
-        <div className="flex py-1 text-sm font-semibold">
+        <div className="flex py-1 text-sm font-semibold my-2">
           Read Now
           <Image
             src={rightArrow}

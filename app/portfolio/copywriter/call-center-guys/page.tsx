@@ -6,8 +6,8 @@ import CaseStudyQuickPeek from "@/components/CaseStudyQuickPeek";
 import ArticleComponent from "@/components/CaseStudyArticleMenu";
 
 //images
-import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
 import compressedVerticalPlaceholder from "/public/images/compressed-vertical-placeholder.jpg";
+import CCGProjectImage from "/public/images/Puzzle.png";
 
 //article images
 import brochureImage from "/public/images/Shopping.png";
@@ -80,13 +80,13 @@ export default function CallCenterGuysCaseStudy() {
     <SectionWrapper>
       <main className="min-h-screen mx-auto ">
         {/* Header Image */}
-        <div className=" relative max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <Image
-            src={ccgThumbnail}
+            src={CCGProjectImage}
             alt="Social Section Image"
-            sizes="(max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            33vw"
+            height={400}
+            width={400}
+            className="mx-auto"
           />
         </div>
 

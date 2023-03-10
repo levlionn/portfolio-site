@@ -9,7 +9,7 @@ import ArticleComponent from "@/components/CaseStudyArticleMenu";
 
 //images
 import resourcePlaceholder from "@/public/images/resource-placeholder.png";
-import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
+import SocialInkProjectImage from "/public/images/Modern-Socialization.png";
 
 //article images
 import pressReleaseImage from "/public/images/Target.png";
@@ -92,13 +92,15 @@ export default function SocialInkCaseStudy() {
       <main className="min-h-screen mx-auto ">
         {/* Header Image */}
         <div className=" relative max-w-6xl mx-auto">
-          <Image
-            src={ccgThumbnail}
-            alt="Social Section Image"
-            sizes="(max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            33vw"
-          />
+          <div className="max-w-6xl mx-auto">
+            <Image
+              src={SocialInkProjectImage}
+              alt="Social Section Image"
+              height={400}
+              width={400}
+              className="mx-auto"
+            />
+          </div>
         </div>
         <CaseStudyQuickPeek
           title="Helped a fractional CMO run marketing operations for multiple blockchain startups."
@@ -261,29 +263,6 @@ export default function SocialInkCaseStudy() {
               out in their industries and establish themselves as thought
               leaders, resulting in increased leads and sales.
             </p>
-          </div>
-          <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
-            <div className="row-start-1 row-end-1 relative">
-              <Image
-                src={resourcePlaceholder}
-                alt="Call Center Guys Section Image"
-                className="rounded-md"
-              />
-            </div>
-            <div className="col-span-1 row-span-2 relative">
-              <Image
-                src={resourcePlaceholder}
-                alt="Call Center Guys Section Image"
-                className="rounded-md"
-              />
-            </div>
-            <div className="col-span-2 row-span-3 relative">
-              <Image
-                src={resourcePlaceholder}
-                alt="Call Center Guys Section Image"
-                className="rounded-md"
-              />
-            </div>
           </div>
         </section>
 

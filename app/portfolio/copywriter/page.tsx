@@ -3,7 +3,8 @@ import PortfolioCard from "@/components/PortfolioCard";
 import PrincipleItem from "../PrincipleItem";
 
 //images
-import CCGProjectImage from "/public/images/Call-Center.png";
+import CCGProjectImage from "/public/images/Puzzle.png";
+
 import SocialInkProjectImage from "/public/images/Modern-Socialization.png";
 import OmniProjectImage from "/public/images/Marketing-Plan.png";
 
