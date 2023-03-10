@@ -4,15 +4,8 @@ import React, { useContext } from "react";
 import SkillCard from "@/components/SkillCard";
 import { ModeContext } from "@/ModeContext";
 
-// Images
-import pencilsvg from "/public/svg/pencil.svg";
-import computersvg from "/public/svg/computer.svg";
-import copywriterSkillCardImage from "/public/images/Magic_.png";
-import developerSkillCardImage from "/public/images/Coding.png";
-
 const copywriterExpertise = [
   {
-    icon: pencilsvg.src,
     tag: "copywriting",
     expertiseHeader: "I write clean, concise & converting copy.",
     expertiseBody:
@@ -24,7 +17,6 @@ const copywriterExpertise = [
 
 const developerExpertise = [
   {
-    icon: computersvg.src,
     tag: "front end",
     expertiseHeader: "I develop & deploy gorgeous websites.",
     expertiseBody:
@@ -40,9 +32,6 @@ const SkillsSection = () => {
   const shownCardData =
     mode === "copywriter" ? copywriterExpertise : developerExpertise;
 
-  const shownCardImageData =
-    mode === "copywriter" ? copywriterSkillCardImage : developerSkillCardImage;
-
   return (
     <main className="">
       <h2 className="section-h2">What I do</h2>
@@ -53,8 +42,6 @@ const SkillsSection = () => {
       {shownCardData.map((item, index) => {
         return (
           <SkillCard
-            src={shownCardImageData}
-            icon={item.icon}
             tag={item.tag}
             expertiseHeader={item.expertiseHeader}
             expertiseBody={item.expertiseBody}

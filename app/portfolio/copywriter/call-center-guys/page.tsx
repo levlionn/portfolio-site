@@ -1,147 +1,72 @@
 "use client";
-import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
-import compressedPlaceholder from "/public/images/compressed-placeholder.jpg";
-import compressedVerticalPlaceholder from "/public/images/compressed-vertical-placeholder.jpg";
-import Image, { StaticImageData } from "next/image";
-
-import rightArrow from "/public/svg/right-top-arrow.svg";
-import { SectionWrapper } from "@/app/SectionWrapper";
 import { useState } from "react";
+import Image from "next/image";
+import { SectionWrapper } from "@/app/SectionWrapper";
 import CaseStudyQuickPeek from "@/components/CaseStudyQuickPeek";
+import ArticleComponent from "@/components/CaseStudyArticleMenu";
+
+//images
+import ccgThumbnail from "/public/images/CCG-Thumbnail.jpg";
+import compressedVerticalPlaceholder from "/public/images/compressed-vertical-placeholder.jpg";
+
+//article images
+import brochureImage from "/public/images/Shopping.png";
+import eBookImage1 from "/public/images/Gossip.png";
+import eBookImage2 from "/public/images/Instant-Support.png";
+import designImage from "/public/images/Painting.png";
+import socialImage from "/public/images/Modern-Socialization.png";
+import socialImage2 from "/public/images/Notion_Planet.png";
 
 const ARTICLE_DATA = [
   {
-    id: 0,
     href: "https://drive.google.com/file/d/1X8JxZvI3SdZisX46oe6a28FgdmwWhnIi/view?usp=sharing",
-    src: compressedPlaceholder,
+    src: brochureImage,
     title: "Brochure",
     body: "A brochure targetted to execs within Sacks Fifth with the goal of onboarding them as a client.",
     client: "CCG",
     badgeLbl: "Brochure",
   },
   {
-    id: 1,
     href: "https://drive.google.com/file/d/1Jnz8yi-o481mj7B8n9ihlU4k0ryeNj2G/view?usp=sharing",
-    src: compressedPlaceholder,
+    src: eBookImage1,
     title: "Omnichannel Customer Service",
     body: "Used for a Facebook ads campaign. An educational incentive piece to get users to sign up to CCG's newslettter & recieve a free copy.",
     client: "CCG",
     badgeLbl: "eBook",
   },
   {
-    id: 2,
     href: "https://drive.google.com/file/d/1Jnz8yi-o481mj7B8n9ihlU4k0ryeNj2G/view?usp=sharing",
-    src: compressedPlaceholder,
+    src: eBookImage2,
     title: "11 Critical Customer Service Skills",
     body: "Used for a Facebook ads campaign. An educational incentive piece to get users to sign up to CCG's newslettter & recieve a free copy.",
     client: "CCG",
     badgeLbl: "eBook",
   },
   {
-    id: 3,
     href: "https://drive.google.com/file/d/1Vjw8filxhipH3ns13M-TKdJSjUnZdfOp/view?usp=sharing",
-    src: compressedPlaceholder,
+    src: designImage,
     title: "Design Guide",
     body: "CCG's Design Guide/New Brand Identity Book",
     client: "CCG",
     badgeLbl: "Design Guide",
   },
   {
-    id: 4,
     href: "https://www.linkedin.com/company/call-centre-guys-inc-/",
-    src: compressedPlaceholder,
+    src: socialImage,
     title: "Linkedin Content",
-    body: "Ideated, curated and created content to showcase CCG online and attract new leads through value-based content.",
+    body: "Created value-based, educational content tailored towards the professional.",
     client: "CCG",
     badgeLbl: "Social",
   },
   {
-    id: 4,
     href: "https://www.instagram.com/callcenterguys/",
-    src: compressedPlaceholder,
+    src: socialImage2,
     title: "Instagram Content",
-    body: "Ideated, curated and created content to showcase CCG online and attract new leads through value-based content.",
+    body: "Created value-based, educational content tailored towards the everyday person.",
     client: "CCG",
     badgeLbl: "Social",
   },
 ];
-
-interface PDFItem {
-  href: string;
-  src: StaticImageData;
-  title: string;
-  body: string;
-  client: string;
-  badgeLbl: string;
-}
-
-// const PDFComponenet = ({ href, src, title, body, client }: PDFItem) => {
-//   return (
-//     <>
-//       <div className="relative w-36 h-48 desktop:w-44 rounded-lg bg-white shadow-xl cursor-pointer my-2">
-//         <Image src={src} alt="CCG Brochure" className="rounded-lg" fill />
-//       </div>
-//       <div className="py-2 tablet:-ml-14 desktop:-ml-20">
-//         <h5 className="text-md desktop:text-lg font-bold leading-tight">
-//           {title}
-//         </h5>
-//         <p className="text-xs desktop:text-base text-gray-600 my-4">{body}</p>
-//         <a href={href} target="_blank">
-//           <div className="flex py-1 text-sm font-semibold">
-//             Read Now
-//             <Image
-//               src={rightArrow}
-//               alt="arrow pointing north east"
-//               height={10}
-//               width={10}
-//               className="ml-1"
-//             />
-//           </div>
-//         </a>
-//       </div>
-//     </>
-//   );
-// };
-
-const ArticleComponent = ({
-  href,
-  src,
-  title,
-  body,
-  client,
-  badgeLbl,
-}: PDFItem) => {
-  return (
-    <div className="relative max-w-xs flex flex-col">
-      <div className="relative w-full h-32 rounded-lg bg-white shadow-xl cursor-pointer">
-        <Image src={src} alt="CCG Brochure" className="rounded-lg" fill />
-        {/* Badge */}
-        <div className="absolute top-0 left-0 m-2 p-0.5 w-fit text-center text-white text-xs  font-medium px-2 bg-etonBlue rounded-lg">
-          {badgeLbl}
-        </div>
-      </div>
-      <div className="py-2">
-        <span className="text-xs text-gray-500">{client}</span>
-
-        <h5 className="text-lg font-bold leading-tight">{title}</h5>
-
-        <p className="text-xs desktop:text-base text-gray-600 my-3 ">{body}</p>
-        <a href={href} target="_blank" rel="noreferrer">
-          <div className="flex py-1 text-sm font-semibold">
-            Read Now
-            <Image
-              src={rightArrow}
-              alt="arrow pointing north east"
-              height={10}
-              width={10}
-              className="ml-1"
-            />
-          </div>
-        </a>
-      </div>
-    </div>
-  );
-};
 
 export default function CallCenterGuysCaseStudy() {
   //state management
@@ -173,7 +98,7 @@ export default function CallCenterGuysCaseStudy() {
           platform="Custom"
           role="Copywriter & Developer"
           services="Copywriting, Digital Marketing, Guerrilla Marketing, Community
-          Building, Content Marketing, Communications, & Social Media Management."
+          Building, Content Marketing, Communications & Social Media Management."
         />
 
         {/* Project Summary */}
@@ -276,7 +201,7 @@ export default function CallCenterGuysCaseStudy() {
           </div>
           {/* End Filter Menu -- */}
           <hr />
-          <div className="grid grid-cols-2 laptop:grid-cols-4 gap-5 py-2">
+          <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-2 py-2">
             {ARTICLE_DATA.filter((a) => a.badgeLbl === filter).map(
               (article, index) => (
                 <ArticleComponent

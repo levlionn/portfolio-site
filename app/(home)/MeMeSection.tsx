@@ -27,7 +27,6 @@ const MeMeSection = () => {
         </Link>
         or keep scrolling!
       </p>
-      <p>Thanks for dropping by,</p>
     </main>
   );
 };

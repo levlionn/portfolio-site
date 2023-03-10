@@ -1,48 +1,12 @@
 "use client";
+
 import React, { useContext } from "react";
-import SkillCard from "@/components/SkillCard";
-import ResourceCard from "@/components/ResourceCard";
-import firstPic from "/public/images/005.jpg";
-
 import { ModeContext } from "@/ModeContext";
-
-import pencilsvg from "/public/svg/pencil.svg";
-import computersvg from "/public/svg/computer.svg";
-import Image from "next/image";
-import PortfolioCard from "@/components/PortfolioCard";
+import SkillCard from "@/components/SkillCard";
 import { SectionWrapper } from "../SectionWrapper";
-
-//images
-// import heroImage from "public/images/heroImage-compressed.jpg";
-// import { RESOURCE_DATA } from "../../ALL_DATA";
-
-// const PORTFOLIO_PROJECTS = [
-//   {
-//     source: firstPic,
-//     client: "Call Center Guys",
-//     altText: "Call Center Guys portfolio image",
-//     cardHeader: "Complete Website Makover",
-//     cardBody:
-//       "Designed, developed and deployed a custom-built wesbite – including copy, and marketing.",
-//     tags: ["#uxui", "#webcopy"],
-//     colour: "cinnabar",
-//     href: "/portfolio/copywriter/call-center-guys",
-//   },
-//   {
-//     source: firstPic,
-//     client: "BTH645",
-//     altText: "Seneca Assignments for BTH645",
-//     cardHeader: "Academic Projects",
-//     cardBody: "A list of school projects for BTH645.",
-//     tags: ["#uxui", "#hci"],
-//     colour: "cinnabar",
-//     href: "/portfolio/copywriter/call-center-guys",
-//   },
-// ];
 
 const copywriterExpertise = [
   {
-    icon: pencilsvg.src,
     tag: "copywriting",
     expertiseHeader: "I write clean, concise & converting copy.",
     expertiseBody:
@@ -54,7 +18,6 @@ const copywriterExpertise = [
 
 const developerExpertise = [
   {
-    icon: computersvg.src,
     tag: "front end",
     expertiseHeader: "I develop & deploy gorgeous websites.",
     expertiseBody:
@@ -69,6 +32,7 @@ export default function Portfolio() {
 
   const shownCardData =
     mode === "copywriter" ? copywriterExpertise : developerExpertise;
+
   return (
     <SectionWrapper>
       <main className="min-h-screen mx-auto ">
@@ -86,7 +50,6 @@ export default function Portfolio() {
             {shownCardData.map((item, index) => {
               return (
                 <SkillCard
-                  icon={item.icon}
                   tag={item.tag}
                   expertiseHeader={item.expertiseHeader}
                   expertiseBody={item.expertiseBody}
@@ -97,27 +60,6 @@ export default function Portfolio() {
               );
             })}
           </section>
-          {/* <section className="section-y-spacing section-x-outer-margin-width">
-          <h2 className="section-h2">Copywriting Projects</h2>
-
-          <div className=" laptop:basis-1/3">
-            {PORTFOLIO_PROJECTS.map((item, index) => {
-              return (
-                <PortfolioCard
-                  source={item.source.src}
-                  altText={item.altText}
-                  client={item.client}
-                  cardHeader={item.cardHeader}
-                  cardBody={item.cardBody}
-                  tags={item.tags}
-                  colour={item.colour}
-                  href={item.href}
-                  key={index}
-                />
-              );
-            })}
-          </div>
-        </section> */}
         </div>
       </main>
     </SectionWrapper>
