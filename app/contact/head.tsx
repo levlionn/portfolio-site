@@ -1,10 +1,8 @@
-export default function Head() {
-  return (
-    <>
-      <title>Lev Markelov</title>
-      <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta name="Lev Markelov Contact Form" content="Let's chat! " />
-      <link rel="icon" href="/svg/sparkles.svg" />
-    </>
-  );
+// app/head.js
+import { NextSeo } from "next-seo";
+
+import { NEXT_SEO_DEFAULT } from "@/next-seo.config";
+
+export default async function Head() {
+  return <NextSeo {...NEXT_SEO_DEFAULT} useAppDir={true} />;
 }

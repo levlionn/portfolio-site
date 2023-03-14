@@ -9,6 +9,7 @@ import { ModeContext } from "../ModeContext";
 import { useState } from "react";
 import { Mode } from "@/types";
 import { AnimatePresence } from "framer-motion";
+import { NextSeo } from "next-seo";
 
 const kanit = Kanit({
   weight: ["400", "700"],
@@ -25,10 +26,17 @@ export default function RootLayout({
   const [mode, setMode] = useState<Mode>("copywriter");
   return (
     <html lang="en">
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width" />
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
+      <NextSeo
+        useAppDir={true}
+        themeColor="#F0C987"
+        titleTemplate="Lev Markelov | Levitate Above The Noise"
+      />
       <head />
 
       <body className={`${kanit.className}`}>
