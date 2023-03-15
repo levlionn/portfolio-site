@@ -191,7 +191,7 @@ export default function OmniAgencyCaseStudy() {
           </div>
           {/* End Filter Menu -- */}
           <hr />
-          <div className="grid grid-cols-2 laptop:grid-cols-4 gap-5 py-2">
+          <div className="flex flex-col laptop:flex-row gap-2 py-2">
             {ARTICLE_DATA.filter((a) => a.badgeLbl === filter).map(
               (article, index) => (
                 <ArticleComponent
@@ -222,7 +222,7 @@ export default function OmniAgencyCaseStudy() {
               engagement rates, and overall brand awareness.
             </p>
           </div>
-          <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
+          {/* <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
             <div className="row-start-1 row-end-1 relative">
               <Image
                 src={resourcePlaceholder}
@@ -244,7 +244,7 @@ export default function OmniAgencyCaseStudy() {
                 className="rounded-md"
               />
             </div>
-          </div>
+          </div> */}
         </section>
 
         {/* Final Thoughts*/}

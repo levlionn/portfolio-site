@@ -3,13 +3,15 @@ import Image from "next/image";
 
 //images
 import heroImage from "public/images/heroImage-compressed.jpg";
+import notionAvatar from "public/images/Notion_Avatar-min.png";
+import notionAvatarSmiling from "public/images/Notion_Avatar_Smiling.png";
 
 const AboutHeroSection = () => {
   return (
     <div className="flex flex-col my-10 laptop:pr-8 first:items-center">
       <div className="flex">
         <Image
-          src={heroImage}
+          src={notionAvatarSmiling}
           height={250}
           width={250}
           alt="heroImage"

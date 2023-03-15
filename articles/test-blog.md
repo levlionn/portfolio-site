@@ -1,193 +1,70 @@
 ---
-title: "Welcome to Lev Letter"
-subtitle: "Read my approach to blogging, and what to expect."
+title: "#1 – How the pandemic shaped my life"
+subtitle: "A story of low-lows and high-highs."
 summary: "Read my approach to blogging, and what to expect."
-date: "March 13, 2023"
-readTime: "1 min read"
-featureImage: "/images/Painting.png"
+date: "March 15, 2023"
+readTime: "4 min read"
+featureImage: "/images/FirstBlogHeroImage.png"
 tags: "Personal"
 ---
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
-AngularJS-powered HTML5 Markdown editor.
+It’s the tailwind of 2019 – the shadow of the pandemic has yet to hit the world, but its impact is slowly starting to be felt.
 
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
+I’m sitting alone at the condo lounge, where I often find myself doing work, except this time, things are different. A typical work day for me was simple: study for my Software Development degree (I should say attempt to ‘study’) for a few hours, watch some YouTube videos, hit the gym and then head off to my bartending gig until 2-3 am, wake up around 11 pm the next day and do it all over again; life was simple.
 
-## Features
+**Once the pandemic hit – everything changed.**
 
-- Import a HTML file and watch it magically convert to Markdown
-- Drag and drop images (requires your Dropbox account be linked)
-- Import and save files from GitHub, Dropbox, Google Drive and One Drive
-- Drag and drop markdown and HTML files into Dillinger
-- Export documents as Markdown, HTML and PDF
+I lost my job. School went online. My gym closed.
 
-Markdown is a lightweight markup language based on the formatting conventions
-that people naturally use in email.
-As [John Gruber] writes on the [Markdown site][df1]
+Sitting there, alone, in the quietness of the lounge, I realized that I no longer had to rush out the door and run off to do the next thing instead, I was faced with the reality in front of me – I had time to do things that previously I would postpone, excusing myself as _‘too busy’_ to pursue it.
 
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
+I was excited about this new chapter; elated to know that I could pour my heart & soul into a new endeavour; run off into a new direction that previously felt unattainable, scary and unknown. In all honesty, I remember feeling _happy_ at that moment because I felt like I could conquer the world, that everything was within my reach, and nothing was an obstacle.
 
-This text you see here is \*actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
+**So, I got to work.**
 
-## Tech
+I started a business with two amazing co-founders – something that I’ve been dreaming about for years building up to that moment. In May of 2020, we officially incorporated [Snakebyte Studios](https://www.snakebyte.ca/) – a creative experience agency that was going to be the vehicle that would drive me towards success. Myself behind the wheel, and my two partners beside me; _our agency was going to change the advertising landscape in Toronto_ and, with that, _our lives._
 
-Dillinger uses a number of open source projects to work properly:
+I’m going to skip most of the story from this point on because it involves a lot of mundane, day-to-day entrepreneurial moments: learning to put out fires, absorbing new information on a day-to-day basis on how to build a business, managing employees & client expectations, constant failures and micro successes. I’ll tell you one thing tho – _life was fun_. I was completely tunnel visioned on success, nothing bothered me, and any adversity was met with unbreakable optimism – **I felt unstoppable.**
 
-- [AngularJS] - HTML enhanced for web apps!
-- [Ace Editor] - awesome web-based text editor
-- [markdown-it] - Markdown parser done right. Fast and easy to extend.
-- [Twitter Bootstrap] - great UI boilerplate for modern web apps
-- [node.js] - evented I/O for the backend
-- [Express] - fast node.js network app framework [@tjholowaychuk]
-- [Gulp] - the streaming build system
-- [Breakdance](https://breakdance.github.io/breakdance/) - HTML
-  to Markdown converter
-- [jQuery] - duh
+Fast forward to the beginning of 2022. The business collapsed, my motivation to pursue it extinguished, and my dreams, along with my identity, shattered before my eyes. I felt exhausted, drained, emotionally fatigued and mentally unable to cope with my life – in other words, I got **burnt out.**
 
-And of course Dillinger itself is open source with a [public repository][dill]
-on GitHub.
+<img  src="/images/ArticleOne_img2.png"  alt="Boy burned out standing infront of cave"  width="230"  height="300"  title="Pixel art of a boy standing infront of a cave"  style="border-radius:4px!important;">
 
-## Installation
+**Burnout** is a real thing – despite what our parents, or society, might say. It’s not as simple as _“get over it”_ or _“stop feeling sorry for yourself; just get back to work, and it will all go away.”_
 
-Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
+When you’re burnt out, you’re in a state that comes from long-term, unresolved _stress_ that can impact your entire life. Nobody _wants to burn out_, yet year over year, there has been an increase in the number of people experiencing burnout. [Google searches of ‘signs of burnout’ increased by over 200%](https://www.hrmagazine.co.uk/content/news/google-searches-of-signs-of-burnout-increase-by-over-200/).
 
-Install the dependencies and devDependencies and start the server.
+Burnout occurs over 5 stages:
 
-```sh
-cd dillinger
-npm i
-node app
-```
+1.  **HONEYMOON PHASE**
 
-For production environments...
+You’ve undertaken a new task; life feels novel & exciting. You’re energized, creative, and have plenty of satisfaction with your daily routine.
 
-```sh
-npm install --production
-NODE_ENV=production node app
-```
+2.  **ONSET OF STRESS**
 
-## Plugins
+Suddenly, some days are more difficult than others. You begin to feel pangs of anxiety, avoidance of decision making, change in appetite, irritability & poor sleep.
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
+3.  **CHRONIC STRESS**
 
-| Plugin           | README                                    |
-| ---------------- | ----------------------------------------- |
-| Dropbox          | [plugins/dropbox/README.md][pldb]         |
-| GitHub           | [plugins/github/README.md][plgh]          |
-| Google Drive     | [plugins/googledrive/README.md][plgd]     |
-| OneDrive         | [plugins/onedrive/README.md][plod]        |
-| Medium           | [plugins/medium/README.md][plme]          |
-| Google Analytics | [plugins/googleanalytics/README.md][plga] |
+You’ve been grinding the gears for too long, and your motivation has been shot, along with your desire to be a productive human being. Constant exhaustion, decreased sexual desire, aggression, and procrastination engulf you.
 
-## Development
+4.  **BURNOUT**
 
-Want to contribute? Great!
+Congratulations, you’ve reached burnout! Every day becomes difficult to cope with. You feel like you’ve hit your limit, and even getting up in the morning feels like an enormous task.
 
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
+5.  **HABITUAL BURNOUT**
 
-Open your favorite Terminal and run these commands.
+If left untreated, your life becomes a constant state of chronic mental fatigue, depression, sadness and physical issues. You have become one with the burnout (and not in a good way.)
 
-First Tab:
+Naturally, we all want to stay within the HONEYMOON PHASE - forever - but without proper coping mechanisms, you will begin to see yourself descend the burnout ladder until you’ve hit bottom – and that’s not a place that’s fun to be at.
 
-```sh
-node app
-```
+**AFTERSHOCK**
+This by no means is a sob story – in fact, one that I hope proves to be inspirational.
 
-Second Tab:
+I've since moved on from my doom-and-gloom mindset and have embarked on a new adventure. I write for amazing clients, I develop websites (like my personal one!) and am finishing up my last few courses at school.
 
-```sh
-gulp watch
-```
+This coming year, I will continue to hone my craft, while actively engaging in interesting AI trends/technologies that I can learn to leverage to augment my productivity/output as a solopreneur.
 
-(optional) Third:
+I'm beyond thrilled to wake up each day with a purpose – and have long since realized that life is an emotional rollercoaster filled with scary, exhilarating peaks, and long, depressing lows – that's the beauty of life.
 
-```sh
-karma test
-```
-
-#### Building for source
-
-For production release:
-
-```sh
-gulp build --prod
-```
-
-Generating pre-built zip archives for distribution:
-
-```sh
-gulp build dist --prod
-```
-
-## Docker
-
-Dillinger is very easy to install and deploy in a Docker container.
-
-By default, the Docker will expose port 8080, so change this within the
-Dockerfile if necessary. When ready, simply use the Dockerfile to
-build the image.
-
-```sh
-cd dillinger
-docker build -t <youruser>/dillinger:${package.json.version} .
-```
-
-This will create the dillinger image and pull in the necessary dependencies.
-Be sure to swap out `${package.json.version}` with the actual
-version of Dillinger.
-
-Once done, run the Docker image and map the port to whatever you wish on
-your host. In this example, we simply map port 8000 of the host to
-port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
-
-```sh
-docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger <youruser>/dillinger:${package.json.version}
-```
-
-> Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
-
-Verify the deployment by navigating to your server address in
-your preferred browser.
-
-```sh
-127.0.0.1:8000
-```
-
-## License
-
-MIT
-
-**Free Software, Hell Yeah!**
-
-[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
-[dill]: https://github.com/joemccann/dillinger
-[git-repo-url]: https://github.com/joemccann/dillinger.git
-[john gruber]: http://daringfireball.net
-[df1]: http://daringfireball.net/projects/markdown/
-[markdown-it]: https://github.com/markdown-it/markdown-it
-[ace editor]: http://ace.ajax.org
-[node.js]: http://nodejs.org
-[twitter bootstrap]: http://twitter.github.com/bootstrap/
-[jquery]: http://jquery.com
-[@tjholowaychuk]: http://twitter.com/tjholowaychuk
-[express]: http://expressjs.com
-[angularjs]: http://angularjs.org
-[gulp]: http://gulpjs.com
-[pldb]: https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md
-[plgh]: https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md
-[plgd]: https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md
-[plod]: https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md
-[plme]: https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md
-[plga]: https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md
+:)
