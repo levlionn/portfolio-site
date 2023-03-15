@@ -235,7 +235,7 @@ export default function SocialInkCaseStudy() {
           </div>
           {/* End Filter Menu -- */}
           <hr />
-          <div className="grid grid-cols-2 laptop:grid-cols-4 gap-5 py-2">
+          <div className="flex flex-col laptop:flex-row gap-2 py-2">
             {ARTICLE_DATA.filter((a) => a.badgeLbl === filter).map(
               (article, index) => (
                 <ArticleComponent

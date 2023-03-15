@@ -22,7 +22,7 @@ const ArticleComponent = ({
   badgeLbl,
 }: PDFItem) => {
   return (
-    <div className="p-5 border border-independence/10 relative flex flex-col w-fit h-auto rounded-xl shadow-xl overflow-hidden">
+    <div className="p-5 border border-independence/10 relative flex flex-col w-80 h-auto rounded-xl shadow-xl overflow-hidden">
       <div className="absolute top-0 right-0 m-3 p-1 w-fit text-center text-white text-xs font-semibold px-2 bg-etonBlue/70 rounded-md">
         {badgeLbl}
       </div>

@@ -17,8 +17,8 @@ const navLinks = [
     text: "about",
   },
   {
-    href: "/blog",
-    text: "blog",
+    href: "/letters",
+    text: "letters",
   },
   {
     href: "/contact",

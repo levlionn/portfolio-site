@@ -201,7 +201,7 @@ export default function CallCenterGuysCaseStudy() {
           </div>
           {/* End Filter Menu -- */}
           <hr />
-          <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-2 py-2">
+          <div className="flex flex-col laptop:flex-row gap-2 py-2">
             {ARTICLE_DATA.filter((a) => a.badgeLbl === filter).map(
               (article, index) => (
                 <ArticleComponent
@@ -231,7 +231,7 @@ export default function CallCenterGuysCaseStudy() {
               rates and drive traffic to the website.
             </p>
           </div>
-          <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
+          {/* <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
             <div className="row-start-1 row-end-1 relative">
               <Image
                 src={compressedVerticalPlaceholder}
@@ -253,15 +253,15 @@ export default function CallCenterGuysCaseStudy() {
                 className="rounded-md"
               />
             </div>
-          </div>
+          </div> */}
         </section>
         {/* Facebook Ads - VIDEOS */}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
           <div className="flex justify-between gap-4">
             {[
-              "/videos/CCG-vid1.mp4",
-              "/videos/CCG-vid2.mp4",
-              "/videos/CCG-vid3.mp4",
+              "/videos/ccg-vid1.mp4",
+              "/videos/ccg-vid2.mp4",
+              "/videos/ccg-vid3.mp4",
             ].map((vid, index) => {
               return (
                 <div
