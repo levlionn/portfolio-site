@@ -8,7 +8,6 @@ import Link from "next/link";
 const ArticlePreview = () => {
   const articleMetaData = getArticleMetaData();
   const articlePreview = articleMetaData.map((article) => {
-    console.log(article);
     return (
       <div key={article.slug} className="my-8 w-fit">
         <Link href={`/letters/${article.slug}`} className="cursor-pointer">

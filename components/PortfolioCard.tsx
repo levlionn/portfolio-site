@@ -28,9 +28,15 @@ const PortfolioCard = ({
   href,
 }: Props) => {
   return (
-    <div className="max-w-s md:max-w-2xl mx-auto my-2 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
-      <div className="relative w-80 h-80 rounded-lg mx-auto ">
-        <Image src={source} fill alt={altText} />
+    <div className=" h-auto max-w-s md:max-w-2xl mx-auto my-2 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+      <div className="mx-auto ">
+        <Image
+          src={source}
+          alt={altText}
+          height={400}
+          width={600}
+          className="mx-auto"
+        />
       </div>
 
       <div className="px-5 pt-6 pb-6">

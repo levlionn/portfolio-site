@@ -6,7 +6,10 @@ import CaseStudyQuickPeek from "@/components/CaseStudyQuickPeek";
 import ArticleComponent from "@/components/CaseStudyArticleMenu";
 
 //images
-import compressedVerticalPlaceholder from "/public/images/compressed-vertical-placeholder.jpg";
+import ccgImage1 from "/public/images/ccg-social-1.png";
+import ccgImage2 from "/public/images/ccg-social-2.png";
+import ccgImage3 from "/public/images/ccg-coverImage.png";
+
 import CCGProjectImage from "/public/images/Puzzle.png";
 
 //article images
@@ -231,29 +234,29 @@ export default function CallCenterGuysCaseStudy() {
               rates and drive traffic to the website.
             </p>
           </div>
-          {/* <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
+          <div className="grid grid-rows-1 auto-cols-auto gap-2 my-2">
             <div className="row-start-1 row-end-1 relative">
               <Image
-                src={compressedVerticalPlaceholder}
+                src={ccgImage1}
                 alt="Call Center Guys Section Image"
                 className="rounded-md"
               />
             </div>
             <div className="col-span-1 row-span-2 relative">
               <Image
-                src={compressedVerticalPlaceholder}
+                src={ccgImage2}
                 alt="Call Center Guys Section Image"
                 className="rounded-md"
               />
             </div>
             <div className="col-span-2 row-span-3 relative">
               <Image
-                src={compressedVerticalPlaceholder}
+                src={ccgImage3}
                 alt="Call Center Guys Section Image"
                 className="rounded-md"
               />
             </div>
-          </div> */}
+          </div>
         </section>
         {/* Facebook Ads - VIDEOS */}
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl ">
