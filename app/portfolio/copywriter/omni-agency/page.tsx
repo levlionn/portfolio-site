@@ -10,7 +10,9 @@ import ArticleComponent from "@/components/CaseStudyArticleMenu";
 //images
 import OmniProjectImage from "/public/images/Marketing-Plan.png";
 
-import resourcePlaceholder from "@/public/images/resource-placeholder.png";
+import omniImage1 from "/public/images/omni-social-1.png";
+import omniImage2 from "/public/images/omni-social-2.png";
+import omniImage3 from "/public/images/omni-social-3.png";
 
 //article images
 import socialImage from "/public/images/Modern-Socialization.png";
@@ -222,29 +224,29 @@ export default function OmniAgencyCaseStudy() {
               engagement rates, and overall brand awareness.
             </p>
           </div>
-          {/* <div className="grid grid-rows-2 grid-flow-col gap-2 my-2">
+          <div className="grid grid-rows-1 auto-cols-auto gap-2 my-2">
             <div className="row-start-1 row-end-1 relative">
               <Image
-                src={resourcePlaceholder}
+                src={omniImage1}
                 alt="Call Center Guys Section Image"
                 className="rounded-md"
               />
             </div>
             <div className="col-span-1 row-span-2 relative">
               <Image
-                src={resourcePlaceholder}
+                src={omniImage2}
                 alt="Call Center Guys Section Image"
                 className="rounded-md"
               />
             </div>
             <div className="col-span-2 row-span-3 relative">
               <Image
-                src={resourcePlaceholder}
+                src={omniImage3}
                 alt="Call Center Guys Section Image"
                 className="rounded-md"
               />
             </div>
-          </div> */}
+          </div>
         </section>
 
         {/* Final Thoughts*/}

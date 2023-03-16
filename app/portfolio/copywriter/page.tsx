@@ -3,10 +3,9 @@ import PortfolioCard from "@/components/PortfolioCard";
 import PrincipleItem from "../PrincipleItem";
 
 //images
-import CCGProjectImage from "/public/images/Puzzle.png";
-
-import SocialInkProjectImage from "/public/images/Modern-Socialization.png";
-import OmniProjectImage from "/public/images/Marketing-Plan.png";
+import CCGProjectImage from "/public/images/ccg-projectCardImage.png";
+import SocialInkProjectImage from "/public/images/Social Ink Cover.png";
+import OmniProjectImage from "/public/images/Omni Agency Cover.png";
 
 const COPYWRITER_PROJECTS = [
   {
@@ -26,7 +25,7 @@ const COPYWRITER_PROJECTS = [
     altText: "Social Ink portfolio image",
     cardHeader: "Content Manager",
     cardBody:
-      "Ran the complete content pipeline from ideation, design, copywriting and publishing.",
+      "Ran the complete content pipeline from ideation, design, copywriting and publishing surrounding web3/blockchain-based startups.",
     tags: ["#contentmarketing", "#smm"],
     colour: "cinnabar",
     href: "/portfolio/copywriter/social-ink",
@@ -37,7 +36,7 @@ const COPYWRITER_PROJECTS = [
     altText: "Social Ink portfolio image",
     cardHeader: "Lead Copywriter",
     cardBody:
-      "Ideated & wrote social media content, website blogs, and guerrilla marketing ideas for multiple Web3-based startups.",
+      "Ideated and wrote social media content, website blogs, and guerrilla marketing ideas for multiple web3-based startups.",
     tags: ["#smm", "#seo"],
     colour: "cinnabar",
     href: "/portfolio/copywriter/omni-agency",
@@ -113,7 +112,7 @@ export default function CopywriterPortfolio() {
         <section className="section-y-spacing section-x-outer-margin-width max-w-6xl mx-auto">
           <h2 className="section-h2">Copywriting Projects</h2>
 
-          <div className="laptop:grid laptop:grid-cols-2 laptop:gap-4">
+          <div className="laptop:grid laptop:grid-cols-2 gap-6">
             {COPYWRITER_PROJECTS.map((item, index) => {
               return (
                 <PortfolioCard
