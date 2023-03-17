@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import { formatISO9075 } from "date-fns";
+import SenecaStamp from "@/components/SenecaTimeStamp";
 
 const WEB_USABILITY_PRINCIPLES = [
   {
@@ -47,30 +47,6 @@ const WEB_USABILITY_PRINCIPLES = [
 ];
 
 export default function SenecaBTHPage() {
-  const lastUpdated = formatISO9075(new Date(), {
-    format: "extended",
-    representation: "complete",
-  });
-
-  const SenecaStamp = () => (
-    <>
-      <p className="text-gray-800 my-4 font-semibold text-lg">
-        Below is a showcase of all labs & assignments that I did for BTH645
-        during my 4th year at Seneca 2023.
-      </p>
-      <p className="text-gray-400 mt-4">
-        I declare that this is wholly my own work in accordance with Seneca
-        Academic Policy. No part of this work has been copied manually or
-        electronically from any other source (including web sites) or
-        distributed to other students.
-      </p>
-      <div className="flex items-center justify-between my-2">
-        <span className="text-gray-400">Lev Markelov | 031-431-158</span>
-
-        <p className="text-gray-400">Last Modified {lastUpdated}</p>
-      </div>
-    </>
-  );
   return (
     <main className="min-h-screen mx-auto ">
       <section className="section-y-spacing section-x-outer-margin-width max-w-6xl">
@@ -81,11 +57,23 @@ export default function SenecaBTHPage() {
 
       <section className="section-y-spacing section-x-outer-margin-width laptop:basis-2/3 max-w-6xl">
         <h2 className="section-h2">Labs</h2>
-        <Link href="/portfolio/seneca-bth645/lab2">View Lab 2</Link>
+        <Link
+          href="/portfolio/seneca-bth645/lab2"
+          target="_blank"
+          className="underline"
+        >
+          View Lab 2
+        </Link>
       </section>
       <section className="section-y-spacing section-x-outer-margin-width laptop:basis-2/3 max-w-6xl">
         <h2 className="section-h2">Assignments</h2>
-        <div>Assignment 1 will go here</div>
+        <Link
+          href="/portfolio/seneca-bth645/assignment-1"
+          target="_blank"
+          className="underline"
+        >
+          View Assignment 1
+        </Link>
       </section>
       <section className="section-y-spacing section-x-outer-margin-width laptop:basis-2/3 max-w-6xl">
         <h2 className="section-h2">Web Usability</h2>
