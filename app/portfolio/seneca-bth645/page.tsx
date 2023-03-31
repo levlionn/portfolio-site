@@ -80,13 +80,26 @@ export default function SenecaBTHPage() {
       </section>
       <section className="section-y-spacing section-x-outer-margin-width laptop:basis-2/3 max-w-6xl">
         <h2 className="section-h2">Assignments</h2>
-        <Link
-          href="/portfolio/seneca-bth645/assignment-1"
-          target="_blank"
-          className="underline"
-        >
-          View Assignment 1
-        </Link>
+        <div className="flex-col py-3 gap-4">
+          <div>
+            <Link
+              href="/portfolio/seneca-bth645/assignment-1"
+              target="_blank"
+              className="underline"
+            >
+              View Assignment 1
+            </Link>
+          </div>
+          <div>
+            <Link
+              href="/portfolio/seneca-bth645/assignment-2"
+              target="_blank"
+              className="underline"
+            >
+              View Assignment 2
+            </Link>
+          </div>
+        </div>
       </section>
       <section className="section-y-spacing section-x-outer-margin-width laptop:basis-2/3 max-w-6xl">
         <h2 className="section-h2">Web Usability</h2>
