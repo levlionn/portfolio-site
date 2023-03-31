@@ -7,6 +7,7 @@ import Image from "next/image";
 import { sketch } from "@/components/Sketch";
 
 import ss from "/public/images/lab5-screenshot-sketch.png";
+import isaac from "/public/images/isaac_newton_digitalart.png";
 
 const P5Wrapper = dynamic(() => import("@/components/P5Wrapper"), {
   ssr: false,
@@ -49,17 +50,42 @@ export default function SenecaBTHLab5() {
         <h2 className="text-4xl font-bold mb-4">Lab 5 - p5.js Drawing</h2>
         <SenecaStamp />
 
-        <div className="flex-col space-y-4">
-          <div className="flex-col ">
-            <h2 className="font-semibold text-lg">The Invention of Gravity</h2>
-            <p className="text-gray-400">All it took was an apple.</p>
+        <div className="flex-col space-x-4">
+          <div className="flex-col w-fit space-y-6">
+            <div>
+              <h2 className="font-semibold text-lg">
+                The Invention of Gravity
+              </h2>
+              <p className="text-gray-500">All it took was an apple.</p>
+              <p className="text-gray-500">Created using p5.js</p>
+            </div>
+            <P5Wrapper sketch={sketch} />
+
+            <div>
+              <div className="">
+                <h2 className="font-semibold text-lg">AI Art</h2>
+                <p className="text-gray-500">
+                  {" "}
+                  prompt: issac newton sitting under a tree with a red apple
+                  falling on his head, vibrant, hyper realistic, digital art,
+                  Magical --v 5
+                </p>
+              </div>
+
+              <Image
+                src={isaac}
+                alt={"lab5 image"}
+                height={300}
+                width={300}
+                className=""
+              />
+            </div>
           </div>
 
-          <P5Wrapper sketch={sketch} />
           <div>
             <div className="flex-col ">
               <h2 className="font-semibold text-lg">Sketch.ts</h2>
-              <p className="text-gray-400">
+              <p className="text-gray-500">
                 {" "}
                 Using NextJS13,Tailwind & Typescript
               </p>
@@ -70,7 +96,7 @@ export default function SenecaBTHLab5() {
               alt={"lab5 image"}
               height={400}
               width={600}
-              className="mx-auto"
+              className=""
             />
           </div>
         </div>

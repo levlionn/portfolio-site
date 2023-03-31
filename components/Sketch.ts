@@ -1,6 +1,10 @@
 import * as p5 from "p5";
 
+let newtonImg: p5.Image;
 export const sketch = (p: p5) => {
+  p.preload = function () {
+    newtonImg = p.loadImage("/images/isaac_selfie.png");
+  };
   const scaleFactor = 4;
 
   p.setup = function () {
@@ -36,5 +40,10 @@ export const sketch = (p: p5) => {
     p.stroke(0);
     p.strokeWeight(1);
     p.text("GRAVITY", 44, 12);
+
+    // Draw Isaac Newton's picture
+    if (newtonImg) {
+      p.image(newtonImg, 10, 55, 12, 12);
+    }
   };
 };
