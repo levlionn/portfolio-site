@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import { ModeContext } from "@/ModeContext";
 import SkillCard from "@/components/SkillCard";
 import { SectionWrapper } from "../SectionWrapper";
+import Link from "next/link";
 
 const copywriterExpertise = [
   {
@@ -42,6 +43,7 @@ export default function Portfolio() {
             From copywriting projects, to developer applications, AI generated
             artwork, screenplays and more – here is a showcase of my work.
           </p>
+          <Link href="/portfolio/prompt-journal">Prompt Journal</Link>
         </section>
         {/* 2 part section -- skill & projects */}
         <div className="laptop:flex laptop:gap-4">

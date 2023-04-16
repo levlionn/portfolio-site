@@ -6,6 +6,7 @@ import PrincipleItem from "../PrincipleItem";
 import CCGProjectImage from "/public/images/ccg-projectCardImage.png";
 import SocialInkProjectImage from "/public/images/Social Ink Cover.png";
 import OmniProjectImage from "/public/images/Omni Agency Cover.png";
+import Link from "next/link";
 
 const COPYWRITER_PROJECTS = [
   {
