@@ -28,8 +28,6 @@ const ArticlePreview = () => {
 };
 
 export default function Blog() {
-  const articleMetaData = getArticleMetaData();
-
   return (
     <SectionWrapper>
       <main className="min-h-screen mx-auto">

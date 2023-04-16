@@ -99,6 +99,15 @@ export default function SenecaBTHPage() {
               View Assignment 2
             </Link>
           </div>
+          <div>
+            <Link
+              href="/portfolio/seneca-bth645/assignment-3"
+              target="_blank"
+              className="underline"
+            >
+              View Assignment 3
+            </Link>
+          </div>
         </div>
       </section>
       <section className="section-y-spacing section-x-outer-margin-width laptop:basis-2/3 max-w-6xl">
